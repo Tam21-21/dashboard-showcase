@@ -4,6 +4,8 @@ A personal research lab for trading strategies and the dashboard that runs it, w
 
 The lab writes strategy ideas from templates, backtests them on decades of prices, grades every result with nine statistical checks, retests the survivors in a second engine and sends the few that pass to paper trading. Real money stays off behind a kill switch, limits enforced on the server and my written approval.
 
+I built this with Claude Code and a team of AI agents. I designed it, planned the work and made the decisions. The agents wrote most of the code from those plans, and every change passed its tests and a review before it went in.
+
 The screenshots show the interface design with example data.
 
 ![Overview page](docs/images/01-overview.png)
