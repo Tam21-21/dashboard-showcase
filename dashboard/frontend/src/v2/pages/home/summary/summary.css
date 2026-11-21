@@ -1,0 +1,117 @@
+/* The evening Summary on Home (lane ES1c). Values copied from the mockup's lab-summary.css (frozen 2026-11-19), every rule
+   scoped under .v2 .sm. The mockup's ink is the app's --bright and its ink2 the app's --ink. */
+.v2 .sm { --good: #2fe08a; --bad: #ff5a63; --warn: #ffb020; --c: 141 152 168; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 20px; align-items: center; padding: 28px 30px 32px; }
+.v2 .sm > .sm-head { grid-column: 1; margin-bottom: 0; } .v2 .sm > .sm-fold { grid-column: 2; grid-row: 1; }
+.v2 .sm > .sm-say, .v2 .sm > .sm-band, .v2 .sm > .sm-strip { grid-column: 1 / -1; }
+.v2 .sm .sec-head { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; min-height: 38px; }
+.v2 .sm .sec-head .h { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; }
+.v2 .sm .sec-head h2 { margin: 0; font: 500 21px/1.2 var(--sans); letter-spacing: -.028em; color: var(--bright); }
+.v2 .sm .sm-date { font: 500 21px/1.2 var(--sans); letter-spacing: -.028em; color: var(--soft); }
+.v2 .sm .sm-say { max-width: 44ch; margin: 18px 0 30px; font: 500 clamp(24px, 2.3vw, 34px) / 1.18 var(--sans); letter-spacing: -.028em; color: var(--bright); text-wrap: balance; }
+.v2 .sm .sm-say em { font-style: normal; font-weight: inherit; }
+.v2 .sm .sm-say em.good { color: var(--good); } .v2 .sm .sm-say em.bad { color: var(--bad); } .v2 .sm .sm-say em.warn { color: var(--warn); }
+.v2 .sm .sm-note { grid-column: 1 / -1; color: var(--ink); }
+
+/* One band: four columns, two of them hold two cards. Every column is as tall as the tallest. */
+.v2 .sm .sm-band { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.v2 .sm .sm-col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.v2 .sm .sm-col > .sm-card { flex: 1 1 auto; min-width: 0; }
+.v2 .sm .sm-col > .sm-card.sm-small { flex: 0 0 auto; }
+/* Round-ups: kept small. */
+.v2 .sm .sm-rrow { display: flex; align-items: flex-end; gap: 16px; margin-top: 14px; }
+.v2 .sm .sm-rrow .x-figrow { margin-top: 0; flex: 0 1 auto; min-width: 0; flex-wrap: wrap; gap: 2px 10px; }
+.v2 .sm .sm-small .x-figrow .fig { font-size: 30px; }
+.v2 .sm .sm-rrow .sm-pic { flex: 1 1 84px; min-width: 84px; margin-top: 0; }
+.v2 .sm .sm-small .t-name { white-space: nowrap; }
+.v2 .sm .mk-tile { display: flex; flex-direction: column; align-items: stretch; padding: 18px 18px 16px; border: 0; border-radius: 16px; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  background: linear-gradient(180deg, rgb(var(--c) / .13), rgb(var(--c) / .03)); box-shadow: inset 0 0 0 1px rgb(var(--c) / .22); transition: transform .2s var(--ease); animation: sm-rise .7s var(--expo) calc(var(--i, 0) * 55ms) backwards; }
+.v2 .sm .mk-tile[data-hue="good"] { --c: 47 224 138; } .v2 .sm .mk-tile[data-hue="bad"] { --c: 255 90 99; } .v2 .sm .mk-tile[data-hue="warn"] { --c: 255 176 32; } .v2 .sm .mk-tile[data-hue="data"] { --c: 77 155 255; }
+.v2 .sm .mk-tile:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) { .v2 .sm .mk-tile:hover { transform: translateY(-3px); } }
+@keyframes sm-rise { from { opacity: 0; transform: translateY(16px); } }
+.v2 .sm .t-name { font-size: 17px; font-weight: 500; line-height: 1.25; color: var(--ink); }
+.v2 .sm .x-toprow { display: flex; align-items: center; min-height: 28px; justify-content: space-between; gap: 10px; } .v2 .sm .x-toprow .t-name { flex: 1; min-width: 0; } .v2 .sm .x-toprow .nl-st { flex: none; max-width: none; }
+.v2 .sm .x-figrow { display: flex; align-items: baseline; gap: 10px; margin-top: 16px; }
+.v2 .sm .x-figrow .fig { margin: 0; font: 500 clamp(34px, 2.8vw, 40px) / 1 var(--mono); font-stretch: 78%; letter-spacing: -.045em; font-variant-numeric: tabular-nums; color: var(--bright); }
+.v2 .sm .x-unit { white-space: nowrap; font-size: 15.5px; color: var(--soft); }
+.v2 .sm .sm-card .t-chg { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 12px 10px; margin-top: auto; padding-top: 20px; }
+.v2 .sm .sm-card .t-chg.x-f2 { grid-template-columns: repeat(2, auto); }
+.v2 .sm .sm-card .t-chg span { display: flex; flex-direction: column; gap: 2px; }
+.v2 .sm .sm-card .t-chg i { font-style: normal; font-size: 13.5px; color: var(--soft); } .v2 .sm .sm-card .t-chg b { font-size: 15.5px; font-weight: 500; color: var(--bright); }
+.v2 .sm .sm-pic { display: block; position: relative; margin-top: 20px; }
+
+/* Out of your accounts and Out this month: one thick bar each. The whole bar is the limit; the fill is what went out. */
+.v2 .sm .o2-share { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: #ffffff0a; gap: 0; }
+.v2 .sm .o2-share.none { background: none; box-shadow: inset 0 0 0 1px var(--line3); }
+.v2 .sm .o2-share i { display: block; min-width: 3px; height: 100%; position: relative; --blend: 14px; }
+.v2 .sm .o2-share i + i::before { content: ""; position: absolute; top: 0; bottom: 0; right: 100%; width: var(--blend); background: inherit; -webkit-mask-image: linear-gradient(90deg, transparent, #000); mask-image: linear-gradient(90deg, transparent, #000); pointer-events: none; }
+.v2 .sm .sm-share { height: 16px; border-radius: 8px; transform-origin: left; animation: sm-grow 1.1s var(--expo) .45s backwards; }
+@keyframes sm-grow { from { transform: scaleX(0); } }
+.v2 .sm .sm-since { display: block; margin-top: 6px; font-size: 13.5px; color: var(--soft); }
+.v2 .sm .sm-pace { display: block; position: relative; padding-top: 32px; }
+.v2 .sm .sm-pin { position: absolute; left: 0; top: 0; bottom: -5px; width: 0; animation: sm-drop .7s var(--expo) 1.15s backwards; }
+.v2 .sm .sm-pin::after { content: ""; position: absolute; left: -2px; top: 25px; bottom: 0; width: 4px; border-radius: 2px; background: var(--bright); box-shadow: 0 0 0 2px rgb(8 11 16 / .92); }
+.v2 .sm .sm-pin b { position: absolute; top: 0; left: 0; transform: translateX(-50%); white-space: nowrap; font-size: 14px; font-weight: 500; color: var(--ink); }
+.v2 .sm .sm-pin b .num { font-size: 14px; color: var(--bright); }
+.v2 .sm .sm-pin.l b { transform: none; left: -2px; } .v2 .sm .sm-pin.r b { transform: translateX(-100%); left: 2px; }
+@keyframes sm-drop { from { opacity: 0; transform: translateY(-10px); } }
+.v2 .sm .sm-ring { margin-top: 14px; }
+
+/* Tomorrow's plan: the day as one strip, then what must be read. */
+.v2 .sm .sm-day { display: block; position: relative; height: 20px; margin-top: 18px; border-radius: 10px; background: #ffffff0d; overflow: hidden; }
+.v2 .sm .sm-day i { position: absolute; top: 0; bottom: 0; min-width: 8px; border-radius: 6px; background: rgb(var(--k)); transform-origin: left; animation: sm-grow .9s var(--expo) .6s backwards; }
+.v2 .sm .sm-hours { display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px; color: var(--soft); } .v2 .sm .sm-hours i { font-style: normal; }
+.v2 .sm .sm-list { display: grid; gap: 10px; margin-top: 18px; }
+.v2 .sm .sm-li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px; align-items: baseline; font-size: 15px; line-height: 1.35; color: var(--bright); }
+.v2 .sm .sm-li b { font-weight: 500; font-size: 14px; color: var(--soft); } .v2 .sm .sm-li b.num { color: var(--ink); font-family: var(--mono); font-variant-numeric: tabular-nums; } .v2 .sm .sm-li b.warn { color: var(--warn); }
+.v2 .sm .sm-li.more > span { color: var(--soft); }
+
+/* A part with no data says so in a sentence, in place of its picture. */
+.v2 .sm .sm-why { display: block; margin-top: 14px; max-width: 34ch; font-size: 15px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+.v2 .sm .sm-empty .x-figrow .fig { color: var(--soft); }
+
+/* Folded (by day, before 22:00): the head, the sentence and four results. */
+.v2 .sm .sm-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.v2 .sm .sm-cell { min-width: 0; }
+.v2 .sm .sm-cell .x-figrow { margin-top: 14px; margin-bottom: 18px; }
+.v2 .sm .sm-cell .nl-st { margin-top: auto; align-self: flex-start; max-width: 100%; height: auto; min-height: 26px; padding-top: 3px; padding-bottom: 3px; white-space: normal; }
+
+@media (min-width: 1101px) and (max-width: 1560px) { .v2 .sm .sm-col > .sm-card:first-child > .x-toprow { min-height: 46px; align-items: flex-start; } }
+@media (min-width: 721px) { .v2 .sm .sm-card[data-k="today"] > .sm-pic, .v2 .sm .sm-card[data-k="month"] > .sm-pic { margin-top: auto; } .v2 .sm .sm-card[data-k="today"] > .x-figrow, .v2 .sm .sm-card[data-k="month"] > .x-figrow { margin-bottom: 20px; } }
+@media (max-width: 1100px) { .v2 .sm .sm-band { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 920px) { .v2 .sm .sm-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) {
+  .v2 .sm .mk-tile { padding: 14px 14px 12px; }
+  .v2 .sm { grid-template-columns: minmax(0, 1fr); padding: 20px 16px 22px; }
+  .v2 .sm > .sm-fold { grid-column: 1; grid-row: auto; order: 9; margin-top: 12px; justify-content: center; }
+  .v2 .sm .sm-say { margin: 16px 0 20px; }
+  .v2 .sm .sm-card .x-figrow .fig, .v2 .sm .sm-cell .x-figrow .fig { font-size: 30px; }
+  /* One column of wide cards: the number on the left, its picture on the right. The small facts move into the window a tap opens. */
+  .v2 .sm .sm-band { grid-template-columns: minmax(0, 1fr); gap: 10px; } .v2 .sm .sm-col { display: contents; }
+  .v2 .sm .sm-card[data-k="today"] { order: 1; } .v2 .sm .sm-card[data-k="month"] { order: 2; } .v2 .sm .sm-card[data-k="burn"] { order: 3; } .v2 .sm .sm-card[data-k="steps"] { order: 4; } .v2 .sm .sm-card[data-k="plan"] { order: 5; } .v2 .sm .sm-card[data-k="round"] { order: 6; }
+  .v2 .sm .sm-card .x-toprow { flex-wrap: nowrap; align-items: center; } .v2 .sm .sm-card .x-toprow .t-name { flex: 1 1 auto; }
+  .v2 .sm .sm-num { display: grid; grid-template-columns: minmax(0, 1fr) 42%; grid-template-areas: "top top" "fig pic"; column-gap: 16px; align-items: center; }
+  .v2 .sm .sm-num > .x-toprow { grid-area: top; } .v2 .sm .sm-num > .x-figrow { grid-area: fig; margin-top: 12px; margin-bottom: 0; } .v2 .sm .sm-num > .sm-pic { grid-area: pic; margin-top: 12px; } .v2 .sm .sm-num > .t-chg, .v2 .sm .sm-num > .sm-since { display: none; }
+  .v2 .sm .sm-num.sm-empty { display: flex; align-items: stretch; } .v2 .sm .sm-empty .x-figrow { display: none; } .v2 .sm .sm-why { max-width: none; margin-top: 10px; }
+  .v2 .sm .sm-pace { padding-top: 28px; } .v2 .sm .sm-pin::after { top: 22px; } .v2 .sm .sm-pin b, .v2 .sm .sm-pin b .num { font-size: 13.5px; }
+  .v2 .sm .sm-ring { margin-top: 10px; } .v2 .sm .sm-list { gap: 8px; margin-top: 14px; } .v2 .sm .sm-day { margin-top: 14px; }
+  .v2 .sm .sm-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .v2 .sm .x-figrow { flex-wrap: wrap; gap: 6px 10px; }
+  .v2 .sm .sm-card .x-toprow { flex-wrap: nowrap; } .v2 .sm .sm-card .x-toprow .t-name { flex: 1 1 auto; }
+}
+.v2.still .sm *, .v2.still .sm *::before { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .v2 .sm *, .v2 .sm *::before { animation: none !important; } }
+
+/* The window a press opens (the kit's Window). */
+.v2 .sm-win .sm-lead { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin: 0; color: var(--ink); font-size: 14.5px; }
+.v2 .sm-win .sm-h3 { margin: 22px 0 8px; font: 500 15px/1.3 var(--sans); color: var(--bright); }
+.v2 .sm-win .sm-note { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--soft); }
+.v2 .sm-win .sm-acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.v2 .sm-win .sm-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.v2 .sm-win .sm-tbl th { text-align: left; font-weight: 500; color: var(--soft); padding: 6px 0; } .v2 .sm-win .sm-tbl th.num, .v2 .sm-win .sm-tbl td.num { text-align: right; }
+.v2 .sm-win .sm-tbl td { padding: 8px 0; box-shadow: inset 0 1px 0 var(--line2); color: var(--ink); }
+.v2 .sm-win .sm-tbl td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.v2 .sm-win .sm-tbl .good { color: var(--g); } .v2 .sm-win .sm-tbl .warn { color: var(--a); }
+.v2 .sm-win .sm-list { display: grid; gap: 10px; }
+.v2 .sm-win .sm-li { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px; align-items: baseline; font-size: 15px; color: var(--bright); }
+.v2 .sm-win .sm-li b { font-weight: 500; font-size: 14px; color: var(--soft); } .v2 .sm-win .sm-li b.warn { color: var(--a); }

@@ -1,0 +1,37 @@
+/* TODAY and the to-do list. Values come from docs/design/rail_mockup_2026-10-10.html, round 10 (.tdy, .agn, .td, .tdadd). */
+.v2 .tdy { display: grid; gap: 18px; align-content: start; overflow-y: auto; padding: 0; }
+.v2 .agn { display: grid; gap: 2px; }
+.v2 .agn .ar { display: grid; grid-template-columns: 118px 4px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 9px 4px; border-bottom: 1px solid var(--line2); }
+.v2 .agn .ar i { width: 4px; height: 30px; border-radius: 2px; background: var(--e); }
+.v2 .agn .ar .t { color: var(--soft); font-size: 13px; }
+.v2 .agn .ar .n { color: var(--bright); }
+.v2 .agn .ar .k { font-size: 12px; color: var(--soft); }
+.v2 .agn .ar.past .n, .v2 .agn .ar.past .k { color: var(--soft); }
+.v2 .agn .ar.past i { opacity: .45; }
+.v2 .agn .now { display: grid; grid-template-columns: 118px minmax(0, 1fr); gap: 12px; align-items: center; padding: 2px 4px; }
+.v2 .agn .now b { height: 1px; background: var(--r); }
+.v2 .agn .now span { color: var(--r); font-size: 11px; letter-spacing: .12em; }
+/* The bar is 6 units tall inside a 36 unit frame, so at the card's width the frame left a hand of empty space above and under it:
+   the frame is cropped to the bar with 4 units to spare (260 x 10), and the head's gap is the card's own. */
+.v2 .cal-todo .nl-blk-h { margin-bottom: 16px; }
+.v2 .tdbarw { margin: 0; }
+.v2 .tdbarw .kz { margin: 0; aspect-ratio: 260 / 10; overflow: hidden; }
+.v2 .tdbarw .kz svg { margin-top: -5%; }
+.v2 .tdlate { color: var(--a); font-weight: 500; }
+.v2 .tdadd { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.v2 .tdadd input { flex: 1; min-width: 0; background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 10px; color: var(--bright); font: inherit; padding: 9px 12px; }
+.v2 .tderr { color: var(--r); font-size: 13px; margin: 0 0 8px; }
+.v2 .td { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 9px 2px; border-bottom: 1px solid var(--line2); }
+.v2 .td .ck { width: 22px; height: 22px; border-radius: 7px; border: 1.5px solid rgba(255,255,255,.3); background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; }
+.v2 .td .ck { flex: none; }
+.v2 .td .tx, .v2 .td .tdedit { flex: 1 1 14ch; min-width: 0; }
+.v2 .td .tdend { flex: none; margin-left: auto; }
+.v2 .td .ck svg { width: 14px; height: 14px; stroke: #060809; stroke-width: 2.6; fill: none; }
+.v2 .td.done .ck { background: var(--g); border-color: var(--g); }
+.v2 .td .tx { color: var(--bright); cursor: text; }
+.v2 .td.done .tx { color: var(--soft); text-decoration: line-through; text-decoration-color: rgba(255,255,255,.25); }
+.v2 .td .tdedit { background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 8px; color: var(--bright); font: inherit; padding: 5px 8px; min-width: 0; }
+.v2 .td .tdend { display: flex; align-items: center; gap: 10px; }
+.v2 .td .x { background: none; border: none; color: var(--soft); font-size: 18px; cursor: pointer; padding: 0 4px; }
+.v2 .td .tdend .pop { left: auto; right: 0; top: auto; bottom: calc(100% + 6px); }
+.v2.phone .cd:has(.td) { overflow: visible; }

@@ -1,0 +1,44 @@
+[Unit]
+Description=Research lab worker (user-level)
+
+# StartLimit* live in [Unit], NOT [Service] — systemd stopped reading them
+# there at v229 and would silently ignore them (the laptop runs systemd 259).
+#
+# Six hours, not the obvious ten minutes, and the window is set by arithmetic.
+# After the failure contract lands there are two populations of exit:
+#
+#   - Permanent exits (rule 2, rule 3) fire on the first request of each start,
+#     so with RestartSec=5 they arrive about five seconds apart. Any window
+#     longer than roughly half a minute catches them.
+#   - Tolerance-ceiling exits are spaced at least one hour apart BY
+#     CONSTRUCTION, because the ceiling is an hour of continuous failure. Five
+#     such starts span about four hours and the sixth — the refusal point —
+#     lands at about five. A 600-second window can never accumulate five, so
+#     the counter would reset between every pair and the unit would restart
+#     once an hour forever without ever reaching `failed`: exactly the
+#     invisible-permanent-fault outcome the ceiling exists to prevent.
+#
+# This is only safe BECAUSE the failure contract stops ordinary network faults
+# from causing exits at all. Setting any start limit before that change would
+# have stopped the worker permanently during a normal outage.
+#
+# Note the limit counts unit STARTS, not crashes, so a manual
+# `systemctl --user restart` consumes the burst too. Five worker-code edits
+# inside a six-hour session make the sixth restart fail with "start request
+# repeated too quickly". Recovery in every case:
+#     systemctl --user reset-failed research-worker.service
+StartLimitIntervalSec=21600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=%h/trading/research_lab/worker
+ExecStart=%h/trading/research_lab/worker/.venv/bin/python %h/trading/research_lab/worker/worker.py
+EnvironmentFile=%h/.research-worker.env
+Restart=always
+RestartSec=5
+StandardOutput=append:%h/trading/research_lab/worker/worker.log
+StandardError=append:%h/trading/research_lab/worker/worker.log
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,23 @@
+{
+  "id": "event_strategy",
+  "name": "Event-driven (triple-barrier)",
+  "kind": "event",
+  "order": 6,
+  "summary": "Consume an event type for a universe and label trades with the shared triple-barrier pipeline.",
+  "params": [
+    {"name": "event_type", "label": "Event type", "type": "enum", "default": "analyst_rating", "target": "code",
+     "options": [
+       {"value": "analyst_rating", "label": "Analyst rating"},
+       {"value": "sec_13d", "label": "SEC 13D filing"}
+     ]},
+    {"name": "trade_side", "label": "Trade side", "type": "enum", "default": 1, "target": "code",
+     "options": [
+       {"value": 1, "label": "Long (+1)"},
+       {"value": -1, "label": "Short (-1)"}
+     ]},
+    {"name": "profit_take_mult", "label": "Profit-take width (volatility units)", "type": "number", "default": 2.0,
+     "target": "setting", "scope": "event_strategy", "key": "profit_take_mult", "bounds": {"type": "number", "min": 0.5, "max": 4.0}},
+    {"name": "stop_loss_mult", "label": "Stop-loss width (volatility units)", "type": "number", "default": 2.0,
+     "target": "setting", "scope": "event_strategy", "key": "stop_loss_mult", "bounds": {"type": "number", "min": 0.5, "max": 4.0}}
+  ]
+}

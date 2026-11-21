@@ -1,0 +1,299 @@
+@import "@fontsource/space-grotesk/300.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+/* ── Theme CSS variables ─────────────────────────────────────────────────────── */
+
+:root {
+  /* Dark (default) — RGB channel values so Tailwind opacity modifiers work.
+     Cool tinted near-black (not pure black) for depth — redesign brief §2. */
+  --c-bg:      11 13 18;    /* #0B0D12 tinted near-black, kills the flat look */
+  --c-surface: 17 21 28;    /* #11151C cool panel */
+  --c-surface2:23 28 38;    /* #171C26 raised / hover */
+  --c-border:  32 38 48;    /* #202630 softer cool line */
+  --c-hair:    rgba(255, 255, 255, 0.06); /* top-highlight + divider */
+  --c-muted:   154 163 178; /* #9AA3B2 secondary text, lifted contrast */
+  --c-subtle:  92 102 115;  /* #5C6473 tertiary text */
+  --c-fg:      231 234 240; /* #E7EAF0 body, softened off pure white */
+  --c-hi:      255 255 255; /* pure white — reserve for emphasis only */
+  --c-ghost:   255 255 255; /* legacy emphasis token (same value as --c-hi) */
+  /* Elevation — lit-from-above inset highlight + soft drop (brief §3). */
+  --shadow-panel:  inset 0 1px 0 var(--c-hair), 0 24px 60px -34px rgba(0,0,0,.8);
+  --shadow-raised: inset 0 1px 0 rgba(255,255,255,.10), 0 30px 70px -30px rgba(0,0,0,.9);
+}
+
+html.light {
+  color-scheme: light;
+  /* Same cool hue family as dark, lightness flipped; contrast checked both ways. */
+  --c-bg:      249 250 252; /* #F9FAFC cool white */
+  --c-surface: 241 244 248; /* #F1F4F8 cool panel */
+  --c-surface2:232 236 242; /* #E8ECF2 raised / hover */
+  --c-border:  213 219 227; /* #D5DBE3 cool line */
+  --c-hair:    rgba(0, 0, 0, 0.06);
+  --c-muted:   71 82 97;    /* #475261 secondary text */
+  --c-subtle:  116 126 140; /* #747E8C tertiary text */
+  --c-fg:      17 22 30;    /* #11161E body */
+  --c-hi:      8 11 16;     /* near-black — emphasis only */
+  --c-ghost:   0 0 0;       /* legacy emphasis token */
+  /* Lighter, cooler elevation for light mode (no heavy black drop). */
+  --shadow-panel:  inset 0 1px 0 rgba(255,255,255,.7), 0 18px 40px -30px rgba(15,23,42,.22);
+  --shadow-raised: inset 0 1px 0 rgba(255,255,255,.9), 0 24px 50px -28px rgba(15,23,42,.30);
+}
+
+/* ── TERM A4 design-kit tokens (D1, DECISIONS #134) ───────────────────────────
+   The A4 terminal palette as a SEPARATE additive namespace alongside the v2 --c-*
+   tokens above, which stay byte-untouched. Channel triples (not raw hex) so the kit
+   keeps Tailwind opacity modifiers via rgb(var(--term-*) / <alpha-value>). Byte-exact
+   equivalents of A4_terminal_max.html:8-13 — every triple is that file's hex, + two
+   data-kind tokens (event/fundamentals) added by D2.1c per contract amendment A4, not in
+   the A4 source file (the mockup shows no event/fundamentals rows). Dark
+   only: the contract gives no light palette (brief §2.3); migrated pages consume these
+   page-by-page under D2 gates, legacy --c-* deleted at rollout end. */
+:root {
+  --term-bg:      6 8 9;        /* #060809 base */
+  --term-bg2:     7 10 15;      /* #070a0f editor chrome bar (mockup .ftabs), a notch below --bg */
+  --term-panel:   10 13 18;     /* #0a0d12 panel surface */
+  --term-panel2:  13 17 24;     /* #0d1118 raised / thead */
+  --term-line:    26 33 48;     /* #1a2130 hairline */
+  --term-line2:   39 49 74;     /* #27314a stronger line */
+  --term-txt:     214 224 238;  /* #d6e0ee body text */
+  --term-txt2:    154 167 189;  /* #9aa7bd v2 readable secondary (term-kit.css v2 --txt2) — content tone */
+  --term-dim:     92 106 128;   /* #5c6a80 dim — CHROME only (inactive controls, timestamps), never open content */
+  --term-faint:   57 69 92;     /* #39455c tertiary — chrome/index ids only */
+  --term-red:     255 77 87;    /* #ff4d57 structure: active / focus / primary */
+  --term-redtint: 20 10 12;     /* #140a0c dark red-tint fill behind an active row (mockup .srow.on) */
+  --term-redsoft: 255 122 130;  /* #ff7a82 header labels / hover */
+  --term-grn:     41 224 124;   /* #29e07c data delta up / fresh */
+  --term-cyn:     54 214 234;   /* #36d6ea interactive */
+  --term-vio:     157 123 255;  /* #9d7bff universe class */
+  --term-eq:      61 219 180;   /* #3ddbb4 equity class */
+  --term-amb:     255 176 0;    /* #ffb000 crypto class / staleness warn */
+  --term-evt:     77 141 245;   /* #4d8df5 event_series data kind (D2.1c / amendment A4) */
+  --term-fnd:     239 91 166;   /* #ef5ba6 fundamentals data kind (D2.1c / amendment A4) */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    color-scheme: dark;
+  }
+
+  html.light, html.light body, html.light #root {
+    color-scheme: light;
+  }
+
+  /* Force dark chrome on all native form controls */
+  input, select, textarea {
+    color-scheme: dark;
+  }
+
+  html.light input,
+  html.light select,
+  html.light textarea {
+    color-scheme: light;
+  }
+
+  /* Remove the default blue on native select options — tie to the palette */
+  option:checked,
+  option:hover {
+    background: #171C26; /* surface2 */
+    color: #E7EAF0;      /* fg */
+  }
+
+  html.light option:checked,
+  html.light option:hover {
+    background: #E8ECF2; /* surface2 light */
+    color: #11161E;      /* fg light */
+  }
+
+  body {
+    @apply bg-bg text-fg font-display antialiased;
+    font-feature-settings: "ss01", "cv11";
+    /* The "lit room": a warm crimson wash across the top, a cyan glow bottom-left,
+       and a faint grid. The top glow is the signature — it makes the dark feel lit. */
+    background-image:
+      radial-gradient(ellipse 90% 55% at 72% -12%, rgba(255,77,87,0.14) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% -8%, rgba(255,77,87,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 70% at 6% 110%, rgba(79,224,210,0.05) 0%, transparent 60%),
+      linear-gradient(to right, rgba(255,255,255,0.014) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.014) 1px, transparent 1px);
+    background-size: auto, auto, auto, 80px 80px, 80px 80px;
+    background-attachment: fixed;
+  }
+
+  html.light body {
+    background-image:
+      radial-gradient(ellipse 90% 55% at 72% -12%, rgba(255,77,87,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 70% at 6% 110%, rgba(79,224,210,0.06) 0%, transparent 60%);
+    background-size: auto, auto;
+  }
+
+  ::selection {
+    background: rgba(255, 77, 87, 0.35);
+    color: #ffffff;
+  }
+
+  html.light ::selection {
+    background: rgba(255, 77, 87, 0.2);
+    color: #000000;
+  }
+
+  /* Scrollbars — dark */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-surface2));
+    border: 2px solid rgb(var(--c-bg));
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--c-border)); }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[11px] tracking-[0.14em] uppercase text-muted font-medium;
+  }
+  .eyebrow-xs {
+    @apply text-[10px] tracking-[0.16em] uppercase text-subtle font-medium;
+  }
+  .hairline {
+    @apply border-t border-border;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+    @apply font-mono;
+  }
+  .panel {
+    @apply bg-surface border border-border rounded-panel; /* W2/D-M5: v2 panel radius */
+    box-shadow: var(--shadow-panel); /* lit-from-above inset + soft drop */
+  }
+  .panel-raised {
+    @apply bg-surface2;
+    box-shadow: var(--shadow-raised);
+  }
+  .hero-num {
+    @apply font-display font-light tabular-nums tracking-tight;
+    font-feature-settings: "tnum", "lnum", "ss01";
+  }
+  .dot-live::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: #FF4D57;
+    opacity: 0.45;
+    animation: pulse-ring 2s cubic-bezier(0.25,0.8,0.25,1) infinite;
+  }
+}
+
+@layer utilities {
+  /* Mask that lets a row shift right on hover — used in tactile tables. */
+  .row-shift {
+    transition: padding-left 300ms cubic-bezier(0.16,1,0.3,1),
+                background-color 300ms cubic-bezier(0.16,1,0.3,1);
+  }
+  .row-shift:hover {
+    padding-left: calc(var(--row-pl, 0.75rem) + 2px);
+  }
+  .divide-hair > * + * {
+    border-top: 1px solid rgb(var(--c-border));
+  }
+}
+
+/* ============================================================================
+   TERM page-local SVG animations — self-hosted (no external deps / no CDN),
+   namespaced `term-*` so they never collide with the legacy/kit animations.
+   Ported from the ratified A4 mockups (term_calendar.html / term_life.html) for
+   the Calendar weather glyphs and the Life sport icons + focal gauges. The app's
+   MotionConfig already honours OS "reduce motion" for framer-motion; these CSS
+   keyframes get the same guard at the bottom so motion is fully dialable.
+   ============================================================================ */
+
+/* ── animated weather glyphs (Calendar day headers) ──────────────────────── */
+@keyframes term-wspin  { to { transform: rotate(360deg); } }
+@keyframes term-wdrift { 0% { transform: translateX(-1px); } 100% { transform: translateX(1.6px); } }
+@keyframes term-wfall  { 0% { transform: translateY(-1px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(6px); opacity: 0; } }
+.term-wx *        { transform-box: view-box; }
+.term-wx .ln      { stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; fill: none; }
+.term-wx .fil     { fill: currentColor; stroke: none; }
+.term-wx .cloud circle,
+.term-wx .cloud rect { fill: rgb(var(--term-txt2)); stroke: none; }
+.term-wx .sunrays    { transform-origin: 12px 12px; animation: term-wspin 9s linear infinite; }
+.term-wx .sunrays-sm { transform-origin: 9px 8px;  animation: term-wspin 9s linear infinite; }
+.term-wx .cloud      { animation: term-wdrift 3.6s ease-in-out infinite alternate; }
+.term-wx .drop       { stroke: rgb(var(--term-evt)); stroke-width: 1.7; stroke-linecap: round; animation: term-wfall 1s linear infinite; }
+.term-wx .drop.d2    { animation-delay: .33s; }
+.term-wx .drop.d3    { animation-delay: .66s; }
+.term-wx .flake      { fill: rgb(var(--term-cyn)); animation: term-wfall 1.4s linear infinite; }
+.term-wx .flake.d2   { animation-delay: .46s; }
+.term-wx .flake.d3   { animation-delay: .9s; }
+
+/* ── animated sport icons (Life movement feed) ───────────────────────────── */
+@keyframes term-legF   { 0%,100% { transform: rotate(26deg); }  50% { transform: rotate(-22deg); } }
+@keyframes term-legB   { 0%,100% { transform: rotate(-22deg); } 50% { transform: rotate(26deg); } }
+@keyframes term-figbob { 0%,50%,100% { transform: translateY(0); } 25%,75% { transform: translateY(-1.4px); } }
+@keyframes term-spin   { to { transform: rotate(360deg); } }
+@keyframes term-pedal  { to { transform: rotate(-360deg); } }
+@keyframes term-curl   { 0%,100% { transform: rotate(10deg); } 50% { transform: rotate(-72deg); } }
+@keyframes term-bobb   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2.4px); } }
+@keyframes term-kickF  { 0%,100% { transform: rotate(13deg); } 50% { transform: rotate(-13deg); } }
+@keyframes term-wavex  { 0% { transform: translateX(0); } 100% { transform: translateX(-9px); } }
+.term-sicon *      { transform-box: view-box; }
+.term-sicon .ln    { fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.term-sicon .fil   { fill: currentColor; stroke: none; }
+/* run */
+.term-sicon .fig   { animation: term-figbob .52s infinite ease-in-out; }
+.term-sicon .legF  { transform-origin: 22px 27px; animation: term-legF .52s infinite ease-in-out; }
+.term-sicon .legB  { transform-origin: 22px 27px; animation: term-legB .52s infinite ease-in-out; }
+.term-sicon .armF  { transform-origin: 27px 16px; animation: term-legB .52s infinite ease-in-out; }
+.term-sicon .armB  { transform-origin: 27px 16px; animation: term-legF .52s infinite ease-in-out; }
+/* bike */
+.term-sicon .w1    { transform-origin: 13px 32px; animation: term-spin .8s infinite linear; }
+.term-sicon .w2    { transform-origin: 38px 32px; animation: term-spin .8s infinite linear; }
+.term-sicon .pedal { transform-origin: 25px 33px; animation: term-pedal .8s infinite linear; }
+/* swim */
+.term-sicon .body  { animation: term-bobb 1.5s infinite ease-in-out; }
+.term-sicon .stroke{ transform-origin: 31px 19px; animation: term-spin 1.4s infinite linear; }
+.term-sicon .legk  { transform-origin: 33px 22px; animation: term-kickF .55s infinite ease-in-out; }
+.term-sicon .water { animation: term-wavex 1.1s infinite linear alternate; }
+/* gym */
+.term-sicon .fore  { transform-origin: 29px 30px; animation: term-curl 1.15s infinite ease-in-out; }
+
+/* ── news tape marquee (F7 bottom-bar news strip) ─────────────────────────── */
+/* A horizontally scrolling headline track. The track holds the headlines TWICE back-to-back and
+   translates -50%, so the loop is seamless. Pauses on hover so a reader can click a headline. */
+@keyframes term-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.term-newstape  { overflow: hidden; flex: 1 1 auto; min-width: 0; }
+.term-newstrack { display: inline-flex; gap: 48px; white-space: nowrap; animation: term-roll 120s linear infinite; }
+.term-newstape:hover .term-newstrack { animation-play-state: paused; }
+
+/* ── value tick-flash (F12): a brief, HUE-NEUTRAL background pulse when a live value changes
+   (SSE-driven). Grammar-safe on purpose — NOT a green/red data delta (those are reserved for ▲▼
+   context) and not interactive-cyan; just an attention brightening that says "this just updated",
+   then settles in ~600ms. Driven by the useValueFlash hook; honoured by reduce-motion below. */
+@keyframes term-flash { 0% { background-color: rgb(var(--term-txt) / 0.12); } 100% { background-color: transparent; } }
+.term-flash { animation: term-flash 0.6s ease-out 1; border-radius: 2px; }
+
+/* honour OS reduce-motion for every page-local SVG animation (kit body.calm equiv) + the tick-flash */
+@media (prefers-reduced-motion: reduce) {
+  .term-wx *, .term-sicon *, .term-newstrack, .term-flash { animation: none !important; }
+}

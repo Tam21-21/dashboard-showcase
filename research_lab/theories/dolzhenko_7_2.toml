@@ -1,0 +1,187 @@
+# Worked example 2: Dolzhenko's SubTheory, as printed (algorithmic trading systems, chapter 7, "SubTheory
+# Example", pdfp 260 to 262; the numbers are her Table 7-2, copied into ranges.toml).
+#
+# Her open signal is one AND group: Volume < Const1, Bbw < Const2, Lp < BbwL. Her close signal is one AND
+# group: Hp > BbwU. Her risk control is a stop-loss with one coefficient. Each candle operand is placed by
+# CandleIntervalId, CandleFrom and CandleInterval; here those are the operand's bar, offset and span, each a
+# parameter pick. Her CandleTo = CandleFrom + CandleInterval is what span adds to offset.
+# Picks are named <signal>.<operand>.<param>, like the rows of her table.
+#
+# Two oddities of the print, kept as printed and not corrected:
+#  1. Const2 is compared with Bbw, the Bollinger band width (a price spread), yet her Const range is 10 to
+#     2000 step 10, a range that suits a volume count. It is her print; a width would need another range.
+#  2. Her stop sentence reads inverted for a long position: "If the current price of a financial asset is
+#     above this level, the position is closed." Here the stop is a fraction of the entry price below it
+#     (the exit stop field), the usual reading for a long. The book does not settle it.
+
+[theory]
+name = "dolzhenko_7_2"
+display_name = "Dolzhenko SubTheory"
+bar = "1d"
+side = "long"
+# The book does not say when the order is placed; next_open is this repo's rule for daily bars.
+entry_time = "next_open"
+status = "research"
+
+[operand.volume]
+kind = "field"
+field = "volume"
+bar = "open.volume.bar"
+offset = "open.volume.offset"
+span = "open.volume.span"
+
+[operand.const1]
+kind = "constant"
+value = "open.const1.value"
+
+[operand.bbw]
+kind = "indicator"
+indicator = "bollinger"
+params = { n = "open.bbw.n", w = "open.bbw.w" }
+output = "width"
+bar = "open.bbw.bar"
+offset = "open.bbw.offset"
+span = "open.bbw.span"
+
+[operand.const2]
+kind = "constant"
+value = "open.const2.value"
+
+[operand.lp]
+kind = "field"
+field = "low"
+bar = "open.lp.bar"
+offset = "open.lp.offset"
+span = "open.lp.span"
+
+[operand.bbwl]
+kind = "indicator"
+indicator = "bollinger"
+params = { n = "open.bbwl.n", w = "open.bbwl.w" }
+output = "lower"
+bar = "open.bbwl.bar"
+offset = "open.bbwl.offset"
+span = "open.bbwl.span"
+
+[operand.hp]
+kind = "field"
+field = "high"
+bar = "close.hp.bar"
+offset = "close.hp.offset"
+span = "close.hp.span"
+
+[operand.bbwu]
+kind = "indicator"
+indicator = "bollinger"
+params = { n = "close.bbwu.n", w = "close.bbwu.w" }
+output = "upper"
+bar = "close.bbwu.bar"
+offset = "close.bbwu.offset"
+span = "close.bbwu.span"
+
+[[entry.group]]
+conditions = [
+  { left = "volume", op = "<", right = "const1" },
+  { left = "bbw", op = "<", right = "const2" },
+  { left = "lp", op = "<", right = "bbwl" },
+]
+
+[[exit.group]]
+conditions = [
+  { left = "hp", op = ">", right = "bbwu" },
+]
+
+# Her stop: one coefficient, a fraction of the entry price.
+[exit]
+stop = "stop.protected.coeff"
+
+[stocks]
+group = "any"
+
+# The book does not say which risk method or money method she uses; these are this repo's only ones (DECISIONS #323).
+[risk]
+method = "volatility_stop"
+
+[money]
+method = "fixed_fraction"
+
+[parameter_picks."open.volume.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."open.volume.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."open.volume.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."open.const1.value"]
+range = "dolzhenko_const"
+
+[parameter_picks."open.bbw.n"]
+range = "dolzhenko_bb_lookback"
+
+[parameter_picks."open.bbw.w"]
+range = "dolzhenko_bb_std"
+
+[parameter_picks."open.bbw.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."open.bbw.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."open.bbw.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."open.const2.value"]
+range = "dolzhenko_const"
+
+[parameter_picks."open.lp.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."open.lp.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."open.lp.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."open.bbwl.n"]
+range = "dolzhenko_bb_lookback"
+
+[parameter_picks."open.bbwl.w"]
+range = "dolzhenko_bb_std"
+
+[parameter_picks."open.bbwl.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."open.bbwl.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."open.bbwl.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."close.hp.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."close.hp.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."close.hp.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."close.bbwu.n"]
+range = "dolzhenko_bb_lookback"
+
+[parameter_picks."close.bbwu.w"]
+range = "dolzhenko_bb_std"
+
+[parameter_picks."close.bbwu.bar"]
+range = "dolzhenko_candle_interval"
+
+[parameter_picks."close.bbwu.offset"]
+range = "dolzhenko_candle_from"
+
+[parameter_picks."close.bbwu.span"]
+range = "dolzhenko_candle_interval_span"
+
+[parameter_picks."stop.protected.coeff"]
+range = "dolzhenko_stop_coeff"

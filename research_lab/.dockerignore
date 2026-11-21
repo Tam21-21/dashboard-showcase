@@ -1,0 +1,10 @@
+# Build context for research-runner:m3-latest is research_lab/ (Dockerfile bakes
+# strategies/). Only docker/ and strategies/ are needed in the image, so keep the
+# context small: drop data, caches, the worker venv, probes, and bytecode.
+data/
+numba-cache/
+worker/
+probes/
+**/__pycache__/
+**/*.pyc
+*:Zone.Identifier

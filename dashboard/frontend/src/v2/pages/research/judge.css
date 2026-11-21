@@ -1,0 +1,175 @@
+/* The Judge page, round six: the nine checks (dial or pass bars), the graded runs and the picked one's sheet, the
+   strategies waiting, and what keeps the checks from running. Motion is transform and opacity only, once, when a part
+   first shows (.in); none under .still or reduced motion. */
+.v2 .jd-stack-page { display: grid; gap: 20px; margin-top: 40px; }
+.v2 .jd-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+.v2 .jd-left { display: grid; gap: 20px; align-content: start; }
+
+/* The nine-check ring */
+.v2 .jd-ring path { transform-box: fill-box; transform-origin: center; }
+.v2 .jd-ring .o-cleared, .v2 .jd-dial-svg .o-cleared { fill: var(--g); }
+.v2 .jd-ring .o-failed, .v2 .jd-dial-svg .o-failed { fill: var(--r); }
+.v2 .jd-ring .o-other, .v2 .jd-dial-svg .o-other { fill: rgb(141 152 168 / .22); }
+.v2 .jd-ring .o-empty { fill: none; stroke: rgb(255 176 32 / .6); stroke-width: 1.2; }
+.v2 .jd-ring.big .o-cleared { filter: drop-shadow(0 0 6px rgb(47 224 138 / .6)); }
+.v2 .jd-ring.big .o-failed { filter: drop-shadow(0 0 6px rgb(255 90 99 / .6)); }
+.v2 .jd-ring.big path { animation: jd-pop .5s var(--ease) calc(.15s + var(--k) * 45ms) backwards; }
+
+/* The dial and its checks */
+.v2 .jd-dial { display: grid; grid-template-columns: minmax(280px, 440px) minmax(0, 1fr); gap: 56px; align-items: center; }
+.v2 .jd-dial-cv { position: relative; }
+.v2 .jd-dial-svg { display: block; width: 100%; height: auto; }
+.v2 .jd-dial-svg path { cursor: crosshair; transition: opacity .18s ease; }
+.v2 .jd-dial-svg path.o-cleared, .v2 .jd-dial-svg path.o-failed { opacity: .92; }
+.v2 .jd-dial-svg path.off { opacity: .28; }
+.v2 .jd-dial-svg .jd-n { font: 500 12px var(--mono); fill: var(--soft); }
+.v2 .jd-dial-svg .jd-n.hot { fill: var(--hi); }
+.v2 .jd-mid { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; pointer-events: none; font-size: 14.5px; color: var(--soft); }
+.v2 .jd-mid .num { font-size: 64px; font-weight: 500; line-height: 1; letter-spacing: -.045em; color: var(--hi); }
+.v2 .jd-dial:not(.in) .jd-dial-cv { opacity: 0; }
+.v2 .jd-dial.in .jd-dial-cv { animation: jd-rise .8s var(--expo) backwards; }
+.v2 .jd-checks { display: grid; gap: 4px; }
+.v2 .jd-ck { display: grid; grid-template-columns: 30px minmax(130px, 1fr) minmax(110px, 1.3fr) 168px; gap: 16px; align-items: center; width: 100%; padding: 9px 12px; border: 0; border-radius: 12px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: background-color .15s ease, opacity .18s ease; }
+.v2 .jd-ck .jd-n { font-size: 12.5px; color: var(--soft); }
+.v2 .jd-ck .jd-nm { font-size: 15px; color: var(--hi); }
+.v2 .jd-ck .nl-st { justify-self: end; }
+.v2 .jd-checks.hov .jd-ck:not(.hot) { opacity: .4; }
+.v2 .jd-ck.hot { background: rgba(255,255,255,.05); }
+.v2 .jd-stack { display: flex; gap: 3px; height: 14px; transform-origin: left; }
+.v2 .jd-stack i { height: 100%; border-radius: 4px; }
+.v2 .jd-stack i.good { background: var(--g); box-shadow: 0 0 12px rgb(47 224 138 / .4); }
+.v2 .jd-stack i.bad { background: var(--r); box-shadow: 0 0 12px rgb(255 90 99 / .4); }
+.v2 .jd-stack i.soft { background: rgb(141 152 168 / .25); }
+.v2 .jd-dial:not(.in) .jd-ck { opacity: 0; }
+.v2 .jd-dial.in .jd-ck { animation: jd-left .6s var(--expo) calc(var(--k) * 50ms) backwards; }
+.v2 .jd-dial.in .jd-stack { animation: jd-wide .9s var(--expo) calc(.2s + var(--k, 0) * 50ms) backwards; }
+@media (hover: hover) and (pointer: fine) { .v2 .jd-ck:hover { background: rgba(255,255,255,.05); } }
+
+/* The pass bars */
+.v2 .jd-bars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.v2 .jd-bar { padding: 18px 20px 20px; border-radius: 16px; background: var(--card2); box-shadow: inset 0 0 0 1px var(--line); }
+.v2 .jd-bar.k-setting { box-shadow: inset 0 0 0 1px rgb(255 176 32 / .32); }
+.v2 .jd-bar.k-runs { box-shadow: inset 0 0 0 1px rgb(47 224 138 / .3); }
+.v2 .jd-bar-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.v2 .jd-bar-i { font-size: 13px; color: var(--soft); }
+.v2 .jd-bar-n { margin: 14px 0 0; font-size: 18px; font-weight: 500; letter-spacing: -.028em; color: var(--hi); }
+.v2 .jd-bar-q { margin: 4px 0 0; font-size: 14px; color: var(--soft); }
+.v2 .jd-bar-t { margin: 16px 0 0; padding-left: 12px; font-size: 14.5px; color: var(--ink); box-shadow: inset 2px 0 0 rgba(255,255,255,.2); }
+.v2 .jd-bar-t[title] { cursor: help; }
+.v2 .jd-bar-s { margin: 6px 0 0; padding-left: 12px; font-size: 13px; color: var(--soft); }
+.v2 .jd-bars:not(.in) .jd-bar { opacity: 0; }
+.v2 .jd-bars.in .jd-bar { animation: jd-rise .8s var(--expo) calc(var(--k) * 45ms) backwards; }
+
+/* Graded runs */
+.v2 .jd-cands { display: grid; gap: 4px; align-content: start; }
+.v2 .jd-c { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 14px; align-items: center; width: 100%; padding: 10px 12px; border: 0; border-radius: 14px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: background-color .15s ease, transform .14s var(--ease); }
+.v2 .jd-c:active { transform: scale(.98); }
+.v2 .jd-c.sel { background: rgba(255,255,255,.07); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.v2 .jd-c-t { display: grid; min-width: 0; }
+.v2 .jd-c-n { font-size: 15px; color: var(--hi); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.v2 .jd-c-s { font-size: 13px; color: var(--soft); }
+.v2 .jd-c-x { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 13px; color: var(--ink); }
+@media (hover: hover) and (pointer: fine) { .v2 .jd-c:hover { background: rgba(255,255,255,.04); } }
+
+/* The picked run's sheet */
+.v2 .jd-sheet-in { animation: jd-rise .5s var(--expo) backwards; }
+.v2 .jd-sh-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 26px; align-items: center; }
+.v2 .jd-sh-ring { position: relative; width: 116px; height: 116px; }
+.v2 .jd-sh-ring .num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 30px; font-weight: 500; color: var(--hi); line-height: 1; }
+.v2 .jd-sh-ring small { margin-top: 4px; font: 400 12.5px var(--sans); color: var(--soft); }
+.v2 .jd-sh-n { margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -.028em; color: var(--hi); }
+.v2 .jd-sh-s { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 10px 0 0; font-size: 13.5px; color: var(--soft); }
+.v2 .jd-sh-say { margin: 12px 0 0; max-width: 62ch; font-size: 15px; color: var(--ink); }
+.v2 .jd-ap { align-self: start; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-size: 13px; }
+.v2 .jd-rows { margin-top: 26px; display: grid; }
+.v2 .jd-head-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-left: auto; }
+.v2 .jd-fig { display: flex; align-items: baseline; gap: 14px; }
+.v2 .jd-fig b { flex: none; font-size: 17px; font-weight: 500; color: var(--hi); letter-spacing: .02em; }
+.v2 .jd-fig b.good { color: var(--g); } .v2 .jd-fig b.bad { color: var(--r); }
+.v2 .jd-row { display: grid; grid-template-columns: 28px minmax(240px, 1fr) minmax(0, 1.5fr) 132px; gap: 24px; align-items: center; padding: 12px 0; box-shadow: inset 0 1px 0 var(--line2); }
+.v2 .jd-row .jd-n { font-size: 12.5px; color: var(--soft); }
+.v2 .jd-rn { display: grid; }
+.v2 .jd-rn b { font-weight: 500; font-size: 14.5px; color: var(--hi); }
+.v2 .jd-rn small { font-size: 13px; color: var(--soft); }
+.v2 .jd-lo { font-size: 13.5px; color: var(--soft); line-height: 1.35; }
+.v2 .jd-v { text-align: right; font-size: 14px; color: var(--hi); }
+.v2 .jd-v.dim { color: var(--soft); }
+.v2 .jd-b { text-align: right; font-size: 12.5px; color: var(--soft); white-space: nowrap; }
+.v2 .jd-w8 { justify-self: end; }
+.v2 .jd-track { position: relative; display: block; height: 12px; border-radius: 7px; background: rgba(255,255,255,.06); }
+.v2 .jd-track i { position: absolute; top: 0; bottom: 0; border-radius: 7px; transform-origin: left; animation: jd-wide .9s var(--expo) calc(.2s + var(--k, 0) * 40ms) backwards; }
+.v2 .jd-track.good i { background: var(--g); box-shadow: 0 0 14px rgb(47 224 138 / .45); }
+.v2 .jd-track.bad i { background: var(--r); box-shadow: 0 0 14px rgb(255 90 99 / .45); }
+.v2 .jd-track.dim i { background: rgb(141 152 168 / .55); }
+.v2 .jd-track .tick { position: absolute; top: -5px; bottom: -5px; width: 2px; margin-left: -1px; border-radius: 1px; background: #fff; }
+.v2 .jd-sheet-in .jd-row { animation: jd-rise .6s var(--expo) calc(var(--k) * 40ms) backwards; }
+
+/* The strategies waiting, and what keeps the checks from running */
+.v2 .jd-wait { display: grid; align-content: start; }
+.v2 .jd-wt { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 9px 0; }
+.v2 .jd-wt + .jd-wt { box-shadow: inset 0 1px 0 var(--line2); }
+.v2 .jd-wt-n { font-size: 14.5px; color: var(--hi); }
+.v2 .jd-wt-d { font-size: 13px; color: var(--soft); white-space: nowrap; }
+.v2 .jd-wait:not(.in) .jd-wt { opacity: 0; }
+.v2 .jd-wait.in .jd-wt { animation: jd-left .6s var(--expo) calc(var(--k) * 45ms) backwards; }
+.v2 .jd-go { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 20px; font-size: 13px; }
+.v2 .jd-why { display: grid; }
+.v2 .jd-w { display: grid; grid-template-columns: minmax(170px, .7fr) minmax(0, 2fr) minmax(140px, .8fr) 64px; gap: 18px; align-items: center; padding: 12px 0; }
+.v2 .jd-w + .jd-w { box-shadow: inset 0 1px 0 var(--line2); }
+.v2 .jd-w-c { display: flex; gap: 10px; align-items: baseline; font-size: 14.5px; color: var(--hi); }
+.v2 .jd-w-c .num { font-size: 12.5px; color: var(--soft); }
+.v2 .jd-w-t { font-size: 14px; color: var(--ink); }
+.v2 .jd-w-bar { height: 10px; border-radius: 6px; background: rgba(255,255,255,.05); }
+.v2 .jd-w-bar i { display: block; height: 100%; border-radius: 6px; transform-origin: left; }
+.v2 .jd-w-bar i.warn { background: var(--a); box-shadow: 0 0 12px rgb(255 176 32 / .45); }
+.v2 .jd-w-bar i.soft { background: rgb(141 152 168 / .55); }
+.v2 .jd-w-n { text-align: right; font-size: 13px; color: var(--soft); }
+.v2 .jd-why:not(.in) .jd-w { opacity: 0; }
+.v2 .jd-why.in .jd-w { animation: jd-fade .5s ease calc(var(--k) * 50ms) backwards; }
+.v2 .jd-why.in .jd-w-bar i { animation: jd-wide .9s var(--expo) calc(.2s + var(--k, 0) * 50ms) backwards; }
+
+@keyframes jd-pop { from { opacity: 0; scale: .6; } }
+@keyframes jd-rise { from { opacity: 0; translate: 0 12px; } }
+@keyframes jd-left { from { opacity: 0; translate: -8px 0; } }
+@keyframes jd-fade { from { opacity: 0; } }
+@keyframes jd-wide { from { scale: 0 1; } }
+.v2.still .jd-page *, .v2.still .jd-page { animation: none !important; }
+.v2.still .jd-dial:not(.in) .jd-dial-cv, .v2.still .jd-dial:not(.in) .jd-ck, .v2.still .jd-bars:not(.in) .jd-bar, .v2.still .jd-wait:not(.in) .jd-wt, .v2.still .jd-why:not(.in) .jd-w { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .v2 .jd-page *, .v2 .jd-page { animation: none !important; }
+  .v2 .jd-dial:not(.in) .jd-dial-cv, .v2 .jd-dial:not(.in) .jd-ck, .v2 .jd-bars:not(.in) .jd-bar, .v2 .jd-wait:not(.in) .jd-wt, .v2 .jd-why:not(.in) .jd-w { opacity: 1; }
+}
+
+@media (max-width: 1180px) {
+  .v2 .jd-dial { grid-template-columns: minmax(0, 1fr); gap: 28px; justify-items: center; }
+  .v2 .jd-dial-cv { width: min(100%, 440px); } .v2 .jd-checks { width: 100%; }
+  .v2 .jd-bars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* The phone frame (DECISIONS #484): one column; a check keeps its name, its state and its figure. */
+.v2.phone .jd-stack-page { margin-top: 24px; gap: 14px; }
+.v2.phone .jd-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.v2.phone .jd-left { gap: 14px; }
+.v2.phone .jd-ck { grid-template-columns: 24px minmax(0, 1fr) auto; gap: 6px 10px; }
+.v2.phone .jd-ck .jd-stack { grid-column: 2 / -1; grid-row: 2; }
+.v2.phone .jd-ck .nl-st { grid-column: 3; grid-row: 1; }
+.v2.phone .jd-bars { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .jd-sh-top { grid-template-columns: auto minmax(0, 1fr); gap: 16px; }
+.v2.phone .jd-ap { grid-column: 1 / -1; align-items: stretch; }
+.v2.phone .jd-sh-ring, .v2.phone .jd-sh-ring svg { width: 88px; height: 88px; }
+.v2.phone .jd-sh-ring .num { font-size: 22px; }
+.v2.phone .jd-sh-n { font-size: 22px; }
+.v2.phone .jd-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 10px; }
+.v2.phone .jd-row .jd-n, .v2.phone .jd-row .jd-b { display: none; }
+.v2.phone .jd-row .jd-rn { grid-column: 1; grid-row: 1; }
+.v2.phone .jd-row .jd-w8 { grid-column: 2; grid-row: 1; }
+.v2.phone .jd-row > div { grid-column: 1; grid-row: 2; }
+.v2.phone .jd-row > div { grid-column: 1 / -1; }
+.v2.phone .jd-head-acts { width: 100%; margin-left: 0; }
+.v2.phone .jd-w { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; }
+.v2.phone .jd-w-t { grid-column: 1 / -1; }
+.v2.phone .jd-w-bar { grid-column: 1; }
+.v2.phone .jd-w-n { grid-column: 2; }
+.v2.phone .jd-c-n { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.3; }
+/* The mockup keeps the buttons that send or approve off the phone (its rule list for the phone frame). */
+.v2.phone .jd-ap, .v2.phone .jd-go { display: none; }

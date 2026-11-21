@@ -1,0 +1,14 @@
+[Unit]
+Description=EODHD daily budget heartbeat (one report line to the root-disk log)
+# Deliberately NO ConditionPathIsMountPoint: this MUST run even when the SSD is detached, so an
+# unmounted day writes the "SSD not mounted — no spend" line instead of silence (the absence of a
+# line is itself the signal the chain broke, so the report makes the WHY explicit). The report
+# detects the mount state itself and writes to the ROOT disk either way, touching nothing on the SSD.
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/tamer/trading
+Environment=PYTHONUNBUFFERED=1
+# --if-absent: a no-op on days a backfill already wrote a per-run line via the backfill service's
+# ExecStartPost; on SSD-unmounted (skipped-backfill) days, nothing wrote a line yet, so this writes it.
+ExecStart=/home/tamer/trading/research_lab/worker/.venv/bin/python -m research_lab.fetcher report --if-absent

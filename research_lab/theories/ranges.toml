@@ -1,0 +1,155 @@
+# The ranges file of generator v2 (DECISIONS #440 item 7, #441): one table per range.
+# A range is from, to and step, or a list of values, and one non-empty line "why" saying where it comes from.
+# A theory takes its numbers from here by key, and may narrow a range, never widen it.
+# The hard limits of each indicator live in research_lab/indicators/limits.py, not here.
+
+# The capitulation rebound test theory (DECISIONS #440 item 2).
+[rebound_bb_window]
+from = 10
+to = 40
+step = 5
+why = "planted test values, DECISIONS #440"
+
+[rebound_bb_width]
+from = 1.5
+to = 3.0
+step = 0.5
+why = "planted test values, DECISIONS #440"
+
+[rebound_volume_ratio]
+from = 1.5
+to = 4.0
+step = 0.5
+why = "planted test values, DECISIONS #440"
+
+[rebound_rsi_window]
+from = 7
+to = 21
+step = 7
+why = "planted test values, DECISIONS #440"
+
+[rebound_rsi_line]
+from = 20
+to = 40
+step = 5
+why = "planted test values, DECISIONS #440"
+
+[rebound_max_hold]
+from = 5
+to = 20
+step = 5
+why = "planted test values, DECISIONS #440"
+
+# Dolzhenko, Table 7-2 (the SubTheory example), copied as printed.
+[dolzhenko_candle_interval]
+values = ["1min", "5min", "10min", "1h", "4h"]
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_candle_from]
+from = 0
+to = 2
+step = 1
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_candle_interval_span]
+from = 0
+to = 5
+step = 1
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_const]
+from = 10
+to = 2000
+step = 10
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_bb_lookback]
+from = 7
+to = 500
+step = 1
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_bb_std]
+from = 2
+to = 5
+step = 1
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262"
+
+[dolzhenko_stop_coeff]
+from = 0.001
+to = 0.1
+step = 0.001
+why = "Dolzhenko, Table 7-2, pdfp 261 to 262 (printed as 0.1% to 10% step 0.1%)"
+
+# The starter templates (lane GV3-T, DECISIONS #467; #441: one line of where each range comes from).
+[swing_stop]
+from = 0.01
+to = 0.10
+step = 0.005
+why = "inside Dolzhenko's stop range (Table 7-2, pdfp 261 to 262: 0.1% to 10%), from 1% for daily bars"
+
+[swing_target]
+from = 0.02
+to = 0.20
+step = 0.01
+why = "up to twice swing_stop's widest loss"
+
+[swing_max_hold]
+from = 5
+to = 30
+step = 1
+why = "one to six weeks of trading sessions"
+
+[swing_rsi_window]
+from = 7
+to = 21
+step = 1
+why = "Wilder's 14 in the middle, a week either side"
+
+[swing_stoch_window]
+from = 7
+to = 21
+step = 1
+why = "Lane's 14 in the middle, a week either side"
+
+[rebound_stoch_line]
+from = 5
+to = 30
+step = 5
+why = "around the 20 line chart tools draw as oversold"
+
+[pullback_rsi_line]
+from = 30
+to = 50
+step = 5
+why = "a dip in an uptrend: above the rebound's 20 to 40, up to RSI's midline"
+
+[pullback_stoch_line]
+from = 10
+to = 40
+step = 5
+why = "a dip in an uptrend: from below the 20 line to 40"
+
+[trend_fast_window]
+from = 5
+to = 45
+step = 5
+why = "a week to two months, always below trend_slow_window"
+
+[trend_slow_window]
+from = 50
+to = 200
+step = 10
+why = "from 50 to the 200 day long trend line"
+
+[breakout_entry_window]
+from = 10
+to = 60
+step = 5
+why = "the Turtle rules' 20 and 55 day breakouts sit inside"
+
+[breakout_exit_window]
+from = 5
+to = 30
+step = 5
+why = "the Turtle rules' 10 and 20 day exits sit inside"

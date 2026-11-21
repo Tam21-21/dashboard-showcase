@@ -1,0 +1,11 @@
+{
+  "id": "breakout",
+  "name": "Donchian breakout",
+  "kind": "price",
+  "order": 5,
+  "summary": "Long when price breaks above the prior-window high; exit when it breaks below the prior-window low.",
+  "params": [
+    {"name": "entry_lookback", "label": "Entry lookback (bars)", "type": "integer", "default": 20, "target": "code", "bounds": {"type": "integer", "min": 2}},
+    {"name": "exit_lookback", "label": "Exit lookback (bars)", "type": "integer", "default": 10, "target": "code", "bounds": {"type": "integer", "min": 2}}
+  ]
+}

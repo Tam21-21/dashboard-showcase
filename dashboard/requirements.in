@@ -1,0 +1,55 @@
+# A2: Top-level server-tier dependencies for the dashboard backend.
+#
+# This file lists only the packages we depend on DIRECTLY. The fully pinned
+# (hash-locked) `requirements.txt` is generated from this file by:
+#
+#     uv pip compile --generate-hashes requirements.in -o requirements.txt
+#
+# or equivalently with pip-tools (`pip-compile`). Commit BOTH files. On the
+# server, install with:
+#
+#     pip install --require-hashes -r requirements.txt
+#
+# Hashes mean the install is byte-deterministic: an upstream package being
+# tampered with does not silently change the deploy. Re-locking is a deliberate
+# step (edit requirements.in, run `uv pip compile`, commit the new lock).
+#
+# Why this matters now: M3 introduced two server-tier deps that were not
+# tracked here (python-multipart, hand-installed for K.0 artifact upload;
+# markdown-it-py, load-bearing for K.5/K.6 HTML rendering as a transitive of
+# rich). The next deploy would silently break if either disappeared. M2.5
+# adds more — pinning the surface stops that class of regression.
+
+# --- FastAPI runtime ---
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-multipart
+sse-starlette
+
+# --- HTTP client ---
+httpx
+
+# --- Data layer (pandas + parquet) ---
+pandas
+pyarrow
+# lane D1b: the NYSE calendar behind the data check's bar_on_closed_day flag
+exchange_calendars==4.13.2
+
+# --- Rendering / sanitisation ---
+markdown-it-py
+rich
+bleach
+
+# --- External integrations ---
+garminconnect==0.3.3
+google-auth>=2.29.0
+google-auth-oauthlib>=1.2.0
+google-api-python-client>=2.130.0
+# lane P6a: Alpaca paper account and asset reads (server venv version, read 2026-10-29)
+alpaca-py==0.43.2
+# lane ES1b1: push message encryption and signing (was only a google-auth dependency)
+cryptography
+
+# --- Test framework (CI + local) ---
+pytest

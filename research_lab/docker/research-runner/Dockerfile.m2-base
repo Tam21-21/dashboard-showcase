@@ -1,0 +1,67 @@
+# syntax=docker/dockerfile:1.7
+#
+# research-runner:m2-latest — the BASE image the fetch path runs (fetch_dataset.py
+# pins DOCKER_IMAGE = "research-runner:m2-latest"); research-runner:m3-latest layers
+# the strategy contract on top via `FROM research-runner:m2-latest` (see ./Dockerfile).
+#
+# Restored to version control by pre-M4 Brief A1. This Dockerfile lived only in git
+# history (commit 48f7d75) after the M3 layer Dockerfile overwrote the canonical path;
+# A1 needs to re-bake the fetch path (durable_write.py), so the base is brought back
+# into the tree and made reproducible from scratch. The only A1 change vs the 48f7d75
+# original is the `COPY durable_write.py` line below.
+#
+# Build CONTEXT is docker/research-runner/ (this directory). From-scratch build:
+#   cd research_lab/docker/research-runner
+#   DOCKER_BUILDKIT=1 docker build -f Dockerfile.m2-base \
+#     --secret id=vbt_gh_token,src=/path/to/vbt_token -t research-runner:m2-latest .
+# Then rebuild m3-latest on top (cd research_lab; docker build -f docker/research-runner/Dockerfile ...).
+#
+# On a machine that ALREADY has research-runner:m2-latest (the laptop), the A1 fetch-path
+# change deploys far cheaper via the thin Dockerfile.m2-patch (no vbt reinstall) — this
+# from-scratch base is the fresh-machine / full-rebuild path.
+
+# Pin interpreter to the M0-verified 3.12.13. Do NOT use python:3.12-slim
+# (rolling tag — would silently float on rebuild).
+FROM python:3.12.13-slim
+
+# System deps. build-essential kept for first build; if pip resolves entirely
+# from manylinux wheels, this can be dropped in a future image revision.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        git \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Non-root user matching host UID 1000
+RUN useradd -m -u 1000 -s /bin/bash runner
+
+WORKDIR /app
+
+# Step 1: install pinned-from-M0 requirements first (cacheable layer)
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Step 2: install vbt pro via BuildKit secret — token NOT in image history.
+# Pinned to the exact commit M0 was installed from (per uv pip freeze
+# 2026-05-18). Do NOT use @v2026.4.7 tag — we never independently
+# verified what that tag points to in the private repo; commit SHA is
+# the only thing actually verified working.
+# This RUN executes as root (USER runner is set below), so root reads
+# the secret regardless of file uid — no uid= option needed on mount.
+RUN --mount=type=secret,id=vbt_gh_token \
+    pip install --no-cache-dir \
+        "vectorbtpro @ git+https://$(cat /run/secrets/vbt_gh_token)@github.com/polakowo/vectorbt.pro.git@b1727ac67fff23169e003a2031d8303396f17e17"
+
+# Verify install succeeded and dependencies are consistent
+RUN pip check && python -c "import vectorbtpro as vbt; print('vbt OK', vbt.__version__)"
+
+COPY fetch.py /app/fetch.py
+# pre-M4 Brief A1: the durable atomic parquet write, imported by fetch.py at /app on sys.path.
+COPY durable_write.py /app/durable_write.py
+# hourly-pivot campaign: the 1h timeframe adapter fetch.py's '1h' route imports at /app on sys.path.
+COPY eodhd_hourly.py /app/eodhd_hourly.py
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+USER runner
+ENTRYPOINT ["/app/entrypoint.sh"]

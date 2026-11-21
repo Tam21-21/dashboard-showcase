@@ -1,0 +1,18 @@
+[Unit]
+Description=EODHD raw backfill (one resumable pass to the SSD)
+# Skip the start cleanly when the SSD is not mounted, so a fired timer does nothing harmful.
+# Belt-and-suspenders with the in-code mountpoint guard (config.require_staging_mounted).
+ConditionPathIsMountPoint=/mnt/ssd
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/tamer/trading
+Environment=PYTHONUNBUFFERED=1
+# The backfill seeds the day's quota from /user, spends to the safe margin, then exits clean.
+# systemd supervises the process, so no setsid is needed; this unit IS the durable launcher.
+ExecStart=/home/tamer/trading/research_lab/worker/.venv/bin/python -m research_lab.fetcher backfill
+# P6 heartbeat: after each run, append one budget-spend line to the root-disk report log. The leading
+# '-' makes a report hiccup never mark the backfill failed (reporting can never break spending). This
+# only fires on a successful ExecStart; SSD-unmounted (Condition-skipped) days are covered by the
+# separate eodhd-report.timer, which has no mount condition.
+ExecStartPost=-/home/tamer/trading/research_lab/worker/.venv/bin/python -m research_lab.fetcher report

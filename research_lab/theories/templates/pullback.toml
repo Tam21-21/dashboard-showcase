@@ -1,0 +1,103 @@
+# Template 3 of 4 (Tamer, 2026-10-17): a dip in an uptrend. The close is above a simple average and an
+# oscillator is low. One slot, RSI or stochastic, makes two theories.
+
+[theory]
+name = "pullback"
+display_name = "Pullback in a trend"
+kind = "template"
+bar = "1d"
+side = "long"
+entry_time = "next_open"
+status = "research"
+
+[operand.close]
+kind = "field"
+field = "close"
+
+[operand.trend]
+kind = "indicator"
+indicator = "sma"
+params = { n = "TS" }
+
+# The oscillator that must be low, and the line it must be under.
+[slot.oscillator]
+choices = ["rsi", "stochastic"]
+
+[choice.rsi]
+words = "RSI"
+
+[choice.rsi.operand.osc]
+kind = "indicator"
+indicator = "rsi"
+params = { n = "R" }
+
+[choice.rsi.operand.osc_line]
+kind = "constant"
+value = "L"
+
+[choice.stochastic]
+words = "Stochastic"
+
+[choice.stochastic.operand.osc]
+kind = "indicator"
+indicator = "stochastic"
+params = { k = "SK", d = 3 }
+output = "k"
+
+[choice.stochastic.operand.osc_line]
+kind = "constant"
+value = "SL"
+
+[[entry.group]]
+conditions = [
+  { left = "close", op = ">", right = "trend" },
+  { left = "osc", op = "<", right = "osc_line" },
+]
+
+[exit]
+stop = "ST"
+target = "TG"
+max_hold = "H"
+
+[stocks]
+group = "trending"
+
+[risk]
+method = "volatility_stop"
+
+[money]
+method = "equal_slots"
+
+[parameter_picks.TS]
+range = "trend_slow_window"
+
+[parameter_picks.R]
+range = "swing_rsi_window"
+
+[parameter_picks.L]
+range = "pullback_rsi_line"
+
+[parameter_picks.SK]
+range = "swing_stoch_window"
+
+[parameter_picks.SL]
+range = "pullback_stoch_line"
+
+[parameter_picks.ST]
+range = "swing_stop"
+
+[parameter_picks.TG]
+range = "swing_target"
+
+[parameter_picks.H]
+range = "swing_max_hold"
+
+# The search settings (DECISIONS #470): the starter values. Round 1 uses about 20 values per number, a round of 500 strategies, narrows
+# around the best 5, goes up to 5 rounds, runs every combination of a box below 5000, and keeps 3 finalists.
+[search]
+values_per_number = 20
+round_size = 500
+best = 5
+max_rounds = 5
+all_below = 5000
+keep = 3

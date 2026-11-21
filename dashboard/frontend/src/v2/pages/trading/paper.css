@@ -1,0 +1,41 @@
+/* The Paper page: the picked strategy's charts, the limits rows, and the dialogs. */
+.v2 .pp-chart { position: relative; height: 300px; display: flex; }
+.v2 .pp-chart.drop { height: 130px; }
+.v2 .pp-none { font-size: 15px; color: var(--soft); }
+.v2 .pp-note { margin: 12px 0 18px; max-width: 86ch; font-size: 14.5px; line-height: 1.5; color: var(--soft); }
+.v2 .pp-empty { margin: 0; }
+
+/* The six limits: name on the left, value on the right, two columns when the page has room */
+.v2 .pp-lims { display: grid; }
+.v2 .pp-lims.wide { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.v2 .pp-lim { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) auto; align-items: center; gap: 6px 18px; min-height: 54px; padding: 8px 0; border-top: 1px solid var(--line2); font-size: 14.5px; color: var(--ink); }
+.v2 .pp-lm { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.v2 .pp-lm small { font-size: 12px; color: var(--soft); }
+.v2 .pp-cols { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+@media (max-width: 1180px) { .v2 .pp-cols { grid-template-columns: minmax(0, 1fr); } }
+.v2 .pp-lim b { font-weight: 500; }
+.v2 .pp-lim b.warn { color: var(--a); font-family: var(--sans); }
+.v2 .pp-lims .pp-lim:first-child { border-top: 0; }
+.v2 .pp-lims.wide .pp-lim:nth-child(2) { border-top: 0; }
+
+.v2 .pp-frow { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 5px 0; font-size: 13px; color: var(--bright); }
+.v2 .pp-frow input { width: 140px; background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 10px; padding: 7px 10px; color: var(--bright); font: inherit; font-size: 13px; text-align: right; }
+.v2 .pp-problem { font-size: 13px; margin-top: 6px; }
+.v2 .pp-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
+.v2 .tp-acts.pp-foot { margin-top: 0; }
+
+/* The phone frame (DECISIONS #484): fits 414 px; wide tables scroll inside their block. */
+.v2.phone .pp-lims, .v2.phone .pp-lims.wide { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .pp-lims.wide .pp-lim:nth-child(2) { border-top: 1px solid var(--line2); }
+.v2.phone .pp-lim { grid-template-columns: minmax(0, 1fr) auto; }
+.v2.phone .pp-lm { grid-column: 1 / -1; grid-row: 2; }
+.v2.phone .pp-lm:empty { display: none; }
+.v2.phone .pp-frow input { width: 110px; }
+.v2.phone .pp-foot { flex-wrap: wrap; justify-content: stretch; }
+.v2.phone .pp-foot .hold { flex: 1 1 100%; }
+.v2.phone .pp-chart { height: 220px; }
+
+.v2 .pp-alloc { margin: 0 0 20px; }
+.v2 .pp-alloc .tp-share { height: 8px; }
+.v2 .pp-chart { width: 100%; }
+.v2.phone .pp-w { display: none; }

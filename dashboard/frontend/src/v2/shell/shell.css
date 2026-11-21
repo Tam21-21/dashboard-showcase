@@ -1,0 +1,209 @@
+/* The new shell: rail, page, page change. Values from docs/design/rail_mockup_2026-10-10.html. */
+.v2 {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--base);
+  display: flex;
+}
+
+/* The rail (round six, Tamer 2026-11-14: "it's gonna be closed"). Closed it is one column of icons, the open app's pages
+   as icons under it, each name on hover. Opening slides a sheet with the names out from behind the icons, over the page:
+   transform and opacity only, and the page keeps its place. With the rail setting "open" the sheet stays and the page moves over. */
+.v2 .rail {
+  position: fixed; left: 0; top: 0; bottom: 0; z-index: 20; width: var(--rail);
+  background: var(--rail-fill); box-shadow: inset -1px 0 0 var(--line2);
+  padding: 16px 0 14px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  view-transition-name: rail;
+}
+/* The sheet: its own element beside the rail (Rail.tsx), so its blur takes the page behind it. Open, the rail takes the
+   sheet's glass too and the two read as one panel, as in the mockup. */
+.v2 .rail-sheet {
+  position: fixed; top: 0; bottom: 0; left: var(--rail); width: 196px; z-index: 19; pointer-events: none;
+  background: var(--sheet-fill); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); box-shadow: inset -1px 0 0 var(--line), 24px 0 48px rgba(0,0,0,.4);
+  transform: translateX(calc(-100% - 60px)); transition: transform .42s var(--expo);
+}
+.v2 .rail-sheet.on { transform: none; }
+.v2 .rail:not(.mini) { box-shadow: none; background: var(--sheet-fill); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
+.v2.pinned .rail-sheet { box-shadow: inset -1px 0 0 var(--line); }
+.v2.still .rail-sheet { transition: none; }
+
+.v2 .app {
+  color: var(--soft); cursor: pointer; background: none; border: 0;
+  font: inherit; width: 46px; height: 42px; border-radius: 12px; flex: none;
+  display: flex; align-items: center; justify-content: center; padding: 0; position: relative;
+  transition: color .15s ease, background-color .15s ease, transform .14s var(--ease);
+}
+.v2 .app svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: hover) and (pointer: fine) { .v2 .app:hover { color: var(--bright); background: rgba(255,255,255,.05); } }
+.v2 .app:active, .v2 .sec:active, .v2 .tog:active { transform: scale(.94); }
+.v2 .app.open { color: var(--hi); }
+.v2 .tog {
+  color: var(--faint); cursor: pointer; background: none; border: 0;
+  position: relative; width: 46px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  padding: 0; margin-bottom: 10px; flex: none; transition: color .15s ease, background-color .15s ease, transform .14s var(--ease);
+}
+@media (hover: hover) and (pointer: fine) { .v2 .tog:hover { color: var(--bright); background: rgba(255,255,255,.05); } }
+.v2 .tog svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+/* The names sit beside the icons, on the sheet. Folded, they are faded out and 10px to the left; they slide and fade in as
+   the sheet comes out: transform and opacity only, as in the mockup, so nothing on the page is laid out again. */
+.v2 .appname, .v2 .sec .sname {
+  position: absolute; left: calc(100% + 14px); top: 50%; transform: translate(-10px, -50%); opacity: 0;
+  font-size: 14.5px; font-weight: 500; color: inherit; white-space: nowrap; pointer-events: none;
+  transition: opacity .18s ease, transform .3s var(--expo);
+}
+.v2 .sec .sname { left: calc(100% + 21px); font-size: 14px; }
+.v2 .rail:not(.mini) .appname, .v2 .rail:not(.mini) .sec .sname { opacity: 1; transform: translate(0, -50%); transition-delay: .06s; }
+.v2.still .appname, .v2.still .sec .sname { transition: none; }
+/* The logo at the top (mockup rule 28): the bare mark, smaller on short screens. */
+.v2 .rail .rtop { display: flex; align-items: center; justify-content: center; width: 48px; height: 40px; margin-bottom: 4px; flex: none; }
+.v2 .rail .logo { width: 31px; height: 31px; overflow: visible; }
+/* The open app's pages sit one rail gap under its icon, as the mockup's siblings do. */
+.v2 .appwrap { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.v2 .secs {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 2px 0 8px; padding: 6px 0;
+  width: 56px; border-radius: 16px; background: rgba(255,255,255,.03);
+}
+.v2 .sec {
+  position: relative; display: flex; align-items: center; justify-content: center; width: 42px; height: 36px; padding: 0; border-radius: 10px;
+  color: var(--soft); cursor: pointer; font: inherit; background: none; border: none;
+  transition: color .15s ease, background-color .15s ease, transform .14s var(--ease);
+}
+.v2 .sec svg { width: 19px; height: 19px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: hover) and (pointer: fine) { .v2 .sec:hover { color: var(--bright); background: rgba(255,255,255,.05); } }
+.v2 .sec.on { color: var(--hi); }
+/* Research's pages in their groups (Data, Build, Test, System): a short line between groups, the group's name beside it when open. */
+.v2 .rsec { position: relative; flex: none; display: block; width: 42px; height: 20px; }
+.v2 .rsec::before { content: ""; position: absolute; left: 50%; top: 50%; width: 18px; height: 1px; margin-left: -9px; background: var(--line3); opacity: .7; }
+.v2 .rsec .sname { position: absolute; left: calc(100% + 21px); top: 50%; transform: translate(-10px, -50%); opacity: 0; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; color: var(--faint); white-space: nowrap; pointer-events: none; transition: opacity .18s ease, transform .3s var(--expo); }
+.v2 .rail:not(.mini) .rsec .sname { opacity: 1; transform: translate(0, -50%); transition-delay: .06s; }
+.v2 .tog .appname { color: var(--faint); }
+/* One piece for the open page: the highlight and its white bar slide together (the mockup's .rail .mark, Tamer 2026-11-16). Rail.tsx sets transform, width and height. */
+.v2 .secs .mark { position: absolute; left: 0; top: 0; border-radius: 10px; background: rgba(255,255,255,.08); pointer-events: none; opacity: 0; will-change: transform; transition: transform .3s var(--expo), opacity .2s ease; }
+.v2 .secs .mark::before { content: ""; position: absolute; left: -17px; top: calc(50% - 9px); width: 3px; height: 18px; border-radius: 2px; background: var(--ink); }
+.v2 .secs .mark.now, .v2.still .secs .mark { transition: none; }
+.v2 .rail .bottom { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative; }
+/* A short screen packs the rail closer (the mockup's rules for 900 and 640 pixels high). */
+@media (max-height: 900px) {
+  .v2 .rail, .v2 .appwrap { gap: 0; } .v2 .rail { padding-top: 8px; } .v2 .rail .rtop { height: 36px; margin: 0 0 2px; } .v2 .rail .logo { width: 28px; height: 28px; }
+  .v2 .app, .v2 .tog { height: 36px; } .v2 .tog { margin-bottom: 4px; } .v2 .secs { margin: 2px 0 4px; padding: 4px 0; gap: 0; } .v2 .sec { height: 31px; } .v2 .rsec { height: 15px; }
+}
+@media (max-height: 640px) {
+  .v2 .rail .rtop { height: 28px; margin: 0; } .v2 .rail .logo { width: 23px; height: 23px; }
+  .v2 .app, .v2 .tog { height: 31px; } .v2 .sec { height: 27px; } .v2 .rsec { height: 9px; }
+}
+
+.v2 canvas { transition: opacity .45s ease; }
+.v2.still canvas { transition: none; }
+
+.v2 main {
+  position: relative; z-index: 1; flex: 1; overflow: auto; padding: 36px 48px 190px;
+  margin-left: var(--rail); view-transition-name: page;
+}
+@media (max-width: 1180px) { .v2 main { padding: 28px 28px 190px; } }
+/* An open window lies over the rail and the phone's bar, as the mockup's windows do (they sit on the body). The window stays
+   inside the page, so the page's own styles still reach it; the page is lifted while one is open. */
+.v2 main:has(.ov) { z-index: 40; }
+/* An open rail lies over the page; only the rail setting "open" moves the page over for good. */
+.v2.pinned main { margin-left: calc(var(--rail) + 196px); }
+
+/* The page header of the mockup: the page's name in one line (the old small title above it is gone), the buttons on the right. */
+.v2 .ph { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 40px; margin-bottom: 18px; }
+.v2 .ph .cr { display: none; }
+.v2 .ph h1 { margin: 0; font: 600 20px/1.2 var(--sans); color: var(--bright); letter-spacing: 0; }
+.v2 .ttl { display: flex; align-items: center; gap: 14px; }
+.v2 .pnav { display: none; gap: 6px; margin-top: 4px; }
+.v2 .pnav button {
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.03);
+  color: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;
+}
+.v2 .pnav button:hover { color: var(--bright); border-color: rgba(255,255,255,.22); }
+.v2 .pnav svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.v2 .nr-line { color: var(--bright); font-size: 14px; }
+.v2 .cd .nr-line { margin: 0; line-height: 1.7; }
+
+/* The hover box (HoverTip.tsx), the mockup's K.tip: a dark box beside the pointer. */
+.v2 .htip { position: fixed; left: 0; top: 0; z-index: 90; pointer-events: none; }
+.v2 .htip-in {
+  min-width: 150px; max-width: 300px; padding: 10px 13px; border-radius: 12px; background: #141a23; box-shadow: inset 0 0 0 1px var(--line3), 0 14px 32px rgba(0,0,0,.55);
+  font-size: 13.5px; line-height: 1.45; color: var(--ink); white-space: normal; opacity: 0; transform: scale(.96); transition: opacity .12s var(--ease), transform .12s var(--ease);
+}
+.v2 .htip.on .htip-in { opacity: 1; transform: none; }
+.v2 .htip b { display: block; font-weight: 500; color: var(--bright); }
+
+/* page change: only the page fades and rises 6px; the rail and the root stay still */
+::view-transition-old(root), ::view-transition-new(root), ::view-transition-group(root) { animation: none; }
+::view-transition-group(rail), ::view-transition-old(rail), ::view-transition-new(rail) { animation: none; }
+::view-transition-group(page) { animation: none; }
+/* a step between pages slides sideways by 28px */
+html[data-dir=next]::view-transition-old(page) { animation: v2-slL 160ms ease-in both; }
+html[data-dir=next]::view-transition-new(page) { animation: v2-slR 260ms cubic-bezier(.2,.7,.2,1) both; }
+html[data-dir=prev]::view-transition-old(page) { animation: v2-slR2 160ms ease-in both; }
+html[data-dir=prev]::view-transition-new(page) { animation: v2-slL2 260ms cubic-bezier(.2,.7,.2,1) both; }
+/* a step between mains slides up or down by 28px */
+html[data-dir=down]::view-transition-old(page) { animation: v2-slU 160ms ease-in both; }
+html[data-dir=down]::view-transition-new(page) { animation: v2-slD 260ms cubic-bezier(.2,.7,.2,1) both; }
+html[data-dir=up]::view-transition-old(page) { animation: v2-slD2 160ms ease-in both; }
+html[data-dir=up]::view-transition-new(page) { animation: v2-slU2 260ms cubic-bezier(.2,.7,.2,1) both; }
+@keyframes v2-slU { to { opacity: 0; transform: translateY(-28px); } }
+@keyframes v2-slD { from { opacity: 0; transform: translateY(28px); } }
+@keyframes v2-slD2 { to { opacity: 0; transform: translateY(28px); } }
+@keyframes v2-slU2 { from { opacity: 0; transform: translateY(-28px); } }
+@keyframes v2-slL { to { opacity: 0; transform: translateX(-28px); } }
+@keyframes v2-slR { from { opacity: 0; transform: translateX(28px); } }
+@keyframes v2-slR2 { to { opacity: 0; transform: translateX(28px); } }
+@keyframes v2-slL2 { from { opacity: 0; transform: translateX(-28px); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root),
+  ::view-transition-old(page), ::view-transition-new(page) { animation: none !important; }
+}
+
+@media (max-width: 700px) {
+  .v2 { --rail: 64px; }
+  .v2 main { padding: 20px 16px; }
+}
+
+/* The phone frame (DECISIONS #484), as the mockup's phone: no rail, a bar of the five apps at the bottom. */
+.v2 .tabbar { display: none; }
+.v2.phone main {
+  margin-left: 0; padding: calc(16px + env(safe-area-inset-top)) 16px calc(49px + 32px + env(safe-area-inset-bottom));
+}
+/* The phone bar: iOS's own tab bar height (49 pt above the home-indicator area), in the open rail's frosted sheet so the
+   page behind never shows through the icons (Tamer 2026-11-16, on his iPhone: "too much space + its not as visible"). */
+.v2.phone .tabbar {
+  display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; height: calc(49px + env(safe-area-inset-bottom)); justify-content: space-around;
+  background: var(--sheet-fill); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+  box-shadow: inset 0 1px 0 var(--line); padding: 4px 6px env(safe-area-inset-bottom);
+}
+/* Under the clock and the notch (the home-screen app draws there, index.html): the page's own background shows through,
+   and what scrolls up under the clock is blurred so the time stays readable. Zero tall wherever there is no notch. */
+.v2.phone::after {
+  content: ""; position: fixed; left: 0; right: 0; top: 0; z-index: 30; height: env(safe-area-inset-top);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); pointer-events: none;
+}
+/* iOS 26 gives a home-screen app with the see-through clock bar a window one clock bar short, so the fixed frame stops
+   above the bottom of the screen (WebKit bug 301108). A page at least as tall as the screen gets the whole screen. */
+@media (display-mode: standalone) {
+  html { min-height: min(100lvh, calc(100% + env(safe-area-inset-top))); }
+}
+.v2 .tabbar button {
+  flex: 1; min-width: 0; background: none; border: none; border-radius: 10px; color: var(--soft); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  font: 500 10.5px/1.5 var(--sans); padding: 0; cursor: pointer; transition: color .15s ease, transform .14s var(--ease);
+}
+.v2 .tabbar button:active { transform: scale(.94); }
+.v2 .tabbar svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.v2 .tabbar .on { color: var(--bright); }
+
+/* A page comes in once, its parts rising in order (the mockup data-in); a calm motion setting puts everything in place at once. */
+.v2 .v2-page { max-width: 1600px; margin: 0 auto; }
+.v2 .v2-page > * { animation: v2-in .6s var(--ease) backwards; }
+.v2 .v2-page > :nth-child(2) { animation-delay: 70ms; }
+.v2 .v2-page > :nth-child(3) { animation-delay: 140ms; }
+.v2 .v2-page > :nth-child(4) { animation-delay: 210ms; }
+.v2 .v2-page > :nth-child(5) { animation-delay: 280ms; }
+.v2 .v2-page > :nth-child(n+6) { animation-delay: 350ms; }
+@keyframes v2-in { from { opacity: 0; transform: translateY(18px) scale(.985); } }
+.v2.still .v2-page > *, .v2[data-motion="calm"] .v2-page > * { animation: none; }
+@media (prefers-reduced-motion: reduce) { .v2 .v2-page > * { animation: none; } }

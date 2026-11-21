@@ -1,0 +1,37 @@
+"""{{strategy_label}} — moving-average crossover (generated from the MA-cross template, M4.5 R16).
+
+Long-only fast/slow simple-moving-average crossover on the close. Enter long when the {{fast_window}}-bar
+average crosses above the {{slow_window}}-bar average; exit when it crosses back below. A starting
+scaffold — edit the rule freely from here.
+"""
+from __future__ import annotations
+
+from strategies.base import RunResult, SettingRow, Strategy, StrategyInput
+from strategies.helpers import default_costs, long_only_signal_result
+
+
+class {{class_name}}(Strategy):
+    """Long-only {{fast_window}}/{{slow_window}} moving-average crossover."""
+
+    # A moving-average cross is a price rule with no asset-class assumption; it reads the neutral cost keys.
+    asset_class_scope = ("crypto", "equities")
+
+    def run(self, data: StrategyInput, settings: list[SettingRow]) -> RunResult:
+        close = data.close  # the closing-price series the averages are built from
+
+        # Fast and slow simple moving averages (pandas; the parameterized rule).
+        fast = close.rolling({{fast_window}}).mean()  # fast SMA
+        slow = close.rolling({{slow_window}}).mean()  # slow SMA
+
+        # Crossover signals: True only on the bar where the relationship flips.
+        entries = (fast > slow) & (fast.shift(1) <= slow.shift(1))  # fast crosses ABOVE slow -> enter long
+        exits = (fast < slow) & (fast.shift(1) >= slow.shift(1))    # fast crosses BELOW slow -> exit
+
+        # Costs from the lab settings via the neutral key dispatch routed by asset class (M4 D2).
+        fees, slippage = default_costs(settings)
+
+        # The shared long-only portfolio build (R16) — no vbt call in the template body.
+        return long_only_signal_result(
+            data, entries, exits, fees, slippage,
+            indicators={"fast_sma": fast, "slow_sma": slow},
+        )

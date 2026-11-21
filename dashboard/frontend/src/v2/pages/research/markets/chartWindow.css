@@ -1,0 +1,2 @@
+/* A window is sized by the viewport, not by the page, so it keeps a window rule. */
+@media (max-width: 720px) { .v2 .ov .mk-win .dt-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .v2 .ov .mk-win .mk-fig .fig { font-size: 44px; } }

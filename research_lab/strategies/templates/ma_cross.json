@@ -1,0 +1,11 @@
+{
+  "id": "ma_cross",
+  "name": "Moving-average crossover",
+  "kind": "price",
+  "order": 1,
+  "summary": "Long when a fast moving average crosses above a slow one; exit on the reverse cross.",
+  "params": [
+    {"name": "fast_window", "label": "Fast window (bars)", "type": "integer", "default": 20, "target": "code", "bounds": {"type": "integer", "min": 1}},
+    {"name": "slow_window", "label": "Slow window (bars)", "type": "integer", "default": 50, "target": "code", "bounds": {"type": "integer", "min": 2}}
+  ]
+}

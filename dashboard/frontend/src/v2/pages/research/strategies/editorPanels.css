@@ -1,0 +1,51 @@
+/* The editor's side panels (mockup editorPage). Every selector starts with this lane's own
+   classes (.ep-*, .se-grid, .se-side); nothing styles a bare element. */
+.v2 .se-grid { display: grid; grid-template-columns: 252px minmax(0, 1fr) 336px; gap: 18px; margin-top: 18px; align-items: start; --ed-h: max(320px, calc(100vh - 250px)); }
+.v2 .se-side { display: flex; flex-direction: column; gap: 14px; }
+.v2 .ep-find { width: 100%; margin-bottom: 8px; box-sizing: border-box; }
+.v2 .ep-list { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #ffffff26 transparent; }
+.v2 .ep-group { margin-top: 10px; }
+.v2 .ep-row { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 4px 2px; font: inherit; font-size: 12.5px; color: var(--ink); cursor: pointer; overflow-wrap: anywhere; }
+.v2 .ep-row:hover:not(:disabled) { color: var(--hi); }
+.v2 .ep-row:disabled { opacity: .5; cursor: default; }
+.v2 .ep-money { display: grid; gap: 10px; }
+.v2 .ep-wide { display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: grab; }
+.v2 .ep-wide:disabled { cursor: default; }
+.v2 .ep-gone { display: flex; justify-content: space-between; align-items: center; color: var(--soft); font-size: 13px; cursor: default; }
+.v2 .ep-params .empty { margin: 0; }
+.v2 .ep-params th, .v2 .ep-params td { text-align: left; }
+.v2 .ep-money .f4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.v2 .ep-group { display: flex; align-items: baseline; justify-content: space-between; margin-top: 14px; padding-bottom: 4px; }
+.v2 .ep-group b { font-size: 14px; font-weight: 500; color: var(--hi); }
+.v2 .ep-group small { font-size: 12.5px; color: var(--soft); }
+.v2 .ep-where { font-weight: 400; font-size: 13px; color: var(--ink); }
+
+/* Money cards, risk rows and catalogue rows as the mockup draws them. */
+.v2 .ep-m { display: block; width: 100%; padding: 14px 16px 16px; border: 0; border-radius: 14px; text-align: left; font: inherit; color: inherit; cursor: pointer; background: rgba(255,255,255,.03); box-shadow: inset 0 0 0 1px var(--line2); }
+.v2 .ep-m:hover:not(:disabled) { background: rgba(255,255,255,.06); }
+.v2 .ep-m.on { background: rgba(47,224,138,.08); box-shadow: inset 0 0 0 1.5px rgba(47,224,138,.55); }
+.v2 .ep-mh { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.v2 .ep-mh b { font-size: 15px; font-weight: 500; color: var(--ink); }
+.v2 .ep-m p { margin: 8px 0 0; font-size: 13.5px; line-height: 1.45; color: var(--soft); }
+.v2 .ep-m .f4 { margin-top: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 16px; }
+.v2 .ep-m .f4 span { font-size: 13.5px; color: var(--soft); }
+.v2 .ep-m .f4 b { font-size: 15px; color: var(--hi); }
+.v2 .ep-cap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 16px; font-size: 12.5px; color: var(--soft); }
+.v2 .ep-cap b { font-size: 13.5px; font-weight: 500; color: var(--hi); }
+.v2 .ep-bar { display: block; height: 8px; border-radius: 4px; background: rgba(255,255,255,.1); overflow: hidden; }
+.v2 .ep-bar i { display: block; height: 100%; border-radius: 4px; background: var(--b); }
+.v2 .ep-off { padding: 14px 16px; border-radius: 14px; box-shadow: inset 0 0 0 1px var(--line2); }
+.v2 .ep-off b { font-size: 15px; font-weight: 500; color: var(--soft); }
+.v2 .ep-risk { padding: 10px 0; font-size: 14.5px; color: var(--ink); box-shadow: inset 0 -1px 0 var(--line2); }
+.v2 .ep-risk:last-child { box-shadow: none; }
+.v2 .ep-where { display: inline-flex; align-items: center; gap: 7px; font-weight: 400; font-size: 13px; color: var(--k, var(--ink)); }
+.v2 .ep-where i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.v2 .ep-where.money { --k: #b58cff; } .v2 .ep-where.exit { --k: #2fd4c0; } .v2 .ep-where.event { --k: var(--a); } .v2 .ep-where.generator { --k: var(--b); }
+.v2 .ep-group { margin-top: 16px; padding-bottom: 6px; }
+.v2 .ep-group b { font-size: 13.5px; }
+.v2 .ep-row { min-height: 34px; padding: 5px 10px; border-radius: 9px; font: 13px var(--mono); color: #8d7bff; }
+.v2 .ep-row:hover:not(:disabled) { background: rgba(141,123,255,.14); color: #8d7bff; }
+.v2 .ep-off b { white-space: nowrap; }
+.v2 .ep-group b { display: inline-flex; align-items: center; gap: 8px; }
+.v2 .ep-group b i { width: 8px; height: 8px; border-radius: 2px; background: var(--k); }
+.v2 .ep-g-indicators { --k: #8d7bff; } .v2 .ep-g-helpers { --k: #2fd4c0; } .v2 .ep-g-settings { --k: var(--a); } .v2 .ep-g-event { --k: var(--b); }

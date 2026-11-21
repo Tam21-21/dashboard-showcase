@@ -1,0 +1,83 @@
+/* The Runs page, round seven (2026-11-15), a replica of the mockup: runs by week and the scatter at full width, the picked run
+   in full, the table. Colour means one thing: green finished with figures, amber waits for the judge, grey finished with
+   nothing saved, red failed, blue running. */
+.v2 .rs6 .nl-blk + .nl-blk { margin-top: 20px; }
+.v2 .rs6 .rs-first { margin-top: 40px; }
+.v2 .rs-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.v2 .rs-counts { display: inline-flex; flex-wrap: wrap; gap: 8px; }
+
+/* Charts: the week bars, the scatter and the money line share one grid and one set of axis words */
+.v2 .wk, .v2 .sc, .v2 .rf-plot { position: relative; }
+.v2 .wk { min-height: 210px; }
+.v2 .sc { min-height: 280px; }
+.v2 .wk svg, .v2 .sc svg, .v2 .rf-plot svg { display: block; overflow: visible; }
+.v2 .wk-grid { stroke: rgba(238,242,247,.07); }
+.v2 .wk-base { stroke: rgba(255,255,255,.12); }
+.v2 .wk-t { font: 400 11.5px var(--sans); fill: var(--soft); }
+.v2 .wk g[data-week] rect { transition: opacity .15s ease; }
+.v2 .wk g[data-week].dim rect { opacity: .4; }
+.v2 .sc-dot { cursor: pointer; }
+.v2 .sc-name { font: 500 12px var(--sans); fill: var(--hi); }
+.v2 .sc-y { display: block; margin-bottom: 6px; font-size: 12.5px; color: var(--soft); }
+.v2 .sc-x { display: flex; justify-content: flex-end; margin-top: 2px; font-size: 12.5px; color: var(--soft); }
+.v2 .rs-key { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 14px; font-size: 13.5px; color: var(--soft); }
+.v2 .rs-key span { display: inline-flex; align-items: center; gap: 8px; }
+.v2 .rs-key i { width: 10px; height: 10px; border-radius: 50%; }
+.v2 .rs-key i.good { background: var(--g); } .v2 .rs-key i.bad { background: var(--r); }
+
+/* The picked run */
+.v2 .rs-when { font-size: 13.5px; color: var(--soft); white-space: nowrap; }
+.v2 .rnm { margin: -8px 0 0; font: 500 26px/1.15 var(--sans); letter-spacing: -.028em; color: var(--hi); text-wrap: balance; }
+.v2 .rs-gone { margin-left: 10px; padding: 2px 8px; border-radius: 999px; font: 400 12px var(--sans); letter-spacing: 0; color: var(--soft); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); vertical-align: 3px; }
+.v2 .rs-none { margin: 18px 0 0; max-width: 56ch; font-size: 15px; line-height: 1.55; color: var(--soft); }
+.v2 .rf-line { margin-top: 30px; }
+.v2 .rf-h { margin: 0 0 22px; padding-top: 22px; box-shadow: inset 0 1px 0 var(--line2); font: 500 16.5px var(--sans); color: var(--hi); }
+.v2 .rf-path { fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+.v2 .rf-path.up { stroke: var(--g); } .v2 .rf-path.down { stroke: var(--r); }
+.v2 .rf-start { stroke: rgba(238,242,247,.22); }
+.v2 .rf-cross { stroke: rgba(238,242,247,.25); }
+.v2 .rs-fa { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 28px; margin-top: 28px; }
+@media (max-width: 1180px) { .v2 .rs-fa { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.v2 .rf-fact { display: block; }
+.v2 .rf-l { display: block; font-size: 13.5px; color: var(--soft); }
+.v2 .rf-fact b { display: block; margin-top: 6px; font-size: 24px; font-weight: 500; letter-spacing: -.02em; color: var(--hi); }
+.v2 .rf-fact b.g { color: var(--g); } .v2 .rf-fact b.rd { color: var(--r); }
+.v2 .rs-act { margin-top: 28px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+
+/* The table */
+.v2 .rs-tbl { overflow-x: auto; }
+.v2 .rs-tbl tbody tr { cursor: pointer; }
+.v2 .rs-tbl tbody tr:has(.rn.sel) td { background: rgba(255,255,255,.05); }
+.v2 .rs-tbl tbody tr:has(.rn.sel) td:first-child { box-shadow: inset 3px 0 0 var(--hi); }
+.v2 .rs-tbl td { padding-top: 11px; padding-bottom: 11px; }
+.v2 .rs-tbl td:first-child, .v2 .rs-tbl th:first-child { padding-left: 12px; }
+.v2 .rn { display: block; max-width: 300px; white-space: normal; line-height: 1.3; color: var(--soft); }
+.v2 .rs-tbl .dim { color: var(--soft); }
+.v2 .rs-id { font-family: var(--mono); font-size: 13px; color: var(--hi); }
+.v2 .rs-id::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 10px; border-radius: 50%; vertical-align: 1px; background: rgba(141,152,168,.75); }
+.v2 .rs-id.off::before { background: none; box-shadow: inset 0 0 0 1.5px rgba(141,152,168,.75); }
+.v2 .rs-id.good::before { background: var(--g); box-shadow: 0 0 8px rgba(47,224,138,.7); } .v2 .rs-id.bad::before { background: var(--r); box-shadow: 0 0 8px rgba(255,90,99,.7); } .v2 .rs-id.run::before { background: var(--b); } .v2 .rs-id.warn::before { background: var(--a); box-shadow: 0 0 8px rgba(255,176,32,.7); }
+.v2 .rs-len { display: inline-flex; align-items: center; gap: 10px; justify-content: flex-end; }
+.v2 .rs-track { display: inline-block; width: 64px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.063); overflow: hidden; flex: none; }
+.v2 .rs-len i { display: block; height: 100%; border-radius: 3px; background: rgba(141,152,168,.75); }
+.v2 .rs-len { min-width: 120px; }
+.v2 .rs-line { display: block; width: 100px; height: 22px; margin-left: auto; }
+.v2 .rs-heat { display: inline-block; min-width: 72px; padding: 4px 9px; border-radius: 8px; font-weight: 500; }
+.v2 .rs-heat.good { color: var(--g); background: rgba(47,224,138,.14); }
+.v2 .rs-heat.bad { color: var(--r); background: rgba(255,90,99,.14); }
+.v2 .rs-heat.soft { color: var(--soft); }
+.v2 .rs-more { margin-top: 18px; }
+.v2 .rs-tbl th:nth-child(2), .v2 .rs-tbl td:nth-child(2) { text-align: left; padding-left: 18px; }
+
+/* The phone frame (DECISIONS #484): the wide table scrolls in its panel. */
+/* On a phone the table keeps the run, the strategy, the return and the state; the rest is on the picked run above. */
+.v2.phone .rs-tbl th:is(:nth-child(3), :nth-child(4), :nth-child(5), :nth-child(7), :nth-child(8)),
+.v2.phone .rs-tbl td:is(:nth-child(3), :nth-child(4), :nth-child(5), :nth-child(7), :nth-child(8)) { display: none; }
+.v2.phone .rs-tbl td:nth-child(2) { white-space: normal; }
+.v2.phone .rs-fa { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 16px; }
+.v2.phone .rf-fact b { font-size: 20px; }
+.v2.phone .sc-y { top: -4px; }
+.v2.phone .rs-counts { display: contents; }
+
+.v2.phone .rs-all .pills { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
+.v2.phone .rs-all .pills button { white-space: nowrap; }

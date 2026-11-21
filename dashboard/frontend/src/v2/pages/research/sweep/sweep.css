@@ -1,0 +1,21 @@
+/* The Run a sweep window (lane SW1). Every rule is scoped to this window's own sw- classes. */
+.v2 .sw .sw-row { display: grid; grid-template-columns: 76px minmax(0, 1fr); align-items: center; gap: 12px; margin-bottom: 4px; }
+.v2 .sw .sw-row.sw-top { align-items: start; }
+.v2 .sw .sw-l { font-size: 13px; color: var(--bright); }
+.v2 .sw .sw-col { display: grid; gap: 6px; min-width: 0; }
+.v2 .sw .sw-line { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.v2 .sw .sw-grow { flex: 1; }
+.v2 .sw .sw-to { font-size: 13px; color: var(--soft); }
+.v2 .sw .sw-win { color: var(--hi); }
+.v2 .sw .sw-small { height: 26px; }
+.v2 .sw .sw-vrow { display: flex; align-items: center; gap: 8px; }
+.v2 .sw .sw-pl { width: 90px; flex: none; font-size: 13px; color: var(--soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v2 .sw .sw-vrow .fin { flex: 1; min-width: 0; }
+.v2 .sw .sw-n { width: 30px; flex: none; text-align: right; color: var(--bright); }
+.v2 .sw .sw-err { font-size: 12.5px; overflow-wrap: anywhere; }
+.v2 .sw .sw-total { text-align: right; color: var(--bright); font-size: 13px; }
+.v2 .sw .sw-stage button:disabled { opacity: .4; cursor: not-allowed; }
+.v2 .sw .sw-ref, .v2 .sw .sw-ok { display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 8px 10px; border-radius: 10px; font-size: 13px; color: var(--bright); overflow-wrap: anywhere; }
+.v2 .sw .sw-ref { border: 1px solid rgba(255, 90, 99, .33); }
+.v2 .sw .sw-ok { border: 1px solid rgba(77, 155, 255, .33); }
+.v2 .sw .sw-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }

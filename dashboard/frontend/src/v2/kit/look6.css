@@ -1,0 +1,19 @@
+/* The new look's parts (round six, 2026-11-14): Block, Say, State, and the clip a chart wears while it is unveiled. */
+.v2 .nl-blk { background: var(--card-fill); border-radius: 22px; padding: 28px 30px 32px; box-shadow: inset 0 0 0 1px var(--card-edge); min-width: 0; }
+.v2 .nl-blk-h { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; min-height: 38px; margin-bottom: 26px; }
+.v2 .nl-blk-t { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 12px; }
+.v2 .nl-blk h2 { margin: 0; font: 500 21px/1.2 var(--sans); letter-spacing: -.028em; color: var(--bright); }
+.v2 .nl-say { margin: 44px 0 0; font: 500 clamp(32px, 3.7vw, 54px)/1.06 var(--sans); letter-spacing: -.028em; color: var(--bright); text-wrap: balance; animation: nl-rise .7s var(--expo) both; }
+.v2 .nl-say b { font-weight: inherit; }
+.v2 .nl-say em { font-style: normal; font-weight: 500; }
+.v2 .nl-say .more { display: block; margin-top: 18px; max-width: 64ch; font: 400 19px/1.5 var(--sans); letter-spacing: 0; color: var(--ink); text-wrap: pretty; }
+.v2 .nl-say .good { color: var(--g); } .v2 .nl-say .bad { color: var(--r); } .v2 .nl-say .warn { color: var(--a); } .v2 .nl-say .run { color: var(--b); }
+.v2 .nl-st { --tc: 141 152 168; display: inline-flex; align-items: center; gap: 7px; height: 26px; padding: 0 11px 0 9px; border-radius: 999px; font-size: 13px; font-weight: 500; white-space: nowrap; color: rgb(var(--tc)); background: rgb(var(--tc) / .15); }
+.v2 .nl-st::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.v2 .nl-st.good { --tc: 47 224 138; } .v2 .nl-st.bad { --tc: 255 90 99; } .v2 .nl-st.warn { --tc: 255 176 32; } .v2 .nl-st.run { --tc: var(--b-c); }
+.v2 .nl-st.dim { color: var(--soft); background: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.v2 .nl-st.dim::before { background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
+.v2 .nl-rv { overflow: hidden; }
+@keyframes nl-rise { from { opacity: 0; transform: translateY(14px); } }
+.v2.still .nl-say { animation: none; }
+@media (prefers-reduced-motion: reduce) { .v2 .nl-say { animation: none; } }

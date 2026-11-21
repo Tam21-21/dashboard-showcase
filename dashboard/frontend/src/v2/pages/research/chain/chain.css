@@ -1,0 +1,160 @@
+/* The Chain section: chains by group on the left, the picked chain on the right (mockup research/CHAIN). */
+.v2 .ch-cols { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 18px; align-items: start; }
+.v2 .ch-cols.solo { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 900px) { .v2 .ch-cols { grid-template-columns: 1fr; } }
+.v2 .ch-right { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.v2 .ch-row2 { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 18px; }
+@media (max-width: 900px) { .v2 .ch-row2 { grid-template-columns: 1fr; } }
+.v2 .ch-row3 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+/* The options chart is Scatter's 700 by 340 drawing: at this width its labels fall to 5px. Hold it at the step line's 150px
+   height (the drawing keeps its shape, so it is centred) and set its labels larger in the drawing's own units. */
+.v2 .ch-row3 .scat svg { height: 150px; margin: 0 auto; overflow: visible; }
+.v2 .ch-row3 .scat svg text { font-size: 19px; }
+@media (max-width: 900px) { .v2 .ch-row3 { grid-template-columns: 1fr; } }
+
+.v2 .ch-h2 { color: var(--bright); font-weight: 500; letter-spacing: .12em; }
+.v2 .ch-soft { color: var(--soft); font-size: 12.5px; }
+.v2 .ch-hi { color: var(--hi); }
+.v2 .ch-status { margin: 0 0 12px; font-size: 13px; color: var(--g); }
+
+/* The group pills sit on one line each and wrap whole. */
+.v2 .ch-groups { margin-bottom: 8px; }
+.v2 .ch-groups .pills { flex-wrap: wrap; border: none; padding: 0; gap: 6px; }
+.v2 .ch-groups .pills button { border: 1px solid var(--line); white-space: nowrap; padding: 4px 10px; font-size: 11px; }
+.v2 .ch-groups .pills button.on { color: var(--btn-ink); }
+
+/* One button per chain, a stripe in its tone colour. */
+.v2 .ch-item { display: block; position: relative; width: 100%; text-align: left; font: inherit; color: inherit; background: none; padding: 11px 12px 12px 16px; border-radius: 12px; cursor: pointer; border: 1px solid transparent; margin-bottom: 2px; }
+.v2 .ch-item::before { content: ""; position: absolute; left: 4px; top: 12px; bottom: 12px; width: 3px; border-radius: 2px; background: var(--k); }
+.v2 .ch-item:hover { background: rgba(255,255,255,.03); }
+.v2 .ch-item.on { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1); }
+.v2 .ch-iname { display: block; color: var(--hi); font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v2 .ch-istate { display: flex; align-items: baseline; gap: 8px; margin-top: 3px; }
+
+/* The picked chain: name, ending, buttons, then the six steps and the years. */
+.v2 .ch-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.v2 .ch-name { font-size: 22px; color: var(--hi); font-weight: 500; }
+.v2 .ch-ending { display: inline-flex; align-items: center; gap: 10px; }
+.v2 .ch-note { font-size: 11px; letter-spacing: .12em; color: var(--a); }
+.v2 .ch-btns { margin-left: auto; display: flex; gap: 8px; }
+.v2 .ch-marks { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.v2 .ch-chip { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 99px; font-size: 12.5px; color: var(--ink); white-space: nowrap; border: 1px solid color-mix(in srgb, var(--k) 33%, transparent); }
+.v2 button.ch-chip { background: none; font: inherit; font-size: 12.5px; cursor: pointer; }
+.v2 button.ch-chip:hover { background: rgba(255,255,255,.05); }
+.v2 .ch-chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--k); }
+.v2 .ch-chip[data-mark="on"] { color: var(--hi); }
+.v2 .ch-years { margin-top: 12px; }
+
+/* The story. */
+.v2 .ch-hist > div { display: grid; grid-template-columns: 92px 8px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line2); font-size: 13.5px; color: var(--bright); }
+.v2 .ch-hist i { width: 8px; height: 8px; border-radius: 50%; background: var(--soft); }
+.v2 .ch-hist i.page { background: var(--b); }
+.v2 .ch-fig { display: inline-flex; align-items: baseline; gap: 8px; justify-self: end; color: var(--hi); white-space: nowrap; font-size: 12.5px; }
+.v2 .ch-hist b { color: var(--hi); font-weight: 500; margin-right: 6px; }
+
+.v2 .ch-dash { color: var(--soft); padding: 10px 0; }
+.v2 .ch-big { font-size: 28px; font-family: var(--mono); }
+.v2 .ch-small { height: 24px; }
+.v2 .ch-more { margin-top: 10px; background: none; border: none; padding: 0; font: inherit; font-size: 12px; letter-spacing: .12em; color: var(--b); cursor: pointer; }
+
+/* The windows. */
+.v2 .ch-wfact { display: flex; justify-content: space-between; gap: 12px; color: var(--bright); font-size: 13.5px; }
+.v2 .ch-wfact b { font-weight: 500; color: var(--hi); }
+.v2 .ch-wtext { margin: 0; color: var(--bright); font-size: 13px; }
+.v2 .ch-wproblem { margin: 0; color: var(--r); font-size: 13px; }
+.v2 .ch-wfoot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px; }
+.v2 .ch-wform { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.v2 .ch-wwide { grid-column: 1 / -1; }
+.v2 .ch-lab { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--bright); margin-bottom: 6px; }
+
+/* The phone frame (DECISIONS #484): one column. */
+.v2.phone .ch-cols { grid-template-columns: 1fr; }
+.v2.phone .ch-row2 { grid-template-columns: 1fr; }
+.v2.phone .ch-wform { grid-template-columns: 1fr; }
+.v2.phone .ch-btns { margin-left: 0; }
+.v2.phone .ch-hist > div { grid-template-columns: 76px 8px minmax(0, 1fr); }
+
+/* Round seven (2026-11-15), a replica of the mockup's Chain page: the finding, the six steps on one line, the years a chain
+   may use beside the chains. Amber is the one step that waits for you and the years kept for the exam; lavender the years
+   open to chains. */
+.v2 .cn6 .nl-say { margin-bottom: 44px; }
+.v2 .cn6 .nl-blk + .nl-blk, .v2 .cn6 .nl-blk + .cn-pair, .v2 .cn6 .cn-pair + .ch-right { margin-top: 20px; }
+.v2 .cn-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+.v2 .cn6 .cn-pair { margin-top: 20px; }
+.v2 .cn6 .cn-pair > .nl-blk { margin-top: 0; }
+.v2 .cn6 .ch-right { margin-top: 20px; }
+.v2 .cn-none { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.v2 .cn-none .empty { margin: 0; min-height: 33px; }
+
+/* The six steps: a line with a node at each, then the name, how many chains are there, what it does, who moves it */
+.v2 .cn-steps { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; }
+.v2 .cn-line { position: absolute; left: 6px; right: 0; top: 5px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.18); }
+.v2 .cn-st { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding-right: 18px; animation: cn-in .6s var(--expo) calc(.1s + var(--i) * 80ms) backwards; }
+.v2 .cn-no { display: block; width: 13px; height: 13px; border-radius: 50%; background: var(--card); box-shadow: inset 0 0 0 2px rgba(255,255,255,.35); }
+.v2 .cn-st.live .cn-no { background: var(--g); box-shadow: none; }
+.v2 .cn-st.you .cn-no { background: var(--a); box-shadow: 0 0 0 5px rgba(255,176,32,.16), 0 0 16px rgba(255,176,32,.5); }
+.v2 .cn-nm { margin-top: 25px; font-size: 15px; font-weight: 500; color: var(--hi); }
+.v2 .cn-big { margin-top: 12px; font-size: 44px; line-height: 1; color: var(--hi); }
+.v2 .cn-st:not(.live):not(.you) .cn-big { color: var(--soft); }
+.v2 .cn-what { min-height: 53px; margin-top: 14px; font-size: 13.5px; line-height: 1.5; color: var(--soft); }
+.v2 .cn-st > .nl-st { margin-top: 10px; }
+@keyframes cn-in { from { opacity: 0; transform: translateY(10px); } }
+
+/* The years: open to chains, kept for the exam, on one axis */
+.v2 .cn-rows { display: grid; grid-template-columns: 140px minmax(0, 1fr) 104px; align-items: center; gap: 12px 14px; }
+.v2 .cn-rl { font-size: 14.5px; line-height: 22px; color: var(--hi); white-space: nowrap; }
+.v2 .cn-rt { font: 400 12.5px var(--mono); color: var(--soft); white-space: nowrap; }
+.v2 .cn-track { position: relative; height: 14px; border-radius: 7px; background: rgba(255,255,255,.06); }
+.v2 .cn-track i { position: absolute; top: 0; bottom: 0; border-radius: 7px; }
+.v2 .cn-track .cn-open { background: #7f86f2; transform-origin: left; animation: cn-grow .9s var(--expo) .1s backwards; }
+.v2 .cn-track .cn-kept { box-shadow: inset 0 0 0 1.5px var(--hi); }
+.v2 .cn-track .exam { position: absolute; top: 2px; bottom: 2px; border-radius: 4px; text-decoration: none; }
+.v2 .cn-track .exam.spent { background: rgba(141,152,168,.55); }
+.v2 .cn-ya { position: relative; height: 18px; font: 400 12px var(--mono); color: var(--soft); }
+.v2 .cn-ya span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+@keyframes cn-grow { from { transform: scaleX(0); } }
+.v2 .cn-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 28px; }
+.v2 .cn-facts > div { display: flex; flex-direction: column; gap: 6px; }
+.v2 .cn-fl { font-size: 13.5px; color: var(--soft); }
+.v2 .cn-facts b { font-size: 19px; font-weight: 500; color: var(--hi); }
+
+/* The chains table and the picked chain */
+.v2 .cn-pair .ch-item { display: block; position: static; width: auto; padding: 0; border: 0; background: none; text-align: left; margin: 0; }
+.v2 .cn-pair .ch-item::before { display: none; }
+.v2 .cn-pair .ch-item.on .ch-iname { text-decoration: underline; text-underline-offset: 4px; }
+.v2 .cn-pair .ch-istate { display: inline-flex; margin: 0; }
+.v2 .ch-years .legend, .v2 .ch-years > :first-child { margin-bottom: 10px; }
+
+.v2.still .cn-st, .v2.still .cn-track .cn-open { animation: none; }
+@media (prefers-reduced-motion: reduce) { .v2 .cn-st, .v2 .cn-track .cn-open { animation: none; } }
+@media (max-width: 1180px) { .v2 .cn-pair { grid-template-columns: minmax(0, 1fr); } }
+
+/* The phone, and a desktop window as narrow as one: the six steps down one line, the years' words above their bars. */
+.v2.phone .cn-pair { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .cn-steps { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.v2.phone .cn-line { display: block; left: 6px; right: auto; top: 6px; bottom: 40px; width: 2px; height: auto; }
+.v2.phone .cn-st { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 12px; row-gap: 6px; padding: 0 0 36px 30px; }
+.v2.phone .cn-no { position: absolute; left: 0; top: 4px; }
+.v2.phone .cn-nm { grid-column: 1; margin-top: 0; }
+.v2.phone .cn-st > .nl-st { grid-column: 2; grid-row: 1; }
+.v2.phone .cn-big { grid-column: 1 / -1; font-size: 44px; }
+.v2.phone .cn-what { grid-column: 1 / -1; max-width: none; min-height: 0; }
+.v2.phone .cn-rl { white-space: normal; }
+.v2.phone .cn-rows { grid-template-columns: 84px minmax(0, 1fr); }
+.v2.phone .cn-rt, .v2.phone .cn-ya { grid-column: 2; }
+.v2.phone .cn-sp { display: none; }
+.v2.phone .cn-facts b { font-size: 21px; }
+@media (max-width: 720px) {
+  .v2 .cn-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 12px; }
+  .v2 .cn-line { display: none; }
+}
+
+.v2.phone .cn-pair .pills, .v2.phone .rs-all .pills { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
+.v2.phone .cn-pair .pills button, .v2.phone .rs-all .pills button { white-space: nowrap; }
+.v2 .cn-facts small { font-size: 12.5px; line-height: 1.4; color: var(--soft); }
+.v2.phone .cn-pair .seg { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; }
+.v2.phone .cn-pair .seg button { white-space: nowrap; }
+.v2.phone .cn-big, .v2.phone .cn-st > .nl-st { margin-top: 0; }
+.v2.phone .cn-what { margin-top: 3px; }
+
+.v2 .cn-pair .seg { gap: 0; }

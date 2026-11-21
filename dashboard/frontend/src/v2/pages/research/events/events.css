@@ -1,0 +1,100 @@
+/* The Events tab of the Data library (mockup: docs/design/rail_mockup_2026-10-10.html, dlEvents). */
+.v2 .evt { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+.v2 .evt > .nl-blk { min-width: 0; }
+.v2 .ev-half { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+.v2 .ev-half > .nl-blk { min-width: 0; }
+.v2 .ev-grow { flex: 1; }
+.v2 .ev-none { font-size: 13px; color: var(--bright); padding: 8px 0; }
+.v2 .ev-err { font-size: 13px; color: var(--rt); padding: 8px 0; }
+
+.v2 .ev-fresh { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; padding: 12px 20px; font-size: 13.5px; color: var(--bright); }
+.v2 .ev-src { display: inline-flex; align-items: center; gap: 8px; }
+.v2 .ev-src > i { width: 9px; height: 9px; border-radius: 2px; }
+
+.v2 .ev-top { display: grid; gap: 2px; }
+.v2 .ev-top > button { display: grid; grid-template-columns: 56px minmax(0, 1fr) 40px; align-items: center; gap: 14px; width: calc(100% + 16px); height: 36px; padding: 0 8px; margin: 0 -8px; font: inherit; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; }
+.v2 .ev-top > button:hover { background: #ffffff0a; }
+.v2 .ev-tkh { font: 500 13.5px var(--sans); letter-spacing: .03em; color: var(--ink); }
+.v2 .ev-n { font: 400 13.5px var(--sans); font-variant-numeric: tabular-nums; color: var(--ink2, var(--ink)); text-align: right; }
+.v2 .ev-hbar { display: block; height: 10px; border-radius: 5px; background: #ffffff0d; }
+.v2 .ev-hbar i { display: block; height: 100%; min-width: 4px; border-radius: 5px; background: linear-gradient(90deg, rgb(var(--b-c) / .6), rgb(var(--b-c))); }
+@media (max-width: 720px) { .v2 .ev-top > button { grid-template-columns: 48px minmax(0, 1fr) 34px; } }
+
+.v2 .ev-acts { display: block; }
+.v2 .ev-kbar { display: flex; height: 18px; border-radius: 9px; overflow: hidden; }
+.v2 .ev-kbar i { display: block; min-width: 4px; height: 100%; cursor: pointer; transition: opacity .2s; }
+.v2 .ev-kbar i.off { opacity: .18; }
+.v2 .ev-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 4px 14px; margin-top: 20px; }
+.v2 .ev-legend > button { display: flex; align-items: center; height: 34px; padding: 0 10px; margin: 0 -10px; font: inherit; font-size: 14.5px; color: var(--ink2, var(--ink)); background: none; border: 0; border-radius: 9px; text-align: left; cursor: pointer; min-width: 0; white-space: nowrap; }
+.v2 .ev-legend > button:hover { background: #ffffff0a; }
+.v2 .ev-legend > button.on { background: color-mix(in srgb, var(--k) 16%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--k) 50%, transparent); color: var(--ink); }
+.v2 .ev-legend > button.off { opacity: .45; }
+.v2 .ev-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; background: var(--k); flex: none; margin-right: 9px; }
+.v2 .ev-legend span { margin-right: 8px; }
+.v2 .ev-legend b { font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.v2 .ev-legend small { margin-left: 8px; font-size: 12.5px; color: var(--soft); }
+
+.v2 .ev-bar2 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.v2 .ev-search { flex: 1 1 260px; min-width: 180px; height: 40px; border: 0; border-radius: 11px; background: rgba(255,255,255,.06); padding: 0 16px; color: var(--ink); font: inherit; font-size: 14.5px; transition: box-shadow .15s ease, background-color .15s ease; }
+.v2 .ev-search::placeholder { color: var(--faint); }
+.v2 .ev-search:focus-visible { outline: none; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1.5px var(--b); }
+.v2 .ev-chip { display: inline-flex; align-items: center; height: 36px; padding: 0 12px; margin-left: 0; border: 0; border-radius: 10px; background: #ffffff0f; font: inherit; font-size: 13.5px; color: var(--ink); cursor: pointer; white-space: nowrap; opacity: .55; }
+.v2 .ev-chip i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; background: var(--k); margin-right: 8px; flex: none; }
+.v2 .ev-chip .num { margin-left: 6px; font: 400 12px var(--sans); color: var(--soft); }
+.v2 .ev-chip.on { opacity: 1; background: color-mix(in srgb, var(--k) 16%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--k) 80%, transparent); }
+.v2 .ev-x { margin-left: 6px; }
+
+.v2 .ev-head, .v2 .ev-line { display: grid; grid-template-columns: 110px 140px 190px minmax(220px, 1fr); gap: 16px; align-items: center; }
+.v2 .ev-head { padding: 0 6px 8px; font-size: 12.5px; color: var(--soft); }
+.v2 .ev-line { padding: 12px 6px; font-size: 14.5px; cursor: pointer; border-radius: 8px; }
+.v2 .ev-line + .ev-line { box-shadow: inset 0 1px 0 var(--line2); }
+.v2 .ev-line:hover { background: #ffffff0a; }
+.v2 .ev-when { color: var(--ink); white-space: nowrap; font: 400 13.5px var(--sans); font-variant-numeric: tabular-nums; }
+.v2 .ev-kind { display: inline-flex; align-items: center; color: var(--ink2, var(--ink)); white-space: nowrap; }
+.v2 .ev-kind i { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 9px; flex: none; }
+.v2 .ev-tks { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.v2 .ev-tk { display: inline-flex; align-items: center; height: 26px; padding: 0 9px; border: 0; border-radius: 7px; background: #ffffff0f; font: 500 13px var(--sans); letter-spacing: .03em; color: var(--ink); cursor: pointer; white-space: nowrap; }
+.v2 .ev-tk:hover { background: rgb(77 155 255 / .25); }
+.v2 .ev-tk.plain { cursor: default; }
+.v2 .ev-line .tx { color: var(--ink); line-height: 1.4; white-space: normal; }
+.v2 .ev-line .tx .state { font-size: inherit; letter-spacing: 0; font-weight: 400; }
+.v2 .ev-line .tx .state.g, .v2 .ev-line .tx .num.g { color: var(--g); } .v2 .ev-line .tx .state.rd, .v2 .ev-line .tx .num.rd { color: var(--r); }
+.v2 .ev-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
+.v2 .ev-foot > span { font-size: 13px; color: var(--soft); }
+
+.v2 .ev-dhead { display: flex; align-items: center; gap: 10px; }
+.v2 .ev-dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
+.v2 .ev-dtitle { color: var(--hi); letter-spacing: .12em; font-size: 13px; font-weight: 500; }
+.v2 .ev-big { font-size: 18px; color: var(--hi); line-height: 1.45; margin: 6px 0 12px; }
+.v2 .ev-rows > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.v2 .ev-rows span { color: var(--bright); }
+.v2 .ev-rows b { font-weight: 400; color: var(--hi); }
+.v2 .ev-morel { margin-top: 16px; }
+
+@media (max-width: 1100px) {
+  .v2 .ev-half { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* The EARNINGS card (mockup: dlEarn, openEarn). */
+.v2 .ev-tscroll { overflow-x: auto; }
+.v2 .ev-earn { width: 100%; border-collapse: collapse; white-space: nowrap; }
+.v2 .ev-earn th { text-align: left; font-weight: 400; font-size: 12.5px; color: var(--soft); padding: 6px 10px; }
+.v2 .ev-earn td { padding: 12px 10px; font-size: 14.5px; color: var(--ink); }
+.v2 .ev-earn tbody tr + tr td { box-shadow: inset 0 1px 0 var(--line2); }
+.v2 .ev-earn th.r, .v2 .ev-earn td.r { text-align: right; }
+.v2 .ev-earn tbody tr { cursor: pointer; }
+.v2 .ev-earn tbody tr:hover { background: rgba(255,255,255,.03); }
+.v2 .ev-co { color: var(--hi); }
+.v2 .ev-vs { color: var(--bright); }
+.v2 .ev-cellbar { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.v2 .ev-cellbar > span:last-child { min-width: 52px; }
+.v2 .ebar { position: relative; display: inline-block; width: 70px; height: 8px; border-radius: 4px; background: rgba(255,255,255,.06); }
+.v2 .ebar b { position: absolute; top: 0; bottom: 0; border-radius: 4px; }
+.v2 .esp { width: 96px; height: 26px; display: block; }
+.v2 .ev-echart { width: 100%; height: auto; display: block; margin: 4px 0 14px; }
+
+/* The phone frame (DECISIONS #484): a line stacks its date, tickers and text beside its colour bar. */
+.v2.phone .ev-head { display: none; }
+.v2.phone .ev-line { grid-template-columns: minmax(0, 1fr); row-gap: 6px; }
+.v2.phone .ev-acts { grid-template-columns: 1fr; }
+.v2.phone .ev-half { grid-template-columns: minmax(0, 1fr); }

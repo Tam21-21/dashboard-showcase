@@ -1,0 +1,11 @@
+{
+  "id": "bollinger",
+  "name": "Bollinger-band mean reversion",
+  "kind": "price",
+  "order": 3,
+  "summary": "Long when price reclaims the lower band; exit when it reclaims the middle band.",
+  "params": [
+    {"name": "bb_window", "label": "Window (bars)", "type": "integer", "default": 20, "target": "code", "bounds": {"type": "integer", "min": 2}},
+    {"name": "num_std", "label": "Band width (standard deviations)", "type": "number", "default": 2.0, "target": "code", "bounds": {"type": "number", "min": 0.1, "max": 5.0}}
+  ]
+}

@@ -1,0 +1,75 @@
+# Template 2 of 4 (Tamer, 2026-10-17): a fast average crossing a slow one. One slot, simple or exponential
+# averages, makes two theories. The way out is the opposite cross; there is no stop or target.
+
+[theory]
+name = "average_crossover"
+display_name = "Average crossover"
+kind = "template"
+bar = "1d"
+side = "long"
+entry_time = "next_open"
+status = "research"
+
+[slot.average]
+choices = ["sma", "ema"]
+
+[choice.sma]
+words = "simple averages"
+
+[choice.sma.operand.fast]
+kind = "indicator"
+indicator = "sma"
+params = { n = "F" }
+
+[choice.sma.operand.slow]
+kind = "indicator"
+indicator = "sma"
+params = { n = "TS" }
+
+[choice.ema]
+words = "exponential averages"
+
+[choice.ema.operand.fast]
+kind = "indicator"
+indicator = "ema"
+params = { n = "F" }
+
+[choice.ema.operand.slow]
+kind = "indicator"
+indicator = "ema"
+params = { n = "TS" }
+
+[[entry.group]]
+conditions = [
+  { left = "fast", op = "crosses_above", right = "slow" },
+]
+
+[[exit.group]]
+conditions = [
+  { left = "fast", op = "crosses_below", right = "slow" },
+]
+
+[stocks]
+group = "trending"
+
+[risk]
+method = "volatility_stop"
+
+[money]
+method = "equal_slots"
+
+[parameter_picks.F]
+range = "trend_fast_window"
+
+[parameter_picks.TS]
+range = "trend_slow_window"
+
+# The search settings (DECISIONS #470): the starter values. Round 1 uses about 20 values per number, a round of 500 strategies, narrows
+# around the best 5, goes up to 5 rounds, runs every combination of a box below 5000, and keeps 3 finalists.
+[search]
+values_per_number = 20
+round_size = 500
+best = 5
+max_rounds = 5
+all_below = 5000
+keep = 3

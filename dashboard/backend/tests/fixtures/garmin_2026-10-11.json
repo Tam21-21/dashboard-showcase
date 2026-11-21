@@ -1,0 +1,203 @@
+{
+ "get_sleep_data": {
+  "dailySleepDTO": {
+   "sleepTimeSeconds": 25200,
+   "deepSleepSeconds": 5000,
+   "lightSleepSeconds": 14000,
+   "remSleepSeconds": 6200,
+   "awakeSleepSeconds": 300,
+   "sleepStartTimestampLocal": 1791671400000,
+   "sleepEndTimestampLocal": 1791701700000,
+   "sleepScores": {
+    "overall": {
+     "value": 71,
+     "qualifierKey": "FAIR"
+    }
+   },
+   "sleepNeed": {
+    "actual": 480
+   }
+  },
+  "sleepLevels": [
+   {
+    "startGMT": "2026-10-10T22:30:00.0",
+    "endGMT": "2026-10-10T23:00:00.0",
+    "activityLevel": 1
+   }
+  ]
+ },
+ "get_body_battery": [
+  {
+   "date": "2026-10-11",
+   "bodyBatteryValuesArray": [
+    [
+     1760140800000,
+     40
+    ],
+    [
+     1760144400000,
+     55
+    ],
+    [
+     1760148000000,
+     null
+    ]
+   ]
+  }
+ ],
+ "get_heart_rates": {
+  "restingHeartRate": 48
+ },
+ "get_steps_data": [
+  {
+   "startGMT": "2026-10-11T00:00:00.0",
+   "endGMT": "2026-10-11T00:15:00.0",
+   "steps": 10000,
+   "primaryActivityLevel": "sedentary"
+  },
+  {
+   "startGMT": "2026-10-11T00:00:00.0",
+   "endGMT": "2026-10-11T00:15:00.0",
+   "steps": 10000,
+   "primaryActivityLevel": "sedentary"
+  },
+  {
+   "startGMT": "2026-10-11T00:00:00.0",
+   "endGMT": "2026-10-11T00:15:00.0",
+   "steps": 5586,
+   "primaryActivityLevel": "sedentary"
+  }
+ ],
+ "get_training_readiness": [
+  {
+   "score": 2,
+   "level": "POOR",
+   "inputContext": "AFTER_ACTIVITY",
+   "timestampLocal": "2026-10-11T08:59:00.0"
+  },
+  {
+   "score": 58,
+   "level": "MODERATE",
+   "inputContext": "AFTER_WAKEUP_RESET",
+   "timestampLocal": "2026-10-11T05:44:00.0"
+  }
+ ],
+ "get_morning_training_readiness": {
+  "score": 58,
+  "level": "MODERATE",
+  "inputContext": "AFTER_WAKEUP_RESET",
+  "acuteLoad": 258,
+  "recoveryTime": 600,
+  "sleepScoreFactorPercent": 80,
+  "sleepScoreFactorFeedback": "GOOD",
+  "recoveryTimeFactorPercent": 90,
+  "recoveryTimeFactorFeedback": "VERY_GOOD",
+  "acwrFactorPercent": 55,
+  "acwrFactorFeedback": "MODERATE",
+  "hrvFactorPercent": 70,
+  "hrvFactorFeedback": "GOOD",
+  "stressHistoryFactorPercent": 65,
+  "stressHistoryFactorFeedback": "GOOD"
+ },
+ "get_stress_data": {
+  "overallStressLevel": 30
+ },
+ "get_stats": {
+  "totalKilocalories": 2800,
+  "moderateIntensityMinutes": 20,
+  "vigorousIntensityMinutes": 10,
+  "bodyBatteryHighestValue": 75,
+  "bodyBatteryLowestValue": 10,
+  "bodyBatteryMostRecentValue": 21,
+  "bodyBatteryAtWakeTime": 73,
+  "dailyStepGoal": 14540,
+  "totalSteps": 25586
+ },
+ "get_hrv_data": {
+  "hrvSummary": {
+   "lastNightAvg": 81,
+   "status": "BALANCED",
+   "baseline": {
+    "balancedLow": 72,
+    "balancedUpper": 97
+   }
+  }
+ },
+ "get_training_status": {
+  "mostRecentTrainingStatus": {
+   "latestTrainingStatusData": {
+    "3456": {
+     "primaryTrainingDevice": true,
+     "trainingStatusFeedbackPhrase": "PRODUCTIVE_3"
+    }
+   }
+  },
+  "mostRecentTrainingLoadBalance": {
+   "metricsTrainingLoadBalanceDTOMap": {
+    "3456": {
+     "monthlyLoadAerobicLow": 806.4743,
+     "monthlyLoadAerobicLowTargetMin": 433,
+     "monthlyLoadAerobicLowTargetMax": 952,
+     "monthlyLoadAerobicHigh": 457.3329,
+     "monthlyLoadAerobicHighTargetMin": 519,
+     "monthlyLoadAerobicHighTargetMax": 1039,
+     "monthlyLoadAnaerobic": 373.19147,
+     "monthlyLoadAnaerobicTargetMin": 173,
+     "monthlyLoadAnaerobicTargetMax": 519
+    }
+   }
+  }
+ },
+ "get_endurance_score": {
+  "overallScore": 6658,
+  "gaugeLowerLimit": 3570,
+  "gaugeUpperLimit": 10560,
+  "classificationLowerLimitRecreational": 3570,
+  "classificationLowerLimitIntermediate": 5100,
+  "classificationLowerLimitTrained": 5800,
+  "classificationLowerLimitWellTrained": 6500,
+  "classificationLowerLimitExpert": 7300,
+  "classificationLowerLimitSuperior": 8100,
+  "classificationLowerLimitElite": 8900
+ },
+ "get_race_predictions": {
+  "time5K": 1271,
+  "time10K": 2776,
+  "timeHalfMarathon": 6364,
+  "timeMarathon": 14326
+ },
+ "get_max_metrics": [
+  {
+   "generic": {
+    "vo2MaxPreciseValue": 57.0,
+    "vo2MaxValue": 57
+   }
+  }
+ ],
+ "get_fitnessage_data": {
+  "fitnessAge": 18.0,
+  "chronologicalAge": 30
+ },
+ "get_hill_score": {
+  "overallScore": 34,
+  "strengthScore": 30,
+  "enduranceScore": 40
+ },
+ "get_lactate_threshold": {
+  "speed_and_heart_rate": {
+   "heartRate": 186,
+   "speed": 0.35
+  },
+  "power": {
+   "functionalThresholdPower": 318
+  }
+ },
+ "get_weekly_intensity_minutes": [
+  {
+   "calendarDate": "2026-10-05",
+   "weeklyGoal": 150,
+   "moderateValue": 40,
+   "vigorousValue": 20
+  }
+ ]
+}

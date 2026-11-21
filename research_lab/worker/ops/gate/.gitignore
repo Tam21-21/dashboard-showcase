@@ -1,0 +1,10 @@
+*.key
+*.crt
+*.csr
+*.srl
+*.ext
+bundle.pem
+mode
+proxy.log
+proxy.stdout
+proxy.pid

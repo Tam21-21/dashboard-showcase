@@ -1,0 +1,94 @@
+/* The Datasets tab of the Data library, from dlSets in docs/design/rail_mockup_2026-10-10.html.
+   Every selector sits under .v2 so the old pages are untouched. */
+.v2 .ds { display: flex; flex-direction: column; gap: 18px; }
+.v2 .ds-gal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.v2 .ds-tile { padding: 0; overflow: hidden; display: block; text-align: left; font: inherit; color: inherit; }
+.v2 .ds-click { cursor: pointer; width: 100%; transition: border-color .15s; }
+.v2 .ds-click:hover { border-color: rgba(255,255,255,.2); }
+.v2 .ds-cap { display: block; height: 3px; }
+.v2 .ds-in { display: block; padding: 14px 18px 16px; }
+.v2 .ds-nm { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: 600; color: var(--bright); }
+.v2 .ds-big { display: block; font-size: 30px; color: var(--hi); margin-top: 8px; }
+/* Round six: the ring beside the number and the facts (size on disk, first year, newest). The ring turns in once (transform). */
+.v2 .ds-body { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 18px; align-items: center; margin-top: 12px; }
+.v2 .ds-body .ds-big { margin-top: 0; }
+.v2 .ds-ring { position: relative; display: block; width: 76px; height: 76px; }
+.v2 .ds-ring svg { display: block; width: 100%; height: 100%; }
+.v2 .ds-ring circle { fill: none; stroke-width: 8; }
+.v2 .ds-ring .trk { stroke: rgba(255,255,255,.08); }
+.v2 .ds-ring .arcs { transform-box: view-box; transform-origin: 36px 36px; rotate: -90deg; animation: ds-ringin 1.1s var(--expo) both; }
+.v2 .ds-ring .arc.good { stroke: var(--g); } .v2 .ds-ring .arc.warn { stroke: var(--a); } .v2 .ds-ring .arc.bad { stroke: var(--r); }
+.v2 .ds-ring .arc.run { stroke: var(--b); } .v2 .ds-ring .arc.dim { stroke: rgba(141,152,168,.45); }
+.v2 .ds-ring .ctr { position: absolute; inset: 0; display: grid; place-items: center; font-size: 16px; color: var(--hi); }
+.v2 .ds-facts { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.v2 .ds-f { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+.v2 .ds-f .k { color: var(--soft); }
+.v2 .ds-f .v { color: var(--bright); white-space: nowrap; }
+@keyframes ds-ringin { from { rotate: -210deg; opacity: 0; } }
+.v2.still .ds-ring .arcs { animation: none; }
+@media (prefers-reduced-motion: reduce) { .v2 .ds-ring .arcs { animation: none; } }
+.v2 .ds-u { font-size: 13px; color: var(--bright); }
+.v2 .ds-err { display: block; margin-top: 10px; font-size: 13px; color: var(--rt); }
+
+.v2 .ds-count { font-size: 14px; color: var(--soft); }
+.v2 .ds-h2r { display: flex; align-items: center; gap: 14px; }
+.v2 .ds-none { font-size: 13px; letter-spacing: 0; color: var(--bright); font-weight: 400; }
+.v2 .ds-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.v2 .ds-search { flex: 1; min-width: 180px; border-radius: 99px; height: 32px; }
+.v2 .ds-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 99px; border: 1px solid var(--line); background: none; font: inherit; font-size: 13px; color: var(--bright); cursor: pointer; }
+.v2 .ds-chip:hover { background: rgba(255,255,255,.06); }
+.v2 .ds-chip.on { background: rgba(255,255,255,.12); border-color: rgba(238,242,247,.38); }
+.v2 .ds-chip i, .v2 .ds-src i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
+.v2 .ds-src { display: inline-flex; align-items: center; gap: 8px; }
+.v2 .ds-tbl th.ds-l, .v2 .ds-tbl td.ds-l, .v2 .ds-tbl th:nth-child(-n+4) { text-align: left; }
+.v2 .ds-tbl td.ds-sym { color: var(--hi); text-align: left; }
+.v2 .ds-heldc { width: 220px; }
+.v2 .ds-tl { position: relative; display: block; height: 8px; border-radius: 4px; background: rgba(255,255,255,.05); }
+.v2 .ds-tl b { position: absolute; top: 0; height: 8px; border-radius: 4px; opacity: .85; min-width: 2px; }
+.v2 .ds-acts { display: inline-flex; gap: 8px; justify-content: flex-end; opacity: 0; }
+.v2 .ds-acts .btn { height: 24px; padding: 0 9px; font-size: 11px; }
+.v2 .ds-tbl tr:hover .ds-acts, .v2 .ds-tbl tr:focus-within .ds-acts, .v2 .ds-acts.on { opacity: 1; }
+.v2 .ds-ctext { font-size: 13.5px; color: var(--bright); }
+.v2 .ds-more { margin-top: 12px; }
+
+.v2 .ds-add .ds-row { margin: 6px 0; }
+.v2 .ds-add .ds-row > span { width: 64px; }
+.v2 .ds-add .ds-row .fin { flex: 1; }
+.v2 .ds-add .ds-row input:disabled { opacity: .5; }
+.v2 .ds-notes { margin-top: 8px; font-size: 13px; color: var(--rt); display: grid; gap: 4px; }
+.v2 .ds-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
+
+.v2 .ds-toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 80; display: flex; align-items: center; gap: 14px; padding: 10px 16px; border-radius: 14px; background: #0d1116; border: 1px solid var(--line); font-size: 13.5px; color: var(--bright); box-shadow: 0 20px 50px rgba(0,0,0,.65); }
+
+@media (max-width: 1100px) {
+  .v2 .ds-gal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .v2 .ds-gal { grid-template-columns: 1fr; }
+}
+
+/* The phone frame (DECISIONS #484): one column; the table scrolls inside its panel. */
+.v2.phone .ds-gal { grid-template-columns: 1fr; }
+.v2.phone .ds-tbl { overflow-x: auto; }
+
+/* Price history and Last update (mockup: .weeks and .bars in lab-library.js). */
+.v2 .dl-years { display: flex; align-items: flex-end; gap: 2px; height: 230px; }
+.v2 .dl-years i { flex: 1; min-width: 2px; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #29c6ff, rgba(41,198,255,.42)); transition: filter .15s; }
+.v2 .dl-years i:hover { filter: brightness(1.4); }
+.v2 .dl-axis { display: flex; justify-content: space-between; margin-top: 10px; font-size: 12.5px; color: var(--soft); }
+.v2 .dl-stops { display: grid; gap: 18px; }
+.v2 .dl-stops .top { display: flex; justify-content: space-between; gap: 12px; font-size: 14.5px; color: var(--ink); }
+.v2 .dl-stops .top .num { font-weight: 600; color: var(--hi); font-size: 13.5px; }
+.v2 .dl-stops .trk { height: 10px; margin-top: 8px; border-radius: 5px; background: rgba(255,255,255,.05); overflow: hidden; }
+.v2 .dl-stops .trk b { display: block; height: 100%; border-radius: 5px; min-width: 3px; }
+.v2 .dl-stops .trk b.warn { background: var(--a); } .v2 .dl-stops .trk b.good { background: var(--g); }
+.v2 .ds-lead { display: flex; align-items: center; gap: 12px; margin: 4px 0 14px; font-size: 14.5px; color: var(--ink); }
+.v2 .ds-detail { display: grid; gap: 8px; padding: 8px 0; font-size: 14px; color: var(--bright); }
+.v2 .ds-kind .ds-search { width: 100%; margin-bottom: 10px; }
+.v2 .ds .page-say { margin-top: 0; }
+.v2.phone .lc-chips { display: contents; }
+/* The rows of this page's window; its own class, so it borrows no css from the calendar. */
+.v2 .ds-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--bright); }
+.v2 .ds-row > span { width: 52px; flex: none; }
+.v2 .ds-row .pick { flex: 1; min-width: 0; }
+.v2 .ds-row > input:not([type="checkbox"]) { flex: 1; min-width: 0; background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 10px; padding: 7px 10px; color: var(--bright); font: inherit; font-size: 13px; outline: none; color-scheme: dark; }

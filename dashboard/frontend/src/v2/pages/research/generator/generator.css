@@ -1,0 +1,109 @@
+/* The Generator page (mockup research/GENERATOR): header, the round-six blocks at the end of this file, numbered sections, templates. */
+.v2 .gn-right { display: flex; align-items: center; gap: 14px; }
+.v2 .gn-worker { font-size: 12px; letter-spacing: .12em; color: var(--soft); white-space: nowrap; }
+.v2 .gn-worker .state, .v2 .gn-worker .gn-dash { margin-left: 6px; }
+.v2 .gn-sec { display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; }
+.v2 .gn-sec .num { color: var(--soft); }
+.v2 .gn-sec .gn-sect { color: var(--hi); font-size: 13px; letter-spacing: .12em; font-weight: 500; }
+.v2 .gn-sec .gn-rule { flex: 1; height: 1px; background: var(--line); }
+.v2 .h2 .gn-hd { display: flex; align-items: center; gap: 10px; color: var(--bright); font-weight: 500; letter-spacing: .12em; }
+.v2 .gn-tpl td.gn-name { color: var(--hi); }
+.v2 .gn-empty { padding: 8px 0; font-size: 13px; color: var(--soft); }
+.v2 .gn-note { font-size: 13px; color: var(--ink); margin: 6px 0; }
+.v2 textarea.gn-text { width: 100%; box-sizing: border-box; height: auto; padding: 10px 12px; font-family: var(--mono); font-size: 12.5px; line-height: 1.5; resize: vertical; }
+.v2 .gn-win-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.v2 .gn-fail { font-size: 13px; color: var(--r); }
+.v2 .gn-use { height: 24px; }
+.v2 .gn-dash { color: var(--soft); font-size: 13px; padding: 4px 0; }
+.v2 .gn-wait { display: flex; align-items: center; gap: 12px; padding: 6px 0; border-top: 1px solid var(--line); }
+.v2 .gn-wait:first-child { border-top: none; }
+.v2 .gn-wait .gn-wname { flex: 1; color: var(--hi); font-size: 13.5px; }
+.v2 .gn-wait .gn-soft { color: var(--soft); font-size: 13px; white-space: nowrap; }
+.v2 .gn-start { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 900px) { .v2 .gn-start { grid-template-columns: minmax(0, 1fr); } }
+.v2 .gn-name-row { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--soft); }
+.v2 .gn-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 10px; }
+.v2 .gn-fields { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 8px; }
+.v2 .gn-dates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 10px 0 12px; }
+.v2 .gn-date { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.v2 .gn-letters { margin-top: 4px; max-height: 360px; overflow-y: auto; }
+.v2 .gn-letters td.gn-name { color: var(--hi); }
+.v2 .gn-letters td.gn-l, .v2 .gn-letters th:nth-child(2), .v2 .gn-letters th:nth-child(3) { text-align: left; }
+.v2 .gn-end { display: flex; justify-content: flex-end; margin-top: 12px; }
+.v2 .gn-block { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.v2 .gn-bar { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.v2 .gn-bar .gn-group { width: 150px; }
+.v2 .gn-bar .gn-grow { flex: 1; }
+.v2 .gn-lines { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 14px; font-size: 13.5px; color: var(--ink); }
+.v2 .gn-lines .gn-hi { color: var(--hi); }
+.v2 .gn-result { display: flex; align-items: center; gap: 10px; margin: 6px 0 12px; font-size: 13.5px; color: var(--ink); }
+
+/* The phone frame (DECISIONS #484). */
+.v2.phone .gn-start { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .gn-dates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.v2.phone .gn-fields { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .gn-right { flex-wrap: wrap; gap: 8px; }
+.v2.phone .gn-wait { flex-wrap: wrap; }
+.v2.phone .gn-tpl, .v2.phone .gn-letters { overflow-x: auto; }
+
+/* Round six (2026-11-14): the finding, what stops the generator, the theory table, settings per day, the years. The tiles, the
+   table and the share bars are the Strategies page's (strategies.css). Green past a target, red short of it, blue an amount. */
+.v2 .gn .nl-say { margin-bottom: 44px; }
+.v2 .gn .nl-blk + .nl-blk { margin-top: 20px; }
+.v2 .gn-days { position: relative; }
+.v2 .gn-dplot { position: relative; min-height: 170px; }
+.v2 .gn-dplot svg { display: block; }
+.v2 .gn-dplot rect.off { fill: transparent; }
+.v2 .gn-peak { position: absolute; top: 10px; font-size: 13.5px; color: var(--ink); white-space: nowrap; pointer-events: none; }
+.v2 .gn-peak b { font-size: 14px; font-weight: 500; color: var(--hi); margin-right: 4px; }
+.v2 .gn-grid { stroke: rgba(238,242,247,.07); } .v2 .gn-base { stroke: rgba(255,255,255,.12); } .v2 .gn-t { font-size: 11.5px; fill: var(--soft); }
+.v2 .gn-dax { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12.5px; color: var(--soft); }
+.v2 .gx-daynote { margin: 14px 0 0; }
+.v2 .gx-stops { display: grid; }
+.v2 .gn-cq { container-type: inline-size; }
+.v2 .gx-stop { display: grid; grid-template-columns: 138px minmax(0, 1.35fr) minmax(210px, .8fr) 236px; align-items: center; gap: 8px 28px; padding: 18px 0; border-top: 1px solid var(--line2); }
+.v2 .gx-stop:first-child { border-top: 0; padding-top: 2px; }
+.v2 .gx-stop:last-child { padding-bottom: 2px; }
+.v2 .gx-stop > :first-child { justify-self: start; }
+.v2 .gx-stop .btn { justify-self: end; }
+.v2 .gx-bar { padding-left: 44px; }
+.v2 .gx-why { display: block; }
+.v2 .gx-why b { font-size: 17px; font-weight: 500; color: var(--hi); }
+.v2 .gx-why b { display: block; }
+.v2 .gx-why span { display: block; max-width: 62ch; margin-top: 4px; font-size: 14px; line-height: 1.45; color: var(--soft); text-wrap: pretty; }
+.v2 .gx-bar { display: flex; flex-direction: column; gap: 8px; }
+.v2 .gx-bar .sx-share { flex: none; height: 8px; width: 100%; }
+.v2 .gx-bar > span:last-child { font-size: 12.5px; color: var(--soft); }
+.v2 .gx-table .gx-good { color: var(--g); } .v2 .gx-table .gx-bad { color: var(--r); } .v2 .gx-table .gx-soft { color: var(--soft); }
+.v2 .gx-table td.num { font-size: 14px; }
+.v2 .gx-none { color: var(--soft); }
+.v2 .gx-years { display: flex; gap: 12px; }
+.v2 .gx-yr { display: flex; flex-direction: column; gap: 10px; min-width: 104px; flex-basis: 0; }
+.v2 .gx-yn { font-size: 15px; color: var(--ink); white-space: nowrap; }
+.v2 .gx-yd { font-size: 13px; color: var(--soft); white-space: nowrap; }
+.v2 .gx-yr i { display: block; height: 16px; border-radius: 8px; }
+.v2 .gx-yr i.data { background: var(--b); }
+.v2 .gx-yr i.soft { background: rgba(141,152,168,.3); }
+.v2 .gx-yr i.hold { box-shadow: inset 0 0 0 1.5px var(--ink); }
+@container (max-width: 1008px) { .v2 .gx-stop { grid-template-columns: 138px minmax(0, 1fr) 190px; } .v2 .gx-stop .btn { grid-column: 2 / -1; justify-self: start; } .v2 .gx-bar { padding-left: 0; } }
+@container (max-width: 548px) { .v2 .gx-stop { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 20px 0; } .v2 .gx-stop .btn { grid-column: 1; justify-self: stretch; justify-content: center; } }
+.v2.phone .gx-years { flex-wrap: wrap; }
+.v2.phone .gx-yr { flex-basis: 96px; min-width: 96px; }
+.v2.phone .gx-table th:nth-child(n+2):not(:last-child), .v2.phone .gx-table td:nth-child(n+2):not(:last-child) { display: none; }
+/* The picked theory's search rounds: the counted key reads as a row of keys, each with its number (the kit's counted key is laid
+   out for buttons; these are plain spans). */
+.v2 .gs-cards .lgd.lgd-n { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 12px 0 4px; }
+.v2 .gs-cards .lgd-n > span { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; letter-spacing: .08em; color: var(--soft); }
+.v2 .gs-cards .lgd-n > span .num { font-size: 13.5px; letter-spacing: 0; color: var(--hi); }
+
+/* Tiles, the theory table and the years, as the mockup's rule 18 and its tables draw them (round-one review, 2026-11-16). Scoped to the
+   Generator so the Strategies page keeps the shared tile rules until its own pass. */
+.v2 .gn .sx-tile .sx-tname { font-size: 17px; line-height: 1.25; color: var(--hi); }
+.v2 .gn .sx-toprow { align-items: center; min-height: 28px; }
+.v2 .gn .sx-tfig b { font-weight: 500; font-stretch: 78%; letter-spacing: -.045em; }
+.v2 .gn .sx-unit { font-size: 14.5px; line-height: 1.4; color: var(--ink); }
+.v2 .gn .sx-chg b.num { font-family: var(--sans); font-stretch: normal; font-size: 14.5px; }
+.v2 .gn .gx-table th.num { font-family: var(--sans); padding-left: 18px; padding-right: 0; }
+.v2 .gn .gx-table td.num { padding-left: 18px; padding-right: 0; }
+.v2 .gn .gx-table th:last-child, .v2 .gn .gx-table td:last-child { padding-left: 30px; }
+.v2 .gx-years { gap: 10px; }

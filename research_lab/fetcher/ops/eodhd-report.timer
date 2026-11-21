@@ -1,0 +1,14 @@
+[Unit]
+Description=Append a daily EODHD budget heartbeat line (backstop so every day gets exactly one line)
+
+[Timer]
+# Once a day, late, as a backstop. On days a backfill ran, its ExecStartPost already wrote a line and
+# --if-absent makes this a no-op; on SSD-unmounted (skipped-backfill) days, this is what writes the
+# "no spend" line. Local time is fine for a backstop — its only job is "at least one line per day".
+OnCalendar=*-*-* 23:50:00
+# A backstop missed while WSL was off fires on next start, so a day is never silently skipped.
+Persistent=true
+Unit=eodhd-report.service
+
+[Install]
+WantedBy=timers.target

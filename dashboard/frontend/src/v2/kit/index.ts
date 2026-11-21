@@ -1,0 +1,40 @@
+import { lazy } from "react";
+import "../look.css";
+import "./kit.css";
+
+// Monaco is heavy: the editor loads on first use, in its own build chunk. Callers wrap it in Suspense.
+export const CodeEditor = lazy(() => import("./CodeEditor"));
+export type { CodeEditorProps } from "./CodeEditor";
+
+export { Cols, Facts, Kpis, Legend, PageHeader, Panel, Rows, Segmented, StateWord, Table, Track, ZeroBar, isNum } from "./parts";
+export type { Cell, ColItem, KpiItem, Tone } from "./parts";
+export { PageArrows, PageNavContext } from "./pageNav";
+export type { PageNav } from "./pageNav";
+export { HoldButton, LayoutContext, PhoneNav, PhoneOff, useLayout } from "./phone";
+export type { LayoutMode, PhoneNavValue } from "./phone";
+export { usePageMemory } from "./memory";
+export { DatePick } from "./DatePick";
+export { Toast } from "./Toast";
+export { TimePick } from "./TimePick";
+export { Window } from "./Window";
+export type { WindowSize } from "./Window";
+export { STRETCHES, StageLegend, YearsBand } from "./YearsBand";
+export type { Stage } from "./YearsBand";
+export { Ring } from "./Ring";
+export type { RingRow } from "./Ring";
+export { Gauge } from "./Gauge";
+export type { GaugeProps } from "./Gauge";
+export { StepLine } from "./StepLine";
+export type { StepLineStep } from "./StepLine";
+export { Scatter } from "./Scatter";
+export type { ScatterAxis, ScatterPoint } from "./Scatter";
+export { HeatStrip } from "./HeatStrip";
+export type { HeatCell } from "./HeatStrip";
+export { DayBars, KzSeg, KzSteps, LineChart, ShareBar, Spark, useBoxSize } from "./charts";
+export { BurnColumns, Stair, StepRing } from "./EveningCharts";
+export type { BurnDay } from "./EveningCharts";
+export { Block, Say, State } from "./Block";
+export type { NlTone } from "./Block";
+export { unveil, useUnveil } from "./motion";
+export type { Unveil } from "./motion";
+export type { ChartSeries, DayBar, HoverRows, LineChartProps } from "./charts";

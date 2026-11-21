@@ -1,0 +1,38 @@
+"""{{strategy_label}} — Bollinger-band mean reversion (generated from the Bollinger template, M4.5 R16).
+
+Long-only band reversion on the close. Enter long when price closes back up through the lower band
+({{num_std}} standard deviations below the {{bb_window}}-bar mean); exit when it closes back up through
+the middle band. A starting scaffold — edit the rule freely from here.
+"""
+from __future__ import annotations
+
+from strategies.base import RunResult, SettingRow, Strategy, StrategyInput
+from strategies.helpers import default_costs, long_only_signal_result
+
+
+class {{class_name}}(Strategy):
+    """Long-only Bollinger-band mean reversion, window {{bb_window}}, {{num_std}} sigma."""
+
+    asset_class_scope = ("crypto", "equities")
+
+    def run(self, data: StrategyInput, settings: list[SettingRow]) -> RunResult:
+        close = data.close  # the closing-price series the bands are built from
+
+        # The Bollinger bands in pandas (rolling mean +/- num_std * rolling std; the parameterized rule).
+        mid = close.rolling({{bb_window}}).mean()                 # the middle band (the SMA)
+        sd = close.rolling({{bb_window}}).std()                   # the rolling standard deviation
+        lower = mid - {{num_std}} * sd                           # the lower band
+        upper = mid + {{num_std}} * sd                           # the upper band (overlay only)
+
+        # Cross signals: enter as price reclaims the lower band, exit as it reclaims the middle band.
+        entries = (close > lower) & (close.shift(1) <= lower.shift(1))  # close crosses UP through the lower band
+        exits = (close > mid) & (close.shift(1) <= mid.shift(1))        # close crosses UP through the middle band
+
+        # Costs from the lab settings via the neutral key dispatch routed by asset class (M4 D2).
+        fees, slippage = default_costs(settings)
+
+        # The shared long-only portfolio build (R16) — no vbt call in the template body.
+        return long_only_signal_result(
+            data, entries, exits, fees, slippage,
+            indicators={"bb_mid": mid, "bb_lower": lower, "bb_upper": upper},
+        )

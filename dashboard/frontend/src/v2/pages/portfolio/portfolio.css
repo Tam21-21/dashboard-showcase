@@ -1,0 +1,76 @@
+/* The Money and Budget pages: share bars, owed list, goals, chart keys, the plan dialog. */
+/* Money, Positions and Budget, after the mockup: the net worth line, goals, the twelve month bars. */
+.v2 .mn-line { position: relative; height: 320px; display: flex; }
+.v2 .mn-owed .tp-cap { color: var(--r); }
+.v2 .bg-year { display: flex; gap: 8px; height: 300px; align-items: stretch; }
+.v2 .bg-ym { flex: 1 1 0; min-width: 0; display: grid; grid-template-rows: 1fr auto; gap: 8px; }
+.v2 .bg-ym.part { opacity: .55; }
+.v2 .bg-ycol { display: flex; flex-direction: column; justify-content: flex-end; }
+.v2 .bg-ycol i { display: block; width: 100%; max-width: 34px; margin: 0 auto; }
+.v2 .bg-ycol i.grey { background: rgba(141,152,168,.55); border-radius: 1px 1px 3px 3px; }
+.v2 .bg-ycol i.good { background: var(--g); border-radius: 5px 5px 0 0; }
+.v2 .bg-ycol i.bad { background: var(--r); border-radius: 5px 5px 0 0; }
+.v2 .bg-ym small { text-align: center; font-size: 12.5px; color: var(--soft); }
+.v2.phone .mn-line { height: 240px; }
+.v2.phone .bg-year, .v2.phone .tp-gb { height: 220px; }
+.v2 .mn-bar { display: inline-block; height: 8px; border-radius: 4px; background: #ffb000; opacity: .85; margin-right: 8px; vertical-align: 0; }
+.v2 .mn-none { padding: 6px 0; font-size: 14px; }
+.v2 .mn-owed { margin-top: 14px; }
+.v2 .mn-owed-h { font-size: 11px; letter-spacing: .12em; font-weight: 500; color: var(--rt); }
+.v2 .mn-owed .rows { margin-top: 6px; }
+
+.v2 .mn-goals { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.v2 .mn-goal-h { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; color: var(--bright); margin-bottom: 8px; }
+.v2 .mn-goal-n { font-size: 13px; color: var(--bright); margin-top: 6px; }
+
+.v2 .mn-key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--bright); margin-top: 8px; }
+.v2 .mn-sw { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; vertical-align: -1px; }
+.v2 .mn-key .mn-sw[style*="width: 2px"], .v2 .mn-key .mn-sw[style*="border-left"] { border-radius: 0; height: 12px; vertical-align: -2px; }
+.v2 .mn-note { font-size: 13px; margin-top: 10px; }
+
+.v2 .mn-grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+@media (max-width: 1100px) { .v2 .mn-grid2 { grid-template-columns: 1fr; } }
+.v2 .mn-plan { margin-top: 18px; }
+.v2 .mn-plan-head { display: flex; align-items: center; gap: 14px; }
+
+.v2 .mn-dlg { display: flex; flex-direction: column; gap: 12px; }
+.v2 .mn-dlg h2 { margin: 0; font-size: 18px; font-weight: 500; color: var(--hi); }
+.v2 .mn-row { display: grid; grid-template-columns: minmax(0, 1.3fr) 120px 150px auto auto; gap: 10px; align-items: center; font-size: 13.5px; color: var(--bright); }
+.v2 .mn-row .fin { height: 32px; }
+.v2 .mn-avg { color: var(--bright); display: flex; align-items: center; gap: 8px; }
+.v2 .mn-err { color: var(--rt); font-size: 13px; }
+.v2 .mn-foot { display: flex; justify-content: flex-end; }
+
+/* The phone frame (DECISIONS #484): one column. */
+.v2.phone .mn-grid2 { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 12px; }
+.v2.phone .mn-row { grid-template-columns: minmax(0, 1fr); }
+.v2.phone .mn-goals { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.v2.phone .mn-plan { margin-top: 12px; }
+/* The wide charts keep their drawn size on a phone and scroll sideways inside their panel, so every label reads whole. */
+.v2.phone .mn-scroll { overflow-x: auto; }
+.v2.phone .mn-wide svg { min-width: 880px; }
+.v2.phone .mn-flowbox { padding-right: 24px; }
+.v2.phone .mn-flowbox svg { min-width: 640px; overflow: visible; }
+/* The plan on a phone: one block per category (PlanRows), sized for 414 px. */
+.v2.phone .pr-rows { display: flex; flex-direction: column; gap: 14px; }
+.v2.phone .pr-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.v2.phone .pr-lab { font-size: 13px; color: var(--bright); min-width: 0; overflow-wrap: anywhere; }
+.v2.phone .pr-amt { font-family: "Azeret Mono", monospace; font-size: 12px; color: var(--bright); white-space: nowrap; }
+.v2.phone .pr-of { color: var(--rt); }
+.v2.phone .pr-track { position: relative; height: 12px; margin-top: 6px; border-radius: 4px; background: rgba(255,255,255,.06); }
+.v2.phone .pr-fill { position: absolute; left: 0; top: 0; height: 12px; min-width: 4px; border-radius: 4px; opacity: .9; }
+.v2.phone .pr-pace { position: absolute; top: -2px; height: 16px; border-left: 1.4px dashed #eef2f7; }
+.v2.phone .pr-plan { position: absolute; top: -2px; height: 16px; width: 2px; margin-left: -1px; background: #eef2f7; }
+.v2.phone .pr-sec { font-family: "Azeret Mono", monospace; font-size: 11px; margin-top: 4px; }
+.v2 .mn-two { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+@media (max-width: 1100px) { .v2 .mn-two { grid-template-columns: minmax(0, 1fr); } }
+.v2 .mn-two .tp-tbl td.num { white-space: nowrap; }
+.v2 .bg-key { display: flex; gap: 22px; margin: 0 0 6px; font-size: 13.5px; color: var(--soft); }
+.v2 .bg-key span { display: inline-flex; align-items: center; gap: 8px; }
+.v2 .bg-key i { display: inline-block; }
+.v2 .bg-key i.spent { width: 18px; height: 8px; border-radius: 4px; background: var(--ink); }
+.v2 .bg-key i.pace { width: 16px; height: 2px; background: var(--soft); }
+.v2.phone .tp-barrow { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; padding: 12px 0; }
+.v2.phone .tp-barrow .tp-track { grid-column: 1 / -1; grid-row: 2; }
+.v2.phone .tp-barrow .tp-amt { grid-column: 2; grid-row: 1; }
+.v2.phone .tp-barrow .tp-side { grid-column: 1 / -1; grid-row: 3; text-align: left; }

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- Match the installed-app title bar to the dashboard background (#0B0D12, --c-bg) so it blends in. Safari 26 on
+         iOS ignores it (it samples the page instead); Chrome and Android still read it. -->
+    <meta name="theme-color" content="#0B0D12" />
+    <!-- The iPhone home-screen app: the page draws under the clock and the notch, so the page's own background fills the
+         whole screen (Tamer 2026-11-15). iOS reads these two only when the icon is added: remove the icon and add it again. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Personal Dashboard</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

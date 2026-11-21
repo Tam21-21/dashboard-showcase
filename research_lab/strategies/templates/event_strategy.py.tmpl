@@ -1,0 +1,26 @@
+"""{{strategy_label}} — event-driven triple-barrier strategy (generated from the event template, M4.5 R16).
+
+A minimal EventStrategy: it consumes {{event_type}} events for its universe and applies the shared
+triple-barrier event pipeline. The barrier widths, sizing, and regime dials are read from the
+``event_strategy`` settings scope (all provenance'd), so this scaffold seeds no new parameters — tune the
+profit-take and stop-loss widths from the workspace SETTINGS tab as per-strategy overrides. A starting
+scaffold — edit the rule freely from here.
+"""
+from strategies.base.event_strategy import EventStrategy  # the shared event pipeline base (run() is inherited)
+
+
+class {{class_name}}(EventStrategy):
+    """Event-driven {{event_type}} strategy on a triple-barrier label (side {{trade_side}})."""
+
+    # The event type this strategy consumes (a literal tuple the backend AST-reads at dispatch).
+    event_types = ("{{event_type}}",)
+
+    # An event run targets a universe, which is always equities (the universe invariant).
+    asset_class_scope = ("equities",)
+
+    # The shared event-strategy method scope: barrier widths, sizing, and regime dials (all provenance'd).
+    settings_scope = "event_strategy"
+
+    # +1 reads the event as bullish (go long); -1 reads it as bearish (go short). The side is the
+    # strategy's choice (AFML meta-labeling), NOT the triple-barrier label sign.
+    trade_side = {{trade_side}}

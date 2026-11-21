@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1.7
+#
+# pre-M4 Brief A1 — the CHEAP fetch-path re-bake for a machine that ALREADY has
+# research-runner:m2-latest (the laptop). It layers ONLY the two changed/new fetch-path
+# files onto the existing base and re-tags m2-latest, so the ~5-7 GB vbt stack is NOT
+# reinstalled (the research-runner-image-shared-base discipline). The from-scratch,
+# fully-reproducible build lives in Dockerfile.m2-base; this thin patch is the
+# deploy-gate convenience, not the source of reproducibility.
+#
+# Build CONTEXT is docker/research-runner/ (this directory):
+#   cd research_lab/docker/research-runner
+#   DOCKER_BUILDKIT=1 docker build -f Dockerfile.m2-patch -t research-runner:m2-latest .
+# Then rebuild m3-latest on top (it FROMs m2-latest), so the strategy image inherits the
+# patched fetch path too (harmless — the strategy path does not fetch).
+FROM research-runner:m2-latest
+
+# COPY needs to write into /app; the base ends as USER runner, so step up to root then back.
+USER root
+# lane D1b: the NYSE exchange calendar fetch.py's data check reads (bar_on_closed_day); the same pins as
+# requirements.txt, which the from-scratch Dockerfile.m2-base installs.
+RUN pip install --no-cache-dir exchange_calendars==4.13.2 korean_lunar_calendar==0.4.0 pyluach==2.3.0 toolz==1.2.0 \
+    && pip check
+# The updated fetch.py (now calls durable_write_parquet) and the new helper it imports.
+COPY fetch.py /app/fetch.py
+COPY durable_write.py /app/durable_write.py
+# hourly-pivot campaign: the 1h timeframe adapter fetch.py's '1h' route imports at /app on sys.path.
+COPY eodhd_hourly.py /app/eodhd_hourly.py
+USER runner
+# ENTRYPOINT ["/app/entrypoint.sh"] is inherited from m2-latest.

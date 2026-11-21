@@ -1,0 +1,999 @@
+<SEC-DOCUMENT>0001104659-26-081696.txt : 20260708
+<SEC-HEADER>0001104659-26-081696.hdr.sgml : 20260708
+<ACCEPTANCE-DATETIME>20260708112223
+ACCESSION NUMBER:		0001104659-26-081696
+CONFORMED SUBMISSION TYPE:	SC TO-T/A
+PUBLIC DOCUMENT COUNT:		2
+FILED AS OF DATE:		20260708
+DATE AS OF CHANGE:		20260708
+GROUP MEMBERS:		4 DRAGON MERGER SUB INC.
+
+SUBJECT COMPANY:	
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			GENCO SHIPPING & TRADING LTD
+		CENTRAL INDEX KEY:			0001326200
+		STANDARD INDUSTRIAL CLASSIFICATION:	DEEP SEA FOREIGN TRANSPORTATION OF FREIGHT [4412]
+		ORGANIZATION NAME:           	01 Energy & Transportation
+		EIN:				000000000
+		STATE OF INCORPORATION:			1T
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		SC 13D/A
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	005-81128
+		FILM NUMBER:		261161323
+
+	BUSINESS ADDRESS:	
+		STREET 1:		299 PARK AVENUE
+		STREET 2:		12TH FLOOR
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10171
+		BUSINESS PHONE:		(646) 443-8550
+
+	MAIL ADDRESS:	
+		STREET 1:		299 PARK AVENUE
+		STREET 2:		12TH FLOOR
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10171
+
+SUBJECT COMPANY:	
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			GENCO SHIPPING & TRADING LTD
+		CENTRAL INDEX KEY:			0001326200
+		STANDARD INDUSTRIAL CLASSIFICATION:	DEEP SEA FOREIGN TRANSPORTATION OF FREIGHT [4412]
+		ORGANIZATION NAME:           	01 Energy & Transportation
+		EIN:				000000000
+		STATE OF INCORPORATION:			1T
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		SC TO-T/A
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	005-81128
+		FILM NUMBER:		261161322
+
+	BUSINESS ADDRESS:	
+		STREET 1:		299 PARK AVENUE
+		STREET 2:		12TH FLOOR
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10171
+		BUSINESS PHONE:		(646) 443-8550
+
+	MAIL ADDRESS:	
+		STREET 1:		299 PARK AVENUE
+		STREET 2:		12TH FLOOR
+		CITY:			NEW YORK
+		STATE:			NY
+		ZIP:			10171
+
+FILED BY:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			DIANA SHIPPING INC.
+		CENTRAL INDEX KEY:			0001318885
+		STANDARD INDUSTRIAL CLASSIFICATION:	DEEP SEA FOREIGN TRANSPORTATION OF FREIGHT [4412]
+		ORGANIZATION NAME:           	01 Energy & Transportation
+		EIN:				000000000
+
+	FILING VALUES:
+		FORM TYPE:		SC TO-T/A
+
+	BUSINESS ADDRESS:	
+		STREET 1:		PENDELIS 16
+		STREET 2:		175 64 PALAIO FALIRO
+		CITY:			ATHENS
+		STATE:			J3
+		ZIP:			00000
+		BUSINESS PHONE:		30-210-947-0100
+
+	MAIL ADDRESS:	
+		STREET 1:		PENDELIS 16
+		STREET 2:		175 64 PALAIO FALIRO
+		CITY:			ATHENS
+		STATE:			J3
+		ZIP:			00000
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>SC TO-T/A
+<SEQUENCE>1
+<FILENAME>tm2620046d1_sctota.htm
+<DESCRIPTION>SC TO-T/A
+<TEXT>
+<HTML>
+<HEAD>
+     <TITLE></TITLE>
+</HEAD>
+<BODY STYLE="font: 10pt Times New Roman, Times, Serif">
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<p style="margin: 0"></P>
+
+<P STYLE="margin: 0"></P>
+
+<!-- Field: Rule-Page --><DIV STYLE="margin-top: 0pt; margin-bottom: 3pt; width: 100%"><DIV STYLE="border-top: Black 2pt solid; border-bottom: Black 1pt solid; font-size: 1pt">&nbsp;</DIV></DIV><!-- Field: /Rule-Page -->
+
+<P STYLE="margin: 0"></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>UNITED STATES</B></P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>SECURITIES AND EXCHANGE COMMISSION</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Washington, D.C. 20549</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>SCHEDULE TO</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Tender Offer Statement under Section&nbsp;14(d)(1)&nbsp;or
+13(e)(1)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>of the Securities Exchange Act of 1934</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Amendment No.&nbsp;19)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Genco Shipping&nbsp;&amp; Trading Limited</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Name of Subject Company (Issuer))</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>4 Dragon Merger Sub Inc.</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Offeror)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>a direct wholly owned subsidiary of</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 14pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Diana Shipping Inc.</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Parent of Offeror)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Names of Filing Persons (identifying status
+as offeror, issuer or other person))</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Common Stock, par value $0.01 per share</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Including the Associated Preferred Stock Purchase
+Rights)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Title of Class&nbsp;of Securities)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Y2685T131</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(CUSIP Number of Class&nbsp;of Securities)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Mr.&nbsp;Ioannis Zafirakis</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Pendelis 16, Palaio Faliro</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Athens, Greece J3, 175 64</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>30-210-947-0100</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(Name, Address and Telephone Number of Person
+Authorized to Receive Notices and Communications on Behalf of Filing Persons)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B><I>With a copy to:</I></B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="width: 50%">
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Philip Richter</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Warren de Wied</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Colum Weiden</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Fried, Frank, Harris, Shriver&nbsp;&amp; Jacobson
+    LLP</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>One New York Plaza</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>New York, New York, 10004</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(212) 859-8000</B></P></TD>
+    <TD STYLE="width: 50%">
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Edward S. Horton</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>Seward&nbsp;&amp; Kissel LLP</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>One Battery Park Plaza</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>New York, NY 10004</B></P>
+    <P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>(212) 574-1200</B></P></TD></TR>
+  </TABLE>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="width: 2%; font-size: 10pt; text-align: justify"><FONT STYLE="font-family: Wingdings">&#168;</FONT><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"> </FONT></TD>
+    <TD STYLE="width: 98%; font-size: 10pt; text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Check the box if the filing relates solely to preliminary communications made before the commencement of a tender offer.</FONT></TD></TR>
+  </TABLE>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0 0pt 0.25in; text-align: justify; text-indent: -0.25in">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0 0pt 0.25in; text-align: justify; text-indent: -0.25in">Check the appropriate
+boxes below to designate any transactions to which the statement relates:</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="width: 48px; text-align: justify">&nbsp;</TD>
+    <TD STYLE="width: 24px; text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><FONT STYLE="font-family: Wingdings">&#120;</FONT></FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">third-party tender offer subject to Rule&nbsp;14d-1.</FONT></TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><FONT STYLE="font-family: Wingdings">&#168;</FONT></FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">issuer tender offer subject to Rule&nbsp;13e-4.</FONT></TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><FONT STYLE="font-family: Wingdings">&#168;</FONT></FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">going-private transaction subject to Rule&nbsp;13e-3.</FONT></TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><FONT STYLE="font-family: Wingdings">&#120;</FONT></FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">amendment to Schedule 13D under Rule&nbsp;13d-2.</FONT></TD></TR>
+  </TABLE>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Check the following box if the filing is a final
+amendment reporting the results of the tender offer: <FONT STYLE="font-family: Wingdings">&#168;</FONT></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">If applicable, check the appropriate box(es) below
+to designate the appropriate rule&nbsp;provision(s)&nbsp;relied upon:</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="width: 48px; text-align: justify">&nbsp;</TD>
+    <TD STYLE="width: 24px; text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><FONT STYLE="font-family: Wingdings">&#168;</FONT></FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Rule&nbsp;13e-4(i)&nbsp;(Cross-Border Issuer Tender Offer)</FONT></TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify">&nbsp;</TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="text-align: justify">&nbsp;</TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Wingdings; font-size: 10pt">&#168;</FONT></TD>
+    <TD STYLE="text-align: justify"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Rule&nbsp;14d-1(d)&nbsp;(Cross-Border Third-Party Tender Offer)</FONT></TD></TR>
+  </TABLE>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Rule-Page --><DIV STYLE="margin-top: 3pt; margin-bottom: 12pt; width: 100%"><DIV STYLE="border-top: Black 1pt solid; border-bottom: Black 2pt solid; font-size: 1pt">&nbsp;</DIV></DIV><!-- Field: /Rule-Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 1 -->
+    <DIV STYLE="border-bottom: Black 1pt solid; margin-top: 3pt; margin-bottom: 6pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"><FONT STYLE="background-color: white"><B>As
+permitted by General Instruction G to Schedule TO, this Schedule TO is also Amendment No. 27 (this &ldquo;Amendment&rdquo;) to the Schedule
+13D filed by Diana Shipping Inc. (the Parent of the Offeror), on July 17, 2025 (and amended on July 31, 2025, September 30, 2025, November
+24, 2025, January 13, 2026, January 16, 2026, March 10, 2026, March 23, 2026, April 13, 2026, May 4, 2026, May 7, 2026, May 12, 2026,
+May 18, 2026, May 19, 2026, May 27, 2026, May 28, 2026, June 1, 2026, June 2, 2026, June 4, 2026, June 8, 2026, June 11, 2026, June 12,
+2026, June 15, 2026, June 16, 2026, June 17, 2026, June 18, 2026, June 29, 2026, and June 30, 2026) in respect of the Common Shares of
+the Company. </B></FONT></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"></P>
+
+<table cellspacing="0" cellpadding="0" style="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <tr>
+    <td colspan="5" style="border: Black 1pt solid; padding-top: 1pt; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0"><b>CUSIP No.&nbsp;Y2685T131</b></p>
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">&nbsp;</p></td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>1</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>NAMES OF REPORTING PERSONS <br>
+</b>Diana Shipping Inc.</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>2</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK THE APPROPRIATE BOX IF A MEMBER OF A GROUP</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">(a)&nbsp;<font style="font-family: Wingdings">&#168;</font></p>
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">&nbsp;</p>
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">(b)&nbsp;<font style="font-family: Wingdings">&#120;</font></p></td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>3</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SEC USE ONLY</b></font>
+                                                                                <p style="margin-top: 0; margin-bottom: 0"><b>&nbsp;</b> &nbsp; &nbsp;</p></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>4</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SOURCE OF FUNDS (SEE INSTRUCTIONS) <br>
+</b>WC, BK</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>5</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK BOX IF DISCLOSURE OF LEGAL PROCEEDINGS IS REQUIRED PURSUANT TO ITEM 2(D)&nbsp;OR 2(E)</b></font><p style="margin-top: 0; margin-bottom: 0"><b>&nbsp;</b> &nbsp; &nbsp;</p>
+                                                                                <font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b></b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; text-align: right; padding-bottom: 1pt"><font style="font-family: Wingdings">&#168;</font></td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>6</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CITIZENSHIP OR PLACE OF ORGANIZATION <br>
+</b>MARSHALL ISLANDS</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td colspan="2" rowspan="4" style="padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>NUMBER OF <br>
+SHARES <br>
+BENEFICIALLY <br>
+OWNED BY EACH <br>
+REPORTING <br>
+PERSON <br>
+WITH</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: middle; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>7</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SOLE VOTING POWER <br>
+</b>6,264,548.0</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>8</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SHARED VOTING POWER <br>
+</b>0.0</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>9</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SOLE DISPOSITIVE POWER <br>
+</b>6,264,548.0</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>10</b></font></td>
+    <td style="padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SHARED DISPOSITIVE POWER <br>
+</b>0.0</font></td>
+    <td style="border-right: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>11</b></font></td>
+    <td colspan="3" style="border-top: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0.1in; text-indent: -0.05in"><b>AGGREGATE
+AMOUNT BENEFICIALLY OWNED BY EACH REPORTING PERSON<br>
+</b>6,264,548.0</p></td>
+    <td style="border-top: Black 1pt solid; border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>12</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><p style="margin-top: 0; margin-bottom: 0"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK BOX IF THE AGGREGATE AMOUNT IN ROW (11) EXCLUDES CERTAIN SHARES (SEE INSTRUCTIONS)</b></font></p>
+                                                                                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0; text-align: right"><font style="font-family: Wingdings">&#168;</font></p></td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>13</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>PERCENT OF CLASS&nbsp;REPRESENTED BY AMOUNT IN ROW (11) <br>
+</b>14.4%<sup>1</sup></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>14</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>TYPE OF REPORTING PERSON (SEE INSTRUCTIONS) <br>
+CO</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr style="font-size: 1pt">
+    <td style="font-size: 1pt; padding-top: 1pt; width: 16%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="font-size: 1pt; padding-top: 1pt; width: 6%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="font-size: 1pt; padding-top: 1pt; text-align: center; width: 8%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="font-size: 1pt; padding-top: 1pt; width: 65%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="font-size: 1pt; padding-top: 1pt; width: 5%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td></tr>
+  </table>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"></P>
+
+<!-- Field: Rule-Page --><DIV STYLE="margin-top: 0; margin-bottom: 0; width: 25%"><DIV STYLE="font-size: 1pt; border-top: Black 1pt solid">&nbsp;</DIV></DIV><!-- Field: /Rule-Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt; color: black"><SUP>1</SUP></FONT>
+All reported shares are owned by Diana Shipping Inc. 4 Dragon Merger Sub Inc. is a wholly-owned subsidiary of Diana Shipping Inc. Calculated
+based on 43,577,051 shares of common stock, par value $0.01 per share, of the Issuer outstanding as of May 6, 2026, as reported in the
+Issuer&rsquo;s Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on May 6, 2026.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white"></P>
+
+<!-- Field: Page; Sequence: 2 -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify; background-color: white">&nbsp;</P>
+
+<table cellspacing="0" cellpadding="0" style="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <tr>
+    <td colspan="5" style="border: Black 1pt solid; padding-top: 1pt; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0"><b>CUSIP No.&nbsp;Y2685T131</b></p>
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">&nbsp;</p></td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>1</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>NAMES
+    OF REPORTING PERSONS <BR>
+    4 Dragon Merger Sub Inc.</B></FONT></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>2</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK THE APPROPRIATE BOX IF A MEMBER OF A GROUP</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; text-align: left; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">(a)&nbsp;<font style="font-family: Wingdings">&#168;</font></p>
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0; text-align: left"><font style="font-family: Times New Roman, Times, Serif">&nbsp;</font></p>
+    <p style="font: 10pt Times New Roman, Times, Serif; text-align: left; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0">(b)&nbsp;<font style="font-family: Wingdings">&#120;</font></p></td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>3</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SEC USE ONLY</b> &nbsp; &nbsp; &nbsp;</font>
+                                                                                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>4</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SOURCE OF FUNDS (SEE INSTRUCTIONS) <br>
+</b>AF</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>5</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK BOX IF DISCLOSURE OF LEGAL PROCEEDINGS IS REQUIRED PURSUANT TO ITEM 2(D)&nbsp;OR 2(E)</b></font>
+                                                                                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; text-align: right; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><font style="font-family: Wingdings">&#168;</font></font></td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>6</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CITIZENSHIP OR PLACE OF ORGANIZATION <br>
+</b>MARSHALL ISLANDS</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td colspan="2" rowspan="4" style="padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>NUMBER OF SHARES <br>
+BENEFICIALLY <br>
+OWNED BY EACH <br>
+REPORTING PERSON <br>
+WITH</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: middle; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>7</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>SOLE
+    VOTING POWER </B><BR>
+    <B>0.0</B> </FONT></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>8</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SHARED VOTING POWER <br>
+</b>0.0</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>9</b></font></td>
+    <td style="border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SOLE DISPOSITIVE POWER <br>
+</b>6,264,548.0</font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-right: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>10</b></font></td>
+    <td style="padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>SHARED DISPOSITIVE POWER <br>
+</b>0.0</font></td>
+    <td style="border-right: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-top: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>11</b></font></td>
+    <td colspan="3" style="border-top: Black 1pt solid; border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0.1in; text-indent: -0.05in"><b>AGGREGATE
+AMOUNT BENEFICIALLY OWNED BY EACH REPORTING PERSON<br>
+</b>6,264,548.0</p></td>
+    <td style="border-top: Black 1pt solid; border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>12</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>CHECK BOX IF THE AGGREGATE AMOUNT IN ROW (11) EXCLUDES CERTAIN SHARES (SEE INSTRUCTIONS)</b></font>
+                                                                                <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">
+    <p style="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0; text-align: right"><font style="font-family: Wingdings">&#168;</font></p></td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>13</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>PERCENT OF CLASS&nbsp;REPRESENTED BY AMOUNT IN ROW (11) <br>
+</b>14.4%<sup>2</sup></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; text-align: center; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>14</b></font></td>
+    <td colspan="3" style="border-bottom: Black 1pt solid; border-left: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-left: 0.1in; text-indent: -0.05in; padding-bottom: 1pt"><font style="font-family: Times New Roman, Times, Serif; font-size: 10pt"><b>TYPE OF REPORTING PERSON (SEE INSTRUCTIONS) <br>
+CO</b></font></td>
+    <td style="border-right: Black 1pt solid; border-bottom: Black 1pt solid; padding-top: 1pt; vertical-align: top; padding-bottom: 1pt">&nbsp;</td></tr>
+  <tr>
+    <td style="padding-top: 1pt; width: 16%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="padding-top: 1pt; width: 6%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="text-align: center; padding-top: 1pt; width: 8%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="padding-top: 1pt; width: 65%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td>
+    <td style="padding-top: 1pt; width: 5%; padding-bottom: 1pt"><font style="font-size: 1pt">&nbsp;</font></td></tr>
+  </table>
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Rule-Page --><DIV STYLE="margin-top: 0; margin-bottom: 0; width: 25%"><DIV STYLE="font-size: 1pt; border-top: Black 1pt solid">&nbsp;</DIV></DIV><!-- Field: /Rule-Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<P STYLE="text-align: justify; font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt; color: black"><SUP>2</SUP></FONT>
+All reported shares are owned by Diana Shipping Inc. 4 Dragon Merger Sub Inc. is a wholly-owned subsidiary of Diana Shipping Inc. Calculated
+based on 43,577,051 shares of common stock, par value $0.01 per share, of the Issuer outstanding as of May 6, 2026, as reported in the
+Issuer&rsquo;s Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on May 6, 2026.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 3 -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0; text-align: justify; text-indent: 0in"><FONT STYLE="font-family: Times New Roman, Times, Serif">This
+Amendment No. </FONT>19 to the Tender Offer Statement on Schedule TO (this &ldquo;<U>Amendment</U>&rdquo;) amends and supplements the
+Tender Offer Statement on Schedule TO filed with the U.S. Securities and Exchange Commission on May 4, 2026 (as it may be further amended
+or supplemented from time to time, the &ldquo;<U>Schedule TO</U>&rdquo;), with respect to the tender offer (the &ldquo;<U>Offer</U>&rdquo;)
+made by 4 Dragon Merger Sub Inc., a corporation organized under the laws of the Marshall Islands (&ldquo;<U>Purchaser</U>&rdquo;) and
+a direct wholly-owned subsidiary of Diana Shipping Inc., a corporation organized under the laws of the Marshall Islands (&ldquo;<U>Diana</U>&rdquo;),
+to purchase all of the outstanding shares of Common Stock, par value $0.01 per share (the &ldquo;<U>Common Shares</U>&rdquo;), of Genco
+Shipping &amp; Trading Limited, a corporation organized under the laws of the Marshall Islands (&ldquo;<U>Genco</U>&rdquo;) (including
+the associated preferred stock purchase rights (the &ldquo;<U>Rights</U>&rdquo;, and together with the Common Shares, the &ldquo;<U>Shares</U>&rdquo;)
+issued pursuant to the Shareholder Rights Agreement, dated October 1, 2025 (as it may be further amended or supplemented from time to
+time), by and between Genco and Computershare Inc., as Rights Agent), other than Shares held in treasury by Genco, at $24.80 per share,
+net to the seller in cash, without interest and less any required withholding taxes, upon the terms and subject to the conditions set
+forth in the Offer to Purchase, dated May 4, 2026 (as it may be amended or supplemented from time to time, the &ldquo;<U>Offer to Purchase</U>&rdquo;)
+and in the related Letter of Transmittal (as it may be amended or supplemented from time to time, the &ldquo;<U>Letter of Transmittal</U>&rdquo;),
+copies of which are attached to the Schedule TO as Exhibits (a)(1)(A) and (a)(1)(B), respectively. On June 17, 2026, Diana submitted a
+revised proposal to the Board of Directors of Genco to acquire all of the issued and outstanding Common Shares not already owned by Diana
+for $27.34 in total implied value per share, comprised of $24.80 in cash plus one share of common stock of Diana,&nbsp;with&nbsp;the implied
+value based on the volume-weighted average price per Diana share for the 30 days ended on June 16, 2026 of $2.54.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 15pt 0pt 0; text-align: justify; text-indent: 0in">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin-top: 0pt; margin-bottom: 0pt; margin-left: 0; text-align: justify; text-indent: 0in"><FONT STYLE="font-family: Times New Roman, Times, Serif; background-color: white">Except
+as otherwise set forth in this Amendment, the information set forth in the Schedule TO remains unchanged. This Amendment is being filed
+to reflect certain updates as reflected below. Capitalized terms used but not otherwise defined herein have the meanings ascribed thereto
+in the Offer to Purchase or the Schedule TO, as applicable. You should read this Amendment together with the Schedule TO and the Offer
+to Purchase</FONT><FONT STYLE="background-color: white">.</FONT></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 15pt 0pt 0; text-align: justify; text-indent: 0in">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"><B>ITEM 12. EXHIBITS.</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">Item 12 of the Schedule TO is hereby amended and supplemented by adding
+the following Exhibit:</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR STYLE="vertical-align: top">
+    <TD STYLE="border-bottom: Black 1pt solid; width: 10%; text-align: center"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>Exhibit No.</B></FONT></TD>
+    <TD STYLE="width: 2%; padding-bottom: 1pt">&nbsp;</TD>
+    <TD STYLE="border-bottom: Black 1pt solid; text-align: justify; width: 88%"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>Description</B></FONT></TD></TR>
+  <TR STYLE="vertical-align: top">
+    <TD><A HREF="tm2620046d1_ex-a5y.htm"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">(a)(5)(Y)</FONT></A></TD>
+    <TD>&nbsp;</TD>
+    <TD STYLE="text-align: justify"><A HREF="tm2620046d1_ex-a5y.htm"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Press Release of Diana Shipping Inc., dated July 8, 2026</FONT></A></TD></TR>
+  </TABLE>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 4 -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>SIGNATURE </B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-indent: 20pt">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-indent: 20pt">After due inquiry and to the best of my knowledge
+and belief, I certify that the information set forth in this statement is true, complete and correct.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">Dated: July 8, 2026</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" STYLE="font: 10pt Times New Roman, Times, Serif; width: 100%; border-collapse: collapse">
+  <TR>
+    <TD COLSPAN="2" STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>DIANA SHIPPING INC.</B></FONT><FONT STYLE="font-size: 10pt">&nbsp;</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom; width: 5%">&nbsp;</TD>
+    <TD STYLE="vertical-align: bottom; width: 45%">&nbsp;</TD>
+    <TD STYLE="width: 50%">&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">By:</FONT></TD>
+    <TD STYLE="border-bottom: black 1pt solid; vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">/s/ Ioannis Zafirakis</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Name:</FONT></TD>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Ioannis Zafirakis</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Title: </FONT></TD>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">President</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom">&nbsp;</TD>
+    <TD STYLE="vertical-align: bottom">&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD COLSPAN="2" STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt"><B>4 DRAGON MERGER SUB INC</B></FONT><FONT STYLE="font-size: 10pt">.</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom">&nbsp;</TD>
+    <TD STYLE="vertical-align: bottom">&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">By:</FONT></TD>
+    <TD STYLE="border-bottom: black 1pt solid; vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">/s/ Ioannis Zafirakis</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Name:</FONT></TD>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Ioannis Zafirakis</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Title: </FONT></TD>
+    <TD STYLE="vertical-align: bottom"><FONT STYLE="font-family: Times New Roman, Times, Serif; font-size: 10pt">Secretary</FONT></TD>
+    <TD>&nbsp;</TD></TR>
+  </TABLE>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 5; Options: Last -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+</BODY>
+</HTML>
+</TEXT>
+</DOCUMENT>
+<DOCUMENT>
+<TYPE>EX-99.(A)(5)(Y)
+<SEQUENCE>2
+<FILENAME>tm2620046d1_ex-a5y.htm
+<DESCRIPTION>EXHIBIT (A)(5)(Y)
+<TEXT>
+<HTML>
+<HEAD>
+     <TITLE></TITLE>
+</HEAD>
+<BODY STYLE="font: 10pt Times New Roman, Times, Serif">
+
+<P STYLE="text-align: right; font: 10pt Times New Roman, Times, Serif; margin: 0pt 0 0pt 261pt"><B>Exhibit (a)(5)(Y)</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0 0pt 261pt">&nbsp;</P>
+
+<TABLE CELLPADDING="0" CELLSPACING="0" STYLE="font-size: 10pt; border-collapse: collapse; width: 100%">
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt; width: 50%">&nbsp;</TD>
+    <TD STYLE="font: italic bold 10pt Times New Roman, Times, Serif; width: 50%">Corporate Contact:</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Margarita Veniou</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Chief Corporate Development, Governance &amp;</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Communications Officer and Board Secretary</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Tel: + 30-210-9470-100</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Email: <U>mveniou@dianashippinginc.com</U></TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Website: <U>www.dianashippinginc.com</U></TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">X: @Dianaship</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">&nbsp;</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: italic bold 10pt Times New Roman, Times, Serif">Investor Relations Contact:</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Nicolas Bornozis / Daniela Guerrero</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Capital Link, Inc.</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Tel: (212) 661-7566</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Email: <U>diana@capitallink.com</U></TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">&nbsp;</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Bruce Goldfarb / Chuck Garske / Lisa Patel</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Okapi Partners</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Tel: (212) 297-0720</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif"><U>info@okapipartners.com</U></TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">&nbsp;</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: italic bold 10pt Times New Roman, Times, Serif">Media Contact:</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Mark Semer / Grace Cartwright</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Gasthalter &amp; Co.</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif">Tel: (212) 257-4170</TD></TR>
+  <TR STYLE="font-size: 10pt; vertical-align: bottom">
+    <TD STYLE="font-size: 10pt">&nbsp;</TD>
+    <TD STYLE="font: 10pt Times New Roman, Times, Serif"><U>DianaShipping@gasthalter.com</U></TD></TR>
+  </TABLE>
+
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>DIANA SHIPPING INC. URGES GENCO SHIPPING &amp;
+TRADING SHAREHOLDERS TO TENDER THEIR SHARES BY FRIDAY, JULY 10</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><I>10,583,484 Shares, or 28.4% of Outstanding Shares
+Not Owned by Diana, Tendered into Offer as of June 26, 2026</I></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><I>Diana&rsquo;s $27.34 Per Share Offer Made Directly
+to Genco Board &mdash; Comprised of $24.80 in Cash and One Diana Share Valued at $2.54&nbsp;&mdash; Remains on the Table, Providing an
+Opportunity to Deliver Premium Value for All Genco Shareholders</I></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><I>Nearly Three Weeks After Receiving Diana&rsquo;s
+Offer, Genco Board Has Yet to Respond; By Tendering Their Shares, Shareholders Can Send a Clear Message to the Genco Board That They Should
+Negotiate a Transaction with Diana</I></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: center"><I>&nbsp;</I></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>Athens, Greece &ndash; July 8, 2026</B> &ndash;
+Diana Shipping Inc. (NYSE: DSX) (&ldquo;Diana&rdquo; or &ldquo;the Company&rdquo;), a global shipping company specializing in the ownership
+and bareboat charter-in of dry bulk vessels that is the largest shareholder of Genco Shipping &amp; Trading Limited (NYSE: GNK) (&ldquo;Genco&rdquo;),
+today issued a final reminder to Genco shareholders to tender their shares into Diana&rsquo;s tender offer to acquire all outstanding
+shares of Genco not already owned by Diana by July 10, 2026, at 5:00 p.m., New York City time. As of Friday, June 26, 2026, 10,583,484
+shares &ndash; or 28.4% of the outstanding shares of Genco not owned by Diana &ndash; have been tendered into the offer.&nbsp;The shares
+tendered do not include any of the more than 14% of the outstanding shares of Genco owned by Diana.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"></P>
+
+<!-- Field: Page; Sequence: 1 -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">On June 17, 2026, Diana presented the Genco Board
+with an increased offer to acquire the outstanding shares of Genco that it does not already own to $27.34 per share &mdash; comprised
+of $24.80 per share in cash plus one Diana share valued at $2.54 based on Diana's 30-day volume-weighted average price as of June 16,
+2026. The increased offer remains on the table, but nearly three weeks later, the Genco Board has yet to respond or engage with Diana
+in any way.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Semiramis Paliou, Diana's Chief Executive Officer,
+commented:</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&ldquo;We are grateful to the significant group
+of shareholders that has tendered their shares and, in doing so, demonstrated their support for Diana&rsquo;s premium offer to acquire
+the Genco shares that we do not currently own. It is very clear that shareholders have a strong interest in the Genco Board engaging with
+Diana to negotiate a value-creative transaction in good faith. It has been nearly three weeks since we delivered to the Genco Board our
+increased offer of $27.34 per share. In the final days before our tender offer expires, we urge additional shareholders to tender their
+shares and send a message to the Genco Board that it should take immediate action to deliver all shareholders the value they deserve.
+We are fully available to meet with Genco and its advisors to move this important strategic initiative forward.&rdquo;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Diana's offer is supported by $1.412 billion in
+committed financing from six leading international banks with no financing condition. It represents a 53% premium to Genco's undisturbed
+share price and a 6% premium to Genco's net asset value per share based on VesselsValue data, at cyclically high drybulk asset values
+that are at or near 15-year highs.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>About Diana Shipping Inc.</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Diana Shipping Inc. (&ldquo;Diana&rdquo;) (NYSE:
+DSX) is a global provider of shipping transportation services through its ownership and bareboat charter-in of dry bulk vessels. Diana&rsquo;s
+vessels are employed primarily on short to medium-term time charters and transport a range of dry bulk cargoes, including such commodities
+as iron ore, coal, grain and other materials along worldwide shipping routes.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>About Star Bulk Carriers Corp.</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Star Bulk Carriers Corp. (&ldquo;Star Bulk&rdquo;)
+is a global shipping company providing worldwide seaborne transportation solutions in the dry bulk sector. Star Bulk&rsquo;s vessels transport
+major bulks, which include iron ore, minerals and grain, and minor bulks, which include bauxite, fertilizers and steel products. Star
+Bulk was incorporated in the Marshall Islands on December 13, 2006 and maintains executive offices in Athens, New York, Stamford and Singapore.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"></P>
+
+<!-- Field: Page; Sequence: 2 -->
+    <DIV STYLE="margin-top: 12pt; margin-bottom: 6pt; border-bottom: Black 1pt solid"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"><B>Cautionary Statement Regarding Forward-Looking Statements</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Matters discussed in this communication and other
+statements made by Diana, may constitute forward-looking statements as defined in the Private Securities Litigation Reform Act of 1995.
+Forward-looking statements include, but are not limited to, statements regarding the intent, beliefs, expectations, objectives, goals,
+future events, performance or strategies and other statements of Diana or its management team, which are other than statements of historical
+facts.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">These forward-looking statements relate to, among
+other things, Diana&rsquo;s proposal to acquire Genco and the anticipated benefits of such a transaction, and Diana&rsquo;s ability to
+finance such transaction. Forward looking statements can be identified by words such as &ldquo;believe,&rdquo; &ldquo;will,&rdquo; &ldquo;anticipate,&rdquo;
+ &ldquo;intend,&rdquo; &ldquo;estimate,&rdquo; &ldquo;forecast,&rdquo; &ldquo;project,&rdquo; &ldquo;plan,&rdquo; &ldquo;potential,&rdquo;
+ &ldquo;may,&rdquo; &ldquo;should,&rdquo; &ldquo;expect,&rdquo; &ldquo;pending&rdquo; and similar expressions identify forward-looking
+statements.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">The forward-looking statements in this press release
+and in other statements made by Diana or Star Bulk, as applicable, are based upon various assumptions, many of which are based, in turn,
+upon further assumptions, including without limitation, management&rsquo;s examination of historical operating trends, data contained
+in Diana&rsquo;s records, Genco&rsquo;s public filings and disclosures and data available from third parties. Although Diana believes
+that these assumptions were reasonable when made, because these assumptions are inherently subject to significant uncertainties and contingencies
+that are difficult or impossible to predict and are beyond its control, Diana cannot assure you that it will achieve or accomplish these
+expectations, beliefs or projections.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>&nbsp;</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">The forward-looking statements in this communication
+are based on current expectations, assumptions, and estimates, and are subject to numerous risks and uncertainties. These include, without
+limitation, risks relating to: (i) the possibility that the proposed transaction may not proceed; (ii) the ability to obtain regulatory
+or shareholder approvals, if required; (iii) the risk that Genco&rsquo;s Board of Directors or management may continue to oppose the proposal
+or not respond to further attempted engagement by Diana; (iv) failure to realize anticipated benefits of the transaction; (v) changes
+in the financial or operating performance of Diana, Star Bulk or Genco; (vi) the possibility that shareholders of Genco will not elect
+to tender their shares of common stock of Genco in connection with the Offer (as defined below) or that the conditions to consummation
+of the Offer are not satisfied; and (vii) general economic, market, and industry conditions. These and other risks are described in documents
+filed by Diana with, or furnished by Diana to, the U.S. Securities and Exchange Commission (&ldquo;SEC&rdquo;), including its Annual Report
+on Form 20-F for the fiscal year ended December 31, 2025, and its other subsequent documents filed with, or furnished to, the SEC, and
+are described in documents filed by Genco with, or furnished by Genco to, the SEC, including its Annual Report on Form 10-K for the fiscal
+year ended December 31, 2025, and its other subsequent documents filed with, or furnished to, the SEC. Diana undertakes no obligation
+to revise or update any forward-looking statement, or to make any other forward-looking statements, whether as a result of new information,
+future events or otherwise, except to the extent required by law.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 3 -->
+    <DIV STYLE="border-bottom: Black 1pt solid; margin-top: 12pt; margin-bottom: 6pt"><P STYLE="font-size: 10pt; text-align: center; margin-top: 0pt; margin-bottom: 0pt"></P></DIV>
+    <DIV STYLE="break-before: page; margin-top: 6pt; margin-bottom: 12pt"><P STYLE="margin: 0pt">&nbsp;</P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify"><B>Information Regarding the Offer</B></P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">On May 4, 2026, Diana commenced a tender offer,
+through its wholly owned subsidiary 4 Dragon Merger Sub Inc., to purchase all outstanding shares of Genco common stock at $23.50 per
+share in cash. On May 27, 2026, Diana increased the offer price from $23.50 per share in cash to $24.80 per share in cash. To the extent
+that Genco declares a cash dividend or other distribution on the Genco shares, the cash component of the offer price will be reduced
+by the amount payable per share. Diana intends to file with the SEC an amended tender offer statement on Schedule TO and a registration
+statement on Form F-4 reflecting the terms of its increased offer made to the Genco Board reflecting an implied value of $27.34 per Genco
+share comprised of $24.80 in cash and one Diana share with an implied value of $2.54 based on Diana's 30-day VWAP as of June 16, 2026.
+These materials, as may be amended from time to time, will contain important information, including the terms and conditions of the revised
+Offer. Shareholders of Genco are strongly advised to read Diana's amended tender offer statement, registration statement and other offer
+documents as they become available because they will contain important information regarding the revised offer. Diana's tender offer
+statement, offer to purchase and other offer documents, when filed, will be available at no charge on the SEC's website at <U>www.sec.gov</U>.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">The Offer is conditioned upon, among other things:
+(i) Genco entering into a definitive merger agreement with Diana substantially in the form of the merger agreement included with the Offer
+documents; (ii) Genco shareholders validly tendering a majority of Genco's outstanding shares on a fully diluted basis; (iii) the termination
+or inapplicability of Genco's shareholder rights plan; (iv) the Genco Board's approval of the transaction under certain affiliate transaction
+provisions in Genco's charter, and (v) other customary conditions. When Diana files an amended tender offer statement on Schedule TO and
+a registration statement on Form F-4 reflecting the terms of its increased offer, the Offer will be conditioned on Diana's registration
+statement on Form F-4 being declared effective by the SEC. Satisfaction of the merger agreement condition, the shareholder rights plan
+condition and the affiliate transaction condition is solely within the control of Genco and the members of the Genco Board.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">If the Offer is successfully completed, Diana
+intends to consummate a second-step merger as promptly as practicable, in which any remaining Genco shareholders who did not tender their
+shares in the Offer would receive the same consideration that was paid in the Offer. As a result, if the Offer is completed and the second-step
+merger is consummated, all Genco shareholders &mdash; whether or not they tender their shares &mdash; would receive the same consideration.
+Importantly, shareholders who tender in the Offer may receive their consideration sooner than those whose shares are acquired in the second-step
+merger.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">Questions and requests for assistance regarding
+the Offer may be directed to Okapi Partners LLC, the information agent for the Offer, toll-free at (855) 305-0857 or by email at <U>info@okapipartners.com</U>.</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0; text-align: justify">&nbsp;</P>
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+<!-- Field: Page; Sequence: 4; Options: Last -->
+    <DIV STYLE="border-bottom: Black 1pt solid; margin-top: 12pt; margin-bottom: 6pt"><P STYLE="font-size: 10pt; text-align: center; margin-top: 0pt; margin-bottom: 0pt"></P></DIV>
+    <!-- Field: /Page -->
+
+<P STYLE="font: 10pt Times New Roman, Times, Serif; margin: 0pt 0"></P>
+
+
+</BODY>
+</HTML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

@@ -1,0 +1,38 @@
+"""{{strategy_label}} — MACD crossover (generated from the MACD template, M4.5 R16).
+
+Long-only MACD signal-line crossover on the close. Enter long when the MACD line (the {{fast_span}}-span
+minus the {{slow_span}}-span exponential averages) crosses above its {{signal_span}}-span signal line;
+exit on the reverse cross. A starting scaffold — edit the rule freely from here.
+"""
+from __future__ import annotations
+
+from strategies.base import RunResult, SettingRow, Strategy, StrategyInput
+from strategies.helpers import default_costs, long_only_signal_result
+
+
+class {{class_name}}(Strategy):
+    """Long-only MACD crossover, {{fast_span}}/{{slow_span}}/{{signal_span}}."""
+
+    asset_class_scope = ("crypto", "equities")
+
+    def run(self, data: StrategyInput, settings: list[SettingRow]) -> RunResult:
+        close = data.close  # the closing-price series the averages are built from
+
+        # The MACD line and its signal line in pandas (exponential averages; the parameterized rule).
+        ema_fast = close.ewm(span={{fast_span}}, adjust=False).mean()  # fast exponential average
+        ema_slow = close.ewm(span={{slow_span}}, adjust=False).mean()  # slow exponential average
+        macd = ema_fast - ema_slow                                    # the MACD line
+        signal = macd.ewm(span={{signal_span}}, adjust=False).mean()  # the signal line
+
+        # Cross signals: True only on the bar where the MACD line crosses its signal line.
+        entries = (macd > signal) & (macd.shift(1) <= signal.shift(1))  # MACD crosses ABOVE signal -> enter
+        exits = (macd < signal) & (macd.shift(1) >= signal.shift(1))    # MACD crosses BELOW signal -> exit
+
+        # Costs from the lab settings via the neutral key dispatch routed by asset class (M4 D2).
+        fees, slippage = default_costs(settings)
+
+        # The shared long-only portfolio build (R16) — no vbt call in the template body.
+        return long_only_signal_result(
+            data, entries, exits, fees, slippage,
+            indicators={"macd": macd, "macd_signal": signal},
+        )

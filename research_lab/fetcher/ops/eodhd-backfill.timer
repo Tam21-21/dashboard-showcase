@@ -1,0 +1,15 @@
+[Unit]
+Description=Run the EODHD raw backfill periodically (resume after the daily cap-pause and after boot)
+
+[Timer]
+# Start shortly after WSL/systemd comes up (a reboot or wsl --shutdown loses the prior run).
+OnBootSec=2min
+# Every six hours: a start while the quota is spent or a run is active is a cheap no-op, so frequent
+# re-fires resume within six hours of the daily reset without needing to know the exact reset time.
+OnCalendar=*-*-* 00,06,12,18:00:00
+# A run missed while WSL was off fires on next start.
+Persistent=true
+Unit=eodhd-backfill.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+{
+  "id": "macd",
+  "name": "MACD crossover",
+  "kind": "price",
+  "order": 4,
+  "summary": "Long when the MACD line crosses above its signal line; exit on the reverse cross.",
+  "params": [
+    {"name": "fast_span", "label": "Fast span (bars)", "type": "integer", "default": 12, "target": "code", "bounds": {"type": "integer", "min": 1}},
+    {"name": "slow_span", "label": "Slow span (bars)", "type": "integer", "default": 26, "target": "code", "bounds": {"type": "integer", "min": 2}},
+    {"name": "signal_span", "label": "Signal span (bars)", "type": "integer", "default": 9, "target": "code", "bounds": {"type": "integer", "min": 1}}
+  ]
+}

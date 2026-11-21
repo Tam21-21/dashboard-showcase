@@ -1,0 +1,57 @@
+/* Settings, from the mockup's lab-p-settings.js: page colours, the look, the connections as tiles. */
+.v2 .set-warn { color: var(--a); font-size: 13.5px; margin: 14px 0 0; }
+.v2 .st-sec { margin-top: 20px; }
+.v2 .st-sec.first { margin-top: 44px; }
+.v2 .st-note { max-width: 86ch; font-size: 14.5px; line-height: 1.5; color: var(--soft); text-wrap: pretty; margin: 0 0 18px; }
+.v2 .st-tbl { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.v2 .st-tbl th { text-align: left; font-size: 12.5px; font-weight: 400; color: var(--soft); padding: 0 18px 10px 0; border: 0; }
+.v2 .st-tbl td { text-align: left; padding: 11px 18px 11px 0; color: var(--ink); border: 0; box-shadow: inset 0 1px 0 var(--line2); vertical-align: middle; }
+.v2 .st-pages tbody tr { cursor: pointer; }
+.v2 .st-pages tbody tr:hover td { background: rgba(255,255,255,.04); }
+.v2 .st-link { background: none; border: 0; padding: 0; font: inherit; color: var(--bright); cursor: pointer; text-align: left; }
+.v2 .st-swn { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); }
+.v2 .st-sw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex: none; }
+.v2 .st-app td:last-child { text-align: right; }
+
+.v2 .st-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 40px; }
+.v2 .st-field { display: grid; gap: 8px; min-width: 0; justify-items: start; }
+.v2 .st-field > span { font-size: 13.5px; color: var(--soft); }
+
+.v2 .st-wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.v2 .st-tile { --tc: 141 152 168; display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 18px 20px 20px; border-radius: 16px; background: rgb(var(--tc) / .06); box-shadow: inset 0 0 0 1px rgb(var(--tc) / .22); }
+.v2 .st-tile.h-good { --tc: 47 224 138; } .v2 .st-tile.h-warn { --tc: 255 176 32; } .v2 .st-tile.h-bad { --tc: 255 90 99; } .v2 .st-tile.h-dim { --tc: 141 152 168; }
+.v2 .st-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: nowrap; }
+.v2 .st-top .st-state { flex: none; }
+.v2 .st-name { font-size: 17px; font-weight: 500; color: var(--bright); }
+.v2 .st-fig { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.v2 .st-fig b { font: 500 40px/1 var(--mono); font-stretch: 78%; letter-spacing: -.045em; color: var(--bright); }
+.v2 .st-fig span { font-size: 14.5px; color: var(--soft); }
+.v2 .st-facts { display: flex; justify-content: space-between; gap: 8px 14px; flex-wrap: wrap; }
+.v2 .st-facts > div { display: grid; gap: 3px; align-content: start; min-width: 0; }
+.v2 .st-facts i { font-style: normal; font-size: 11.5px; color: var(--soft); }
+.v2 .st-facts span { font-size: 14.5px; font-weight: 500; color: var(--bright); }
+.v2 .st-act { display: flex; justify-content: flex-end; }
+.v2 .conf { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; color: var(--bright); font-size: 14px; }
+
+.v2 .st-wt { margin: 0; font: 500 21px/1.2 var(--sans); letter-spacing: -.028em; color: var(--bright); }
+.v2 .st-sws { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.v2 .st-sws .btn { gap: 10px; }
+.v2 .st-sws .btn.pressed { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.v2 .st-acts { display: flex; gap: 10px; margin-top: 18px; }
+
+@media (max-width: 1180px) { .v2 .st-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* The phone frame (DECISIONS #484): blocks stacked, every control kept. */
+.v2.phone .st-form { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.v2.phone .st-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.v2.phone .st-tile { padding: 14px; }
+.v2.phone .st-fig b { font-size: 32px; }
+.v2.phone .st-pages th:nth-child(2), .v2.phone .st-pages td:nth-child(2) { display: none; }
+.v2.phone .st-field .seg { max-width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+.v2.phone .st-field .seg button, .v2.phone .st-pages .seg button { padding: 0 9px; font-size: 12.5px; }
+.v2.phone .st-top { flex-wrap: wrap; }
+.v2.phone .st-top .st-name { flex: 1 1 100%; }
+.v2.phone .st-top .st-state, .v2.phone .st-top .st-state * { max-width: 100%; white-space: normal; }
+.v2 .st-pages th:nth-child(1) { width: 46%; } .v2 .st-pages th:nth-child(2) { width: 21%; }
+.v2 .st-pages td { padding-top: 11.5px; padding-bottom: 11.5px; }
+.v2.phone .nl-blk.st-sec { padding: 20px 18px 24px; border-radius: 20px; }

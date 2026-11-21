@@ -1,0 +1,128 @@
+# TEMPLATE for a generator v2 theory: every field of the form, each with a comment line.
+# Copy it to <name>.toml, keep what the theory needs, delete the rest. README.md explains every part.
+# A name written NAME or LETTER in a table header stands for any name you choose. This file is valid TOML
+# but not a valid theory: it shows every field, including fields that exclude each other.
+
+[theory]
+# name: a short text, the theory's name.
+name = "my_theory"
+# display_name (optional): the name pages show for the strategy, 1 to 60 characters; a theory run needs it.
+# display_name = "My theory"
+# bar: the default bar size of the theory ("1d" if left out).
+bar = "1d"
+# side: "long" (the only side today; "long" if left out).
+side = "long"
+# entry_time: "next_open", "same_close" or "after_open:<minutes>".
+entry_time = "next_open"
+# status: "test" (a planted test theory) or "research".
+status = "research"
+# kind: "template" in a template file only; a theory has none and form.load refuses a template (README.md, Templates).
+kind = "template"
+# template: in an expanded theory only, the name of the template it was made from.
+template = "my_template"
+# choices: in an expanded theory only, the choice taken in each slot, slot name to choice name.
+choices = { my_slot = "my_choice" }
+
+# One table per operand. Pick one kind and keep only the fields of that kind (plus bar, offset, span).
+[operand.NAME]
+# kind: "indicator", "field", "constant" or "formula".
+kind = "indicator"
+# indicator: a name in research_lab/indicators/limits.py (kind indicator).
+indicator = "rsi"
+# params: the indicator's parameters; each number may be a letter, a parameter pick (kind indicator).
+params = { n = "R" }
+# output: which output of a several-output indicator, such as "lower" of bollinger (kind indicator).
+output = "lower"
+# field: "open", "high", "low", "close" or "volume", or an earnings field: "eps_surprise_pct" (percent), "eps_beat_miss" (1 beat, 0 in line, -1 miss), "revenue_surprise_pct" (percent), "days_since_report" (trading days), "report_move_pct" (percent) (kind field).
+field = "close"
+# value: a number or a letter (kind constant).
+value = 0
+# expr: a formula over operand names, numbers and + - * / (kind formula).
+expr = "close - lower"
+# bar: this operand's bar size, a text or a letter (default: the theory's bar).
+bar = "1d"
+# offset: how many bars back to read, a whole number or a letter (default 0).
+offset = 0
+# span: extra bars back on which the condition must also hold, a whole number or a letter (default 0).
+span = 0
+
+# One [[entry.group]] per way in; any group is enough (OR), all its conditions must hold (AND).
+[[entry.group]]
+# conditions: a list of { left, op, right }; op is <, <=, >, >=, crosses_above or crosses_below.
+conditions = [ { left = "close", op = "<", right = "lower" } ]
+
+# The exit part: optional groups, plus the stop, target and time rules.
+[exit]
+# stop: "calibrated", "none", a letter or a fraction of the entry price.
+stop = "calibrated"
+# target: "calibrated", "none", a letter or a fraction of the entry price.
+target = "calibrated"
+# trail: the trailing stop's distance, a number of ATRs, above 0, a number or a letter; needs trail_atr too.
+trail = 3
+# trail_atr: the window of the ATR the trail reads, a whole number of at least 2, a number or a letter; needs trail too.
+trail_atr = 14
+# max_hold: the most bars to hold, a whole number or a letter.
+max_hold = "H"
+# expected_price: an operand name; required when stop or target is "calibrated".
+expected_price = "close"
+
+# One [[exit.group]] per way out by signal; same rules as an entry group.
+[[exit.group]]
+# conditions: a list of { left, op, right }, as in an entry group.
+conditions = [ { left = "close", op = ">", right = "middle" } ]
+
+[stocks]
+# group: "trending", "volatile", "flat" or "any". Give group or universe, not both.
+group = "any"
+# universe: the name of a universe rule instead of a group.
+universe = "none_yet"
+
+[risk]
+# method: "volatility_stop" (the only one today, DECISIONS #323); never searched.
+method = "volatility_stop"
+
+[money]
+# method: "fixed_fraction" (the only one today, DECISIONS #323); never searched.
+method = "fixed_fraction"
+
+# One table per letter used in the theory.
+[parameter_picks.LETTER]
+# range: a key of ranges.toml, where the numbers and their source live.
+range = "some_range_key"
+# from: narrow the range from here (optional; on the range's step, never below its start).
+from = 1
+# to: narrow the range up to here (optional; on the range's step, never above its end).
+to = 2
+# step: a coarser step (optional; a whole multiple of the range's step).
+step = 1
+
+# One table per operand that may be replaced.
+[variations.NAME]
+# alternatives: operand names that may take its place; each choice of operands is a combination (a sub-theory is a search round).
+alternatives = ["other_operand"]
+
+# Templates only. A slot lists choices; each combination of one choice per slot is one theory (expand.py).
+[slot.NAME]
+# choices: a non-empty list of choice names; each needs a [choice.NAME] table. One choice belongs to one slot.
+choices = ["my_choice", "other_choice"]
+
+[choice.NAME]
+# words: the plain words the expanded display name uses for this choice.
+words = "Bollinger lower band"
+# operand: the operands this choice fills, operand name to an operand table with the fields of [operand.NAME]; every choice of a slot fills the same names.
+operand = { lower = { kind = "indicator", indicator = "bollinger", params = { n = "N", w = "W" }, output = "lower" } }
+
+# Optional: the search settings of this theory (DECISIONS #470), six whole numbers; when the table is there, all six must be.
+[search]
+# values_per_number: about this many values per number in round 1 (at least 2); a longer range gets a coarser step.
+values_per_number = 20
+# round_size: the strategies a round runs when its box is too big to run whole.
+round_size = 500
+# best: how many of a round's best strategies the next round narrows around (not above round_size).
+best = 5
+# max_rounds: the most rounds the search runs.
+max_rounds = 5
+# all_below: a box with fewer valid strategies than this is run whole.
+all_below = 5000
+# keep: how many finalists the search keeps.
+keep = 3

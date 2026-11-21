@@ -1,0 +1,36 @@
+"""{{strategy_label}} — Donchian breakout (generated from the breakout template, M4.5 R16).
+
+Long-only channel breakout on the close. Enter long when price closes above the highest close of the
+prior {{entry_lookback}} bars; exit when it closes below the lowest close of the prior {{exit_lookback}}
+bars. A starting scaffold — edit the rule freely from here.
+"""
+from __future__ import annotations
+
+from strategies.base import RunResult, SettingRow, Strategy, StrategyInput
+from strategies.helpers import default_costs, long_only_signal_result
+
+
+class {{class_name}}(Strategy):
+    """Long-only Donchian breakout, {{entry_lookback}}-up / {{exit_lookback}}-down."""
+
+    asset_class_scope = ("crypto", "equities")
+
+    def run(self, data: StrategyInput, settings: list[SettingRow]) -> RunResult:
+        close = data.close  # the closing-price series the channel is built from
+
+        # The prior-window high/low channel in pandas (shift(1) excludes the current bar; the rule).
+        upper = close.rolling({{entry_lookback}}).max().shift(1)  # highest close of the prior entry window
+        lower = close.rolling({{exit_lookback}}).min().shift(1)   # lowest close of the prior exit window
+
+        # Breakout signals: True only on the bar where price breaks the channel.
+        entries = (close > upper) & (close.shift(1) <= upper.shift(1))  # close breaks ABOVE the upper channel
+        exits = (close < lower) & (close.shift(1) >= lower.shift(1))    # close breaks BELOW the lower channel
+
+        # Costs from the lab settings via the neutral key dispatch routed by asset class (M4 D2).
+        fees, slippage = default_costs(settings)
+
+        # The shared long-only portfolio build (R16) — no vbt call in the template body.
+        return long_only_signal_result(
+            data, entries, exits, fees, slippage,
+            indicators={"channel_high": upper, "channel_low": lower},
+        )

@@ -1,0 +1,58 @@
+# syntax=docker/dockerfile:1.7
+#
+# research-runner:vbt-study: STUDY ONLY (lane VBT1, night 2026-10-10). This is the
+# Dockerfile.m2-base recipe with ONE change: the vbt pin is the v2026.10.5 tag's commit
+# 673fd69ae72e74dda7636f8abdab19d72bb74b01 (read with gh api on 2026-10-10), not b1727ac6.
+# It never replaces research-runner:m2-latest or m3-latest. The m3 layer for the study is
+# built on top of this tag as research-runner:vbt-study-m3 (see the lane file, step 2).
+#
+# Build CONTEXT is docker/research-runner/. Build:
+#   cd research_lab/docker/research-runner
+#   DOCKER_BUILDKIT=1 docker build -f Dockerfile.vbt-study \
+#     --secret id=vbt_gh_token,src=<token file> -t research-runner:vbt-study .
+#
+# Pin interpreter to the M0-verified 3.12.13. Do NOT use python:3.12-slim
+# (rolling tag — would silently float on rebuild).
+FROM python:3.12.13-slim
+
+# System deps. build-essential kept for first build; if pip resolves entirely
+# from manylinux wheels, this can be dropped in a future image revision.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        git \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Non-root user matching host UID 1000
+RUN useradd -m -u 1000 -s /bin/bash runner
+
+WORKDIR /app
+
+# Step 1: install pinned-from-M0 requirements first (cacheable layer)
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Step 2: install vbt pro via BuildKit secret — token NOT in image history.
+# Pinned to the exact commit M0 was installed from (per uv pip freeze
+# 2026-05-18). Do NOT use @v2026.4.7 tag — we never independently
+# verified what that tag points to in the private repo; commit SHA is
+# the only thing actually verified working.
+# This RUN executes as root (USER runner is set below), so root reads
+# the secret regardless of file uid — no uid= option needed on mount.
+RUN --mount=type=secret,id=vbt_gh_token \
+    pip install --no-cache-dir \
+        "vectorbtpro @ git+https://$(cat /run/secrets/vbt_gh_token)@github.com/polakowo/vectorbt.pro.git@673fd69ae72e74dda7636f8abdab19d72bb74b01"
+
+# Verify install succeeded and dependencies are consistent
+RUN pip check && python -c "import vectorbtpro as vbt; print('vbt OK', vbt.__version__)"
+
+COPY fetch.py /app/fetch.py
+# pre-M4 Brief A1: the durable atomic parquet write, imported by fetch.py at /app on sys.path.
+COPY durable_write.py /app/durable_write.py
+# hourly-pivot campaign: the 1h timeframe adapter fetch.py's '1h' route imports at /app on sys.path.
+COPY eodhd_hourly.py /app/eodhd_hourly.py
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+USER runner
+ENTRYPOINT ["/app/entrypoint.sh"]
